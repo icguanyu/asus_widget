@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 
 App.store = store
 App.router = router
+
 Vue.customElement('asus-widget', App)
 
 // new Vue({
