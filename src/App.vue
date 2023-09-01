@@ -84,6 +84,11 @@ export default {
   mounted() {
     this.route = this.$route;
   },
+  methods: {
+    test() {
+      alert("hello call methods");
+    },
+  },
 };
 </script>
 
