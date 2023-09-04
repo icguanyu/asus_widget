@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     test() {
-      this.show = !this.show
+      this.show = !this.show;
     },
   },
 };
@@ -100,8 +100,10 @@ p {
   position: relative;
   position: fixed;
   border: 1px dashed red;
+  pointer-events: none;
   .main {
     z-index: 1;
+    pointer-events: initial;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -177,6 +179,7 @@ p {
 .toggle {
   cursor: pointer;
   position: absolute;
+  pointer-events: initial;
   background-color: rgb(0, 86, 247);
   box-shadow: 2px 3px 8px #ddd;
   bottom: 0;
