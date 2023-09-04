@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     test() {
-      alert("hello call methods");
+      this.show = !this.show
     },
   },
 };
