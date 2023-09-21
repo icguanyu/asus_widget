@@ -5,7 +5,7 @@
       'position-right': position == 'right',
       'position-left': position == 'left',
     }"
-    :style="`width:${width};height:${height}`"
+    :style="myStyle"
   >
     <div
       class="main"
@@ -31,6 +31,14 @@
           <p>位置：{{ position }}</p>
           <p>寬：{{ width }}</p>
           <p>高：{{ height }}</p>
+          <p>底：{{ bottom }}</p>
+          <p>左：{{ left }}</p>
+          <p>右：{{ right }}</p>
+        </div>
+
+        <div class="style-test">
+          <div class="allpower">我是.allpower</div>
+          <div class="test">我是.test</div>
         </div>
         <router-view />
       </div>
@@ -55,7 +63,7 @@ export default {
   props: {
     name: {
       type: String,
-      default: "enter name",
+      default: "請給我名稱",
     },
     position: {
       type: String,
@@ -68,6 +76,18 @@ export default {
     height: {
       type: String,
       default: "360px",
+    },
+    bottom: {
+      type: String,
+      default: "8px",
+    },
+    left: {
+      type: String,
+      default: "8px",
+    },
+    right: {
+      type: String,
+      default: "8px",
     },
   },
   data() {
@@ -87,6 +107,19 @@ export default {
   methods: {
     test() {
       this.show = !this.show;
+    },
+  },
+  computed: {
+    myStyle() {
+      const width = `width:${this.width};`;
+      const height = `height:${this.height};`;
+      const bottom = `bottom:${this.bottom};`;
+      const right = `right:${this.right};`;
+      const left = `left:${this.left};`;
+
+      return (
+        width + height + bottom + (this.position === "right" ? right : left)
+      );
     },
   },
 };
@@ -162,20 +195,28 @@ p {
   opacity: 0;
 }
 .position-right {
-  right: 10px;
-  bottom: 10px;
   .main {
     transform-origin: bottom right;
   }
 }
 .position-left {
-  bottom: 10px;
-  left: 10px;
   .main {
     transform-origin: bottom left;
   }
 }
-
+.style-test {
+  font-size: 14px;
+  border: 1px solid #000;
+  padding: 10px;
+  .allpower {
+    background-color: #333;
+    color: white;
+  }
+  .test {
+    background-color: rgb(0, 86, 247);
+    color: yellow;
+  }
+}
 .toggle {
   cursor: pointer;
   position: absolute;
