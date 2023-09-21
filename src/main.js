@@ -19,5 +19,17 @@ if (env === "development") {
     render: (h) => h(App),
   }).$mount("asus-widget");
 } else {
-  Vue.customElement("asus-widget", App);
+  Vue.customElement("asus-widget", App, {
+    shadow: true,
+    beforeCreateVueInstance(root) {
+      const rootNode = root.el.getRootNode();
+
+      if (rootNode instanceof ShadowRoot) {
+        root.shadowRoot = rootNode;
+      } else {
+        root.shadowRoot = document.head;
+      }
+      return root;
+    },
+  });
 }
