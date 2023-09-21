@@ -13,11 +13,7 @@
         'element-hide': !show,
       }"
     >
-      <div class="header">
-        <div class="left">hi</div>
-        <div class="name">{{ name }}</div>
-        <div class="right" @click="show = !show">隱藏</div>
-      </div>
+      <Header :name="name" @toggle="show = !show" />
       <div class="body">
         <p>當前路由：{{ route.path }}</p>
         <nav>
@@ -36,10 +32,6 @@
           <p>右：{{ right }}</p>
         </div>
 
-        <div class="style-test">
-          <div class="allpower">我是.allpower</div>
-          <div class="test">我是.test</div>
-        </div>
         <router-view />
       </div>
     </div>
@@ -58,8 +50,10 @@
 </template>
 
 <script>
+import Header from "@/components/layout/Header";
 export default {
   name: "App",
+  components: { Header },
   props: {
     name: {
       type: String,
@@ -92,8 +86,8 @@ export default {
   },
   data() {
     return {
-      show: true,
       route: this.$route.path,
+      show: true,
     };
   },
   watch: {
@@ -106,6 +100,7 @@ export default {
   },
   methods: {
     test() {
+      console.log('父呼叫子');
       this.show = !this.show;
     },
   },
@@ -147,23 +142,7 @@ p {
     box-shadow: 2px 3px 8px #ddd;
     transition: all 0.5s;
     background: #fff;
-    .header {
-      padding: 10px 10px;
-      background-color: rgb(0, 86, 247);
-      text-align: center;
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      .name {
-        flex: 1;
-      }
-      .left,
-      .right {
-        min-width: 30px;
-      }
-    }
+
     .body {
       padding: 10px;
       .params {
@@ -204,19 +183,7 @@ p {
     transform-origin: bottom left;
   }
 }
-.style-test {
-  font-size: 14px;
-  border: 1px solid #000;
-  padding: 10px;
-  .allpower {
-    background-color: #333;
-    color: white;
-  }
-  .test {
-    background-color: rgb(0, 86, 247);
-    color: yellow;
-  }
-}
+
 .toggle {
   cursor: pointer;
   position: absolute;
