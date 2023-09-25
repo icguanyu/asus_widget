@@ -13,7 +13,7 @@
         'element-hide': !show,
       }"
     >
-      <Header :name="name" @toggle="show = !show" />
+      <Header :name="name" :country="country" @toggle="show = !show" />
       <div class="body">
         <p>當前路由：{{ route.path }}</p>
         <nav>
@@ -59,6 +59,10 @@ export default {
       type: String,
       default: "請給我名稱",
     },
+    country: {
+      type: String,
+      default: "TW",
+    },
     position: {
       type: String,
       default: "right",
@@ -100,7 +104,7 @@ export default {
   },
   methods: {
     test() {
-      console.log('父呼叫子');
+      console.log("父呼叫子");
       this.show = !this.show;
     },
   },

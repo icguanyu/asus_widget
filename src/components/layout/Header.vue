@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="left">hi</div>
-    <div class="name">{{ name }}</div>
+    <div class="name">{{ name }}({{ country }})</div>
     <div class="right" @click="test">隱藏</div>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "HelloWorld",
-  props: ["name"],
+  props: ["name", "country"],
   methods: {
     test() {
       this.$emit("toggle");
