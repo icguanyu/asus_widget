@@ -24,6 +24,7 @@ Object.keys(filters).forEach((key) => {
   Vue.filter(key, filters[key]); //插入過濾器名和對應方法
 });
 
+App.i18n = i18n
 App.store = store;
 App.router = router;
 

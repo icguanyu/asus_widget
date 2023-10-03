@@ -31,6 +31,7 @@
       </el-col>
     </el-row>
     <div class="main">
+      /gpt
       <router-view></router-view>
     </div>
   </div>

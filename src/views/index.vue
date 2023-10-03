@@ -5,6 +5,7 @@
       <div class="allpower">我是.allpower</div>
       <div class="test">我是.test</div>
       <div class="primary">Primary Color</div>
+      <img src="@/assets/images/avatar-genio.png" alt="" />
     </div>
   </div>
 </template>

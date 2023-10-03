@@ -15,10 +15,11 @@
     >
       <!-- <Header :name="name" :country="country" @toggle="show = !show" /> -->
 
-      <!-- <p>當前路由：{{ route.path }}</p> -->
-      <!-- <nav>
+      <p>當前路由：{{ route.path }}</p>
+      <nav>
           <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link>
+          <router-link to="/about">About</router-link> |
+          <router-link to="/gpt">GPT</router-link>
         </nav>
 
         <div class="params">
@@ -30,7 +31,7 @@
           <p>底：{{ bottom }}</p>
           <p>左：{{ left }}</p>
           <p>右：{{ right }}</p>
-        </div> -->
+        </div>
 
       <router-view />
     </div>
