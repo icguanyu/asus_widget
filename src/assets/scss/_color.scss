@@ -1,0 +1,57 @@
+/* Colors
+-------------------------- */
+$primary: #006CE1;
+$secondary: #00afb9;
+$yellow: #ffc922;
+$orange: #fed9b7;
+$green: #c3e07c;
+
+$success: #28d84e;
+$warning: #e6a23c;
+$danger: #ff5151;
+$info: #ced1d6;
+$disable: #606266;
+
+/* Font 
+-------------------------- */
+$text-primary: #333333;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #c0c4cc;
+$text-success: #15b364;
+$text-danger: #e66161;
+
+/* Border &B ackground 
+-------------------------- */
+$bg-primary: #f6f9fe;
+$bg-success: #ecfff5;
+$bg-danger: #f7e0e0;
+$bg-blue-light: #f5f7fa;
+$bg-green-light: #e3eff0;
+$bg-gray-light: #f0f0f0;
+
+$shadow: #e6e6e6;
+
+$border-primary: #b7d3e7;
+$border-success: #15b364;
+$border-danger: #e66161;
+$border-gray: #dcdfe6;
+$border-gray-light: #e0e0e0;
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #dcdcdc;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+}

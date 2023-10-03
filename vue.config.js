@@ -12,6 +12,13 @@ module.exports = defineConfig({
   chainWebpack: (config) => {
     config.optimization.delete("splitChunks");
   },
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import "~@/assets/scss/_color.scss";`,
+      },
+    },
+  },
   filenameHashing: false,
   pages: {
     index: {

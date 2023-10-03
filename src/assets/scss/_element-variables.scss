@@ -1,0 +1,32 @@
+/*
+----------------------------------------------------
+[colors variables]
+- 顏色變數來自 :  @/assets/scss/_color.scss
+- 資源參考: https://element.eleme.io/#/zh-CN/component/custom-theme
+----------------------------------------------------
+*/
+
+$--color-primary: $primary !default;
+$--color-success: $success !default;
+$--color-warning: $warning !default;
+$--color-danger: $danger !default;
+$--color-info: $info !default;
+
+/* 改變 icon 字體路徑變數，必須 */
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+$--font-size-small: 16px !default; //14px
+$--font-size-large: 18px !default;
+
+/// borderRadius|1|Radius|0
+$--border-radius-base: 4px !default;
+/// borderRadius|1|Radius|0
+$--border-radius-small: 2px !default;
+/// borderRadius|1|Radius|0
+$--border-radius-circle: 100% !default;
+/// borderRadius|1|Radius|0
+$--border-radius-zero: 0 !default;
+
+$--border-color-lighter: #dfe6ec;
+$--table-border: 1px solid#dfe6ec;
+@import "~element-ui/packages/theme-chalk/src/index";

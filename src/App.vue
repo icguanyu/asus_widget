@@ -8,15 +8,15 @@
     :style="myStyle"
   >
     <div
-      class="main"
+      class="body"
       :class="{
-        'element-hide': !show,
+        'element-hide': !display,
       }"
     >
-      <Header :name="name" :country="country" @toggle="show = !show" />
-      <div class="body">
-        <p>當前路由：{{ route.path }}</p>
-        <nav>
+      <!-- <Header :name="name" :country="country" @toggle="show = !show" /> -->
+
+      <!-- <p>當前路由：{{ route.path }}</p> -->
+      <!-- <nav>
           <router-link to="/">Home</router-link> |
           <router-link to="/about">About</router-link>
         </nav>
@@ -30,10 +30,9 @@
           <p>底：{{ bottom }}</p>
           <p>左：{{ left }}</p>
           <p>右：{{ right }}</p>
-        </div>
+        </div> -->
 
-        <router-view />
-      </div>
+      <router-view />
     </div>
 
     <div
@@ -42,18 +41,18 @@
         'toggle-right': position == 'right',
         'toggle-left': position == 'left',
       }"
-      @click="show = true"
+      @click="toggleDisplay"
     >
-      顯示
+      <img src="@/assets/images/avatar-genio.png" alt="" />
     </div>
   </div>
 </template>
 
 <script>
-import Header from "@/components/layout/Header";
+// import Header from "@/components/layout/Header";
 export default {
   name: "App",
-  components: { Header },
+  // components: { Header },
   props: {
     name: {
       type: String,
@@ -69,11 +68,11 @@ export default {
     },
     width: {
       type: String,
-      default: "280px",
+      default: "280px", //280
     },
     height: {
       type: String,
-      default: "360px",
+      default: "360px", //360
     },
     bottom: {
       type: String,
@@ -91,7 +90,6 @@ export default {
   data() {
     return {
       route: this.$route.path,
-      show: true,
     };
   },
   watch: {
@@ -100,12 +98,24 @@ export default {
     },
   },
   mounted() {
+    this.initConfig();
+    // this.$router.push("/gpt");
     this.route = this.$route;
+
+    if (this.route.name !== "gpt-entrance") {
+      this.$router.push("/gpt");
+    }
   },
   methods: {
     test() {
       console.log("父呼叫子");
-      this.show = !this.show;
+      this.$store.dispatch("global/toggleDisplay");
+    },
+    toggleDisplay() {
+      this.$store.dispatch("global/toggleDisplay");
+    },
+    initConfig() {
+      this.$store.commit("global/setConfig", this.$props);
     },
   },
   computed: {
@@ -120,20 +130,23 @@ export default {
         width + height + bottom + (this.position === "right" ? right : left)
       );
     },
+    display() {
+      return this.$store.state.global.display;
+    },
   },
 };
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/all.scss";
 p {
   margin: 0;
 }
 .app {
   position: relative;
   position: fixed;
-  border: 1px dashed red;
   pointer-events: none;
-  .main {
+  .body {
     z-index: 1;
     pointer-events: initial;
     width: 100%;
@@ -143,31 +156,28 @@ p {
     overflow: auto;
     // border: 1px solid #eee;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 2px 3px 8px #ddd;
+    box-shadow: 2px 3px 8px #ccc;
     transition: all 0.5s;
     background: #fff;
 
-    .body {
+    .params {
+      background-color: #eee;
       padding: 10px;
-      .params {
-        background-color: #eee;
-        padding: 10px;
-        text-align: left;
-        font-size: 12px;
-        letter-spacing: 1px;
-        p {
-          margin: 0;
-        }
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 1px;
+      p {
+        margin: 0;
       }
-      nav {
-        a {
-          font-size: 14px;
-          font-weight: bold;
-          text-decoration: none;
-          color: #2c3e50;
-          &.router-link-exact-active {
-            color: #42b983;
-          }
+    }
+    nav {
+      a {
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #2c3e50;
+        &.router-link-exact-active {
+          color: #42b983;
         }
       }
     }
@@ -178,12 +188,12 @@ p {
   opacity: 0;
 }
 .position-right {
-  .main {
+  .body {
     transform-origin: bottom right;
   }
 }
 .position-left {
-  .main {
+  .body {
     transform-origin: bottom left;
   }
 }
@@ -196,15 +206,18 @@ p {
   box-shadow: 2px 3px 8px #ddd;
   bottom: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
   color: white;
   z-index: -1;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .toggle-right {
   right: 0;
