@@ -10,10 +10,7 @@
       <el-col :span="12" class="title"> </el-col>
 
       <el-col :span="6" class="tools">
-        <el-dropdown
-          @command="handleCommand"
-        
-        >
+        <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
             <img src="@/assets/images/icons/arrow_down.png" alt="" />
           </span>
@@ -24,11 +21,9 @@
               v-if="checkVisiable(['gpt-room'])"
               :disabled="isFinished"
             >
-              <i class="bx bx-log-out-circle"></i>
               {{ $t("GPT.HEAD.LEAVE") }}
             </el-dropdown-item>
             <el-dropdown-item command="new" v-if="checkVisiable(['gpt-room'])">
-              <i class="bx bx-message-rounded-dots"></i>
               {{ $t("GPT.HEAD.CREATE_NEW") }}
             </el-dropdown-item>
           </el-dropdown-menu>
