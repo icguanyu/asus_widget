@@ -20,7 +20,7 @@ export default {
     back() {
       let params = JSON.parse(localStorage.getItem("AC_GPT_CREATE"));
       let country = params.countryId;
-      this.$router.push(`/gpt?country=${country}`);
+      this.$router.push(`/?country=${country}`);
     },
   },
   computed: {},

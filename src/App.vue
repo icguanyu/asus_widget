@@ -5,7 +5,6 @@
       'position-right': position == 'right',
       'position-left': position == 'left',
     }"
-    :style="myStyle"
   >
     <div
       class="body"
@@ -15,23 +14,23 @@
     >
       <!-- <Header :name="name" :country="country" @toggle="show = !show" /> -->
 
-      <p>當前路由：{{ route.path }}</p>
-      <nav>
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/gpt">GPT</router-link>
-        </nav>
-
-        <div class="params">
-          <b>收到or預設參數：</b>
-          <p>標題：{{ name }}</p>
-          <p>位置：{{ position }}</p>
-          <p>寬：{{ width }}</p>
-          <p>高：{{ height }}</p>
-          <p>底：{{ bottom }}</p>
-          <p>左：{{ left }}</p>
-          <p>右：{{ right }}</p>
-        </div>
+      <!-- <p>當前路由：{{ route.path }}</p> -->
+      <!-- <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/gpt">GPT</router-link>
+      </nav> -->
+      <!-- 
+      <div class="params">
+        <b>收到or預設參數：</b>
+        <p>標題：{{ name }}</p>
+        <p>位置：{{ position }}</p>
+        <p>寬：{{ width }}</p>
+        <p>高：{{ height }}</p>
+        <p>底：{{ bottom }}</p>
+        <p>左：{{ left }}</p>
+        <p>右：{{ right }}</p>
+      </div> -->
 
       <router-view />
     </div>
@@ -98,16 +97,27 @@ export default {
       this.route = val;
     },
   },
+
   mounted() {
+    this.onMessage();
     this.initConfig();
     // this.$router.push("/gpt");
     this.route = this.$route;
-
-    if (this.route.name !== "gpt-entrance") {
-      this.$router.push("/gpt");
-    }
   },
   methods: {
+    onMessage() {
+      window.addEventListener("message", (event) => {
+        // console.log("小工具的event", event);
+        const parentUrl = "https://asus-widget-test.netlify.app"; //
+        if (event.origin === parentUrl) {
+          console.log("來自父層的資料:", event.data);
+          alert(event.data);
+          // 回覆消息到父層
+          const replyMessage = "Hello 我是小工具!";
+          event.source.postMessage(replyMessage, parentUrl);
+        }
+      });
+    },
     test() {
       console.log("父呼叫子");
       this.$store.dispatch("global/toggleDisplay");
@@ -147,6 +157,8 @@ p {
   position: relative;
   position: fixed;
   pointer-events: none;
+  width: 100%;
+  height: 100%;
   .body {
     z-index: 1;
     pointer-events: initial;

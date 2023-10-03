@@ -56,7 +56,7 @@ const actions = {
       // 存下sessionId , 前往 room
       sessionStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       commit("setBotRoom", res.data);
-      router.push(`/gpt/${res.data.chatBotRoomId}`);
+      router.push(`/${res.data.chatBotRoomId}`);
     } catch (error) {
       console.log("catch", error);
     }
@@ -74,7 +74,7 @@ const actions = {
     if (params) {
       dispatch("createRoom", params);
     } else {
-      router.push(`/gpt?country=${countryId}`);
+      router.push(`/?country=${countryId}`);
     }
   },
   // 取得文案與決策樹資料

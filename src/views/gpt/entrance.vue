@@ -7,10 +7,8 @@
       </div>
       <div class="privacy-title">{{ $t("GPT.ENTRANCE.POLICY") }}</div>
 
-      <div class="privacy-content">
-        <div v-if="setting">
-          {{ setting.ChatGPT_PrivacyNotice || "Not set." }}
-        </div>
+      <div class="privacy-content" v-if="setting">
+        {{ setting.ChatGPT_PrivacyNotice || "Not set." }}
       </div>
 
       <p>{{ $t("GPT.ENTRANCE.AGREE") }}</p>
@@ -115,9 +113,10 @@ export default {
       height: 80px;
       min-height: 80px;
       overflow-y: auto;
+      overflow-x: hidden;
       font-size: 13px;
       line-height: 20px;
-      padding-right: 18px;
+      margin-bottom: 5px;
     }
     p {
       width: 100%;

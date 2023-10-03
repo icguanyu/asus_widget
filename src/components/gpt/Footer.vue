@@ -118,7 +118,7 @@ export default {
     },
     handleEnd() {
       this.$store.commit("gpt/reset");
-      this.$router.push("/gpt/end");
+      this.$router.push("/end");
     },
   },
   computed: {

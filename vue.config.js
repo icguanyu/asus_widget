@@ -12,11 +12,6 @@ module.exports = defineConfig({
   },
   chainWebpack: (config) => {
     config.optimization.delete("splitChunks");
-    config.module.rule("images").set("parser", {
-      dataUrlCondition: {
-        maxSize: 100000,
-      },
-    });
   },
   css: {
     loaderOptions: {
