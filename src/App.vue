@@ -50,6 +50,7 @@
 
 <script>
 // import Header from "@/components/layout/Header";
+import { languages } from "@/plugins/languages";
 export default {
   name: "App",
   // components: { Header },
@@ -79,9 +80,13 @@ export default {
           console.log("來自父層的資料:", event.data);
           // position: left / right
           // country:
-
+          const { countryId } = event.data;
           vm.$store.commit("global/setConfig", event.data);
+          vm.$store.dispatch("gpt/initSettingMetas", countryId);
 
+          const lang = languages.includes(countryId) ? countryId : "TW";
+
+          vm.$i18n.locale = lang;
           // 回覆消息到父層
           const replyMessage = "Hello 我是小工具!";
           event.source.postMessage(replyMessage, parentUrl);
@@ -142,7 +147,6 @@ p {
     box-shadow: 2px 3px 8px #ccc;
     transition: all 0.5s;
     background: #fff;
-
     .params {
       background-color: #eee;
       padding: 10px;

@@ -20,9 +20,11 @@
       @click="createBotRoom"
       >{{ $t("GPT.LAYOUT.START") }}</el-button
     >
-    <pre>
+
+    <!-- <pre>
+      Data from iframe:
       {{ config }}
-    </pre>
+    </pre> -->
   </div>
 </template>
 
