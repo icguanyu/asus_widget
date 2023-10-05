@@ -72,7 +72,7 @@ const actions = {
   },
   // 取得文案與決策樹資料
   async initSettingMetas({ state, dispatch, commit }, payload) {
-    // commit("toggleLoading", true);
+    commit("initSettingMetas", payload);
     try {
       const basic = await GetChatGPTBasicSetting.get(payload);
       const beforeChat = await SettingMetas.GetBeforeChat(payload);
