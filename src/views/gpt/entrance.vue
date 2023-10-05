@@ -32,29 +32,23 @@ export default {
   name: "gpt-index",
   data() {
     return {
-      create: {
-        countryId: this.$route.query.country || "TW", // 沒帶 country 預設 TW
-        platform: this.$route.query.platform || "",
-        asusWebSiteCountry: this.$route.query.country || "",
-      },
       agree: false,
     };
   },
   async mounted() {
     this.initSettingMetas();
-    const country = this.$store.state.global.config.country;
-    // console.log("country", country);
-    const lang = languages.includes(country) ? country : "TW";
+    const countryId = this.config.countryId;
+    const lang = languages.includes(countryId) ? countryId : "TW";
     this.$i18n.locale = lang;
   },
   methods: {
     initSettingMetas() {
       // console.log("初始化 SettingMetas");
-      localStorage.setItem("AC_GPT_CREATE", JSON.stringify(this.create));
-      this.$store.dispatch("gpt/initSettingMetas", this.create.countryId);
+      const config = this.$store.state.global.config;
+      this.$store.dispatch("gpt/initSettingMetas", config.countryId);
     },
     createBotRoom() {
-      this.$store.dispatch("gpt/createRoom", this.create);
+      this.$store.dispatch("gpt/createRoom");
     },
   },
   computed: {

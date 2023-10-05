@@ -1,8 +1,9 @@
 const state = {
   display: true,
   config: {
-    country: "",
-    position: "",
+    countryId: "TW",
+    platform: "",
+    position: "left",
   },
 };
 

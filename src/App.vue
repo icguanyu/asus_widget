@@ -2,8 +2,8 @@
   <div
     class="app"
     :class="{
-      'position-right': position == 'right',
-      'position-left': position == 'left',
+      'position-right': config.position == 'right',
+      'position-left': config.position == 'left',
     }"
   >
     <div
@@ -38,8 +38,8 @@
     <div
       class="toggle"
       :class="{
-        'toggle-right': position == 'right',
-        'toggle-left': position == 'left',
+        'toggle-right': config.position == 'right',
+        'toggle-left': config.position == 'left',
       }"
       @click="toggleDisplay"
     >
@@ -53,20 +53,6 @@
 export default {
   name: "App",
   // components: { Header },
-  props: {
-    name: {
-      type: String,
-      default: "請給我名稱",
-    },
-    country: {
-      type: String,
-      default: "TW",
-    },
-    position: {
-      type: String,
-      default: "right",
-    },
-  },
   data() {
     return {
       route: this.$route.path,
@@ -80,7 +66,6 @@ export default {
 
   mounted() {
     this.onMessage();
-    this.initConfig();
     // this.$router.push("/gpt");
     this.route = this.$route;
   },
@@ -110,24 +95,24 @@ export default {
     toggleDisplay() {
       this.$store.dispatch("global/toggleDisplay");
     },
-    initConfig() {
-      this.$store.commit("global/setConfig", this.$props);
-    },
   },
   computed: {
-    myStyle() {
-      const width = `width:${this.width};`;
-      const height = `height:${this.height};`;
-      const bottom = `bottom:${this.bottom};`;
-      const right = `right:${this.right};`;
-      const left = `left:${this.left};`;
+    // myStyle() {
+    //   const width = `width:${this.width};`;
+    //   const height = `height:${this.height};`;
+    //   const bottom = `bottom:${this.bottom};`;
+    //   const right = `right:${this.right};`;
+    //   const left = `left:${this.left};`;
 
-      return (
-        width + height + bottom + (this.position === "right" ? right : left)
-      );
-    },
+    //   return (
+    //     width + height + bottom + (this.position === "right" ? right : left)
+    //   );
+    // },
     display() {
       return this.$store.state.global.display;
+    },
+    config() {
+      return this.$store.state.global.config;
     },
   },
 };

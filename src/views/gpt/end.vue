@@ -18,9 +18,8 @@ export default {
   async mounted() {},
   methods: {
     back() {
-      let params = JSON.parse(localStorage.getItem("AC_GPT_CREATE"));
-      let country = params.countryId;
-      this.$router.push(`/?country=${country}`);
+      const config = this.$store.state.global.config;
+      this.$router.push(`/?country=${config.countryId}`);
     },
   },
   computed: {},
@@ -50,7 +49,7 @@ export default {
       height: 56px;
       margin-bottom: 32px;
     }
-    p{
+    p {
       font-size: 16px;
     }
   }

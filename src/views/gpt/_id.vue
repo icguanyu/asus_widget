@@ -1,6 +1,6 @@
 <template>
   <div class="bot-room" v-chat-scroll>
-    <GUI />
+    <!-- <GUI /> -->
     <!--閒置計時-->
     <Counter />
     <div class="rows">
@@ -55,7 +55,7 @@
 
 <script>
 import { ChatBotMessage } from "@/api/gpt";
-import GUI from "@/components/gpt/GUI";
+// import GUI from "@/components/gpt/GUI";
 import Counter from "@/components/gpt/Counter";
 import Footer from "@/components/gpt/Footer";
 import MessageSystem from "@/components/gpt/MessageSystem";
@@ -68,7 +68,6 @@ import MessageBot from "@/components/gpt/MessageBot";
 export default {
   name: "gpt-room",
   components: {
-    GUI,
     Counter,
     Footer,
     MessageSystem,

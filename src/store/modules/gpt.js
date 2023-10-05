@@ -38,18 +38,17 @@ const state = {
 };
 
 const actions = {
-  async createRoom({ commit }, payload) {
+  async createRoom({ rootState, commit }) {
     commit("toggleLoading", true);
-    const { countryId, platform, asusWebSiteCountry } = payload;
+
+    const { countryId, platform } = rootState.global.config;
     const locationCountry = await getUserIpCountry();
     const params = {
       countryId,
       platform,
-      asusWebSiteCountry,
       device: checkDevice(),
       locationCountry: locationCountry,
     };
-    localStorage.setItem("AC_GPT_CREATE", JSON.stringify(params));
     try {
       const res = await ChatBotRoom.Create(params);
       // console.log("create room", res);
@@ -59,6 +58,7 @@ const actions = {
       router.push(`/${res.data.chatBotRoomId}`);
     } catch (error) {
       console.log("catch", error);
+      router.push(`/?country=${countryId}`);
     }
     commit("toggleLoading", false);
   },
@@ -68,14 +68,7 @@ const actions = {
     await ChatBotRoom.Leave({ chatBotRoomId, sessionId });
     commit("reset");
     // 建立新 room
-    const params = JSON.parse(localStorage.getItem("AC_GPT_CREATE"));
-    const countryId = state.botRoom.countryId;
-
-    if (params) {
-      dispatch("createRoom", params);
-    } else {
-      router.push(`/?country=${countryId}`);
-    }
+    dispatch("createRoom");
   },
   // 取得文案與決策樹資料
   async initSettingMetas({ state, dispatch, commit }, payload) {
