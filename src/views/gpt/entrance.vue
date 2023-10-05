@@ -20,6 +20,9 @@
       @click="createBotRoom"
       >{{ $t("GPT.LAYOUT.START") }}</el-button
     >
+    <pre>
+      {{ config }}
+    </pre>
   </div>
 </template>
 
@@ -60,6 +63,9 @@ export default {
     },
     loading() {
       return this.$store.state.gpt.loading;
+    },
+    config() {
+      return this.$store.state.global.config;
     },
   },
 };

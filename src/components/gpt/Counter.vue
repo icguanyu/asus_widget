@@ -46,11 +46,11 @@ export default {
 
         if (idleNoticeTime) {
           if (val == idleNoticeTime) {
-            console.log("先不顯示閒置提示訊息。");
+            // console.log("先不顯示閒置提示訊息。");
             // this.sendMessage("ChatGPT_IdleNotice");
           }
           if (val > offlineNoiceTime) {
-            console.log("踢人!");
+            // console.log("踢人!");
             this.stopIdleCountDown();
             this.sendMessage("ChatGPT_IdleDisconnect");
             this.handleCloseRoom();
@@ -107,7 +107,7 @@ export default {
       const data = { type: "Text", content: message, chatUserRole: "System" };
       try {
         const res = await this.$store.dispatch("gpt/createMessage", data);
-        console.log("res", res);
+        // console.log("res", res);
       } catch (error) {
         console.log("catch", error);
       }
@@ -135,6 +135,7 @@ export default {
 
 <style lang="scss" scoped>
 .gpt-counter {
+  opacity: 0;
   background-color: #ffffff94;
   position: fixed;
   top: 0;

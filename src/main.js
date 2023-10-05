@@ -2,9 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import "@ungap/custom-elements";
 import i18n from "./i18n/i18n";
-// import vueCustomElement from "vue-custom-element";
 
 import VueChatScroll from "vue-chat-scroll";
 Vue.use(VueChatScroll);
@@ -15,7 +13,6 @@ import "./assets/scss/_element-variables.scss"; // 修改 ElementUI 預設變數
 Vue.use(ElementUI, {
   i18n: (key, value) => i18n.t(key, value),
 });
-// Vue.use(vueCustomElement);
 
 Vue.config.productionTip = false;
 

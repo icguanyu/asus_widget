@@ -2,6 +2,7 @@ const state = {
   display: true,
   config: {
     country: "",
+    position: "",
   },
 };
 

@@ -15,15 +15,20 @@
             <img src="@/assets/images/icons/arrow_down.png" alt="" />
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="toggle"> Hide </el-dropdown-item>
+            <el-dropdown-item command="toggle">
+              <i class="bx bx-hide"></i>
+              Hide
+            </el-dropdown-item>
             <el-dropdown-item
               command="leave"
               v-if="checkVisiable(['gpt-room'])"
               :disabled="isFinished"
             >
+              <i class="bx bx-log-out-circle"></i>
               {{ $t("GPT.HEAD.LEAVE") }}
             </el-dropdown-item>
             <el-dropdown-item command="new" v-if="checkVisiable(['gpt-room'])">
+              <i class="bx bx-message-rounded-dots"></i>
               {{ $t("GPT.HEAD.CREATE_NEW") }}
             </el-dropdown-item>
           </el-dropdown-menu>

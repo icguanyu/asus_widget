@@ -66,26 +66,6 @@ export default {
       type: String,
       default: "right",
     },
-    width: {
-      type: String,
-      default: "280px", //280
-    },
-    height: {
-      type: String,
-      default: "360px", //360
-    },
-    bottom: {
-      type: String,
-      default: "8px",
-    },
-    left: {
-      type: String,
-      default: "8px",
-    },
-    right: {
-      type: String,
-      default: "8px",
-    },
   },
   data() {
     return {
@@ -106,12 +86,17 @@ export default {
   },
   methods: {
     onMessage() {
+      const vm = this;
       window.addEventListener("message", (event) => {
         // console.log("小工具的event", event);
         const parentUrl = "https://asus-widget-test.netlify.app"; //
         if (event.origin === parentUrl) {
           console.log("來自父層的資料:", event.data);
-          alert(event.data);
+          // position: left / right
+          // country:
+
+          vm.$store.commit("global/setConfig", event.data);
+
           // 回覆消息到父層
           const replyMessage = "Hello 我是小工具!";
           event.source.postMessage(replyMessage, parentUrl);
