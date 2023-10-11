@@ -1,38 +1,51 @@
 <template>
   <div class="gpt">
-    <el-row class="head">
+    <el-row class="head" :class="{ light: routeName !== 'gpt-room' }">
       <el-col :span="6">
         <div class="logo">
           <img id="logo-white" src="@/assets/images/asus_white.png" alt="" />
-          <img id="logo-blue" src="@/assets/images/asus_blue.png" alt="" />
+          <!-- <img id="logo-blue" src="@/assets/images/asus_blue.png" alt="" /> -->
         </div>
       </el-col>
       <el-col :span="12" class="title"> </el-col>
 
       <el-col :span="6" class="tools">
-        <el-dropdown @command="handleCommand">
+        <el-dropdown
+          @command="handleCommand"
+          trigger="click"
+          v-if="checkVisiable(['gpt-room'])"
+        >
           <span class="el-dropdown-link">
-            <img src="@/assets/images/icons/arrow_down.png" alt="" />
+            <img
+              class="arrow_down"
+              src="@/assets/images/icons/menu.png"
+              alt=""
+            />
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="toggle">
-              <i class="bx bx-hide"></i>
-              Hide
-            </el-dropdown-item>
-            <el-dropdown-item
-              command="leave"
-              v-if="checkVisiable(['gpt-room'])"
-              :disabled="isFinished"
-            >
-              <i class="bx bx-log-out-circle"></i>
+            <el-dropdown-item command="leave" :disabled="isFinished">
+              <!-- <i class="bx bx-log-out-circle"></i> -->
               {{ $t("GPT.HEAD.LEAVE") }}
             </el-dropdown-item>
-            <el-dropdown-item command="new" v-if="checkVisiable(['gpt-room'])">
-              <i class="bx bx-message-rounded-dots"></i>
+            <el-dropdown-item command="new">
+              <!-- <i class="bx bx-message-rounded-dots"></i> -->
               {{ $t("GPT.HEAD.CREATE_NEW") }}
             </el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
+
+        <div class="arrow" @click="toggleDisplay">
+          <img
+            class="arrow_down"
+            src="@/assets/images/icons/arrow_down.png"
+            alt=""
+          />
+          <img
+            class="arrow_down_black"
+            src="@/assets/images/icons/arrow_down_black.png"
+            alt=""
+          />
+        </div>
       </el-col>
     </el-row>
     <div class="main">
@@ -64,9 +77,10 @@ export default {
         this.$store.dispatch("gpt/createNewRoom");
       } else if (command === "leave") {
         this.$store.dispatch("gpt/closeRoom");
-      } else if (command === "toggle") {
-        this.$store.dispatch("global/toggleDisplay");
       }
+    },
+    toggleDisplay() {
+      this.$store.dispatch("global/toggleDisplay");
     },
   },
   computed: {
@@ -102,12 +116,31 @@ export default {
       width: 62px;
       height: 13px;
     }
+
     .tools {
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .arrow {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        .arrow_down_black {
+          display: none;
+        }
+      }
       .el-dropdown-link {
+        cursor: pointer;
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
         img {
           width: 100%;
           height: 100%;
@@ -115,24 +148,21 @@ export default {
         }
       }
     }
-    .tools {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-    .logo {
-      #logo-blue {
-        display: none;
-      }
-    }
   }
   .head.light {
     background: none;
-    #logo-blue {
-      display: block;
-    }
     #logo-white {
       display: none;
+    }
+    .tools {
+      .arrow {
+        .arrow_down {
+          display: none;
+        }
+        .arrow_down_black {
+          display: block;
+        }
+      }
     }
   }
   .main {
