@@ -97,6 +97,7 @@ export default {
 <style lang="scss" scoped>
 .gpt {
   // border: 2px solid red;
+
   margin: auto;
   width: 100%;
   height: 100%;
@@ -104,6 +105,8 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 8px 24px 0px #0000001a;
+
   .head {
     width: 100%;
     background-color: #006ce1;

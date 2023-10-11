@@ -40,6 +40,7 @@
       :class="{
         'toggle-right': config.position == 'right',
         'toggle-left': config.position == 'left',
+        'toggle-hide': display,
       }"
       @click="toggleDisplay"
     >
@@ -134,13 +135,14 @@ p {
   pointer-events: none;
   width: 100%;
   height: 100%;
+  // padding: 20px;
   .body {
     z-index: 1;
     pointer-events: initial;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 16px;
     overflow: auto;
     // border: 1px solid #eee;
     font-family: Arial, Helvetica, sans-serif;
@@ -213,5 +215,8 @@ p {
 .toggle-left {
   bottom: 0;
   left: 0;
+}
+.toggle-hide{
+  display: none;
 }
 </style>
