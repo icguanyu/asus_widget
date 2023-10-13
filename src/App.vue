@@ -58,11 +58,16 @@ export default {
   data() {
     return {
       route: this.$route.path,
+      parentUrl: "https://asus-widget-test.netlify.app", // 要從 parent 來
+      event: null,
     };
   },
   watch: {
     $route(val) {
       this.route = val;
+    },
+    display(val) {
+      this.event.source.postMessage({ display: val }, this.parentUrl);
     },
   },
 
@@ -76,8 +81,8 @@ export default {
       const vm = this;
       window.addEventListener("message", (event) => {
         // console.log("小工具的event", event);
-        const parentUrl = "https://asus-widget-test.netlify.app"; //
-        if (event.origin === parentUrl) {
+
+        if (event.origin === vm.parentUrl) {
           console.log("來自父層的資料:", event.data);
           // position: left / right
           // country:
@@ -90,7 +95,7 @@ export default {
           vm.$i18n.locale = lang;
           // 回覆消息到父層
           const replyMessage = "Hello 我是小工具!";
-          event.source.postMessage(replyMessage, parentUrl);
+          event.source.postMessage(replyMessage, vm.parentUrl);
         }
       });
     },
@@ -216,7 +221,7 @@ p {
   bottom: 0;
   left: 0;
 }
-.toggle-hide{
+.toggle-hide {
   display: none;
 }
 </style>
