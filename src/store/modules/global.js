@@ -1,5 +1,5 @@
 const state = {
-  display: true,
+  display: false,
   config: {
     countryId: "TW",
     platform: "",
