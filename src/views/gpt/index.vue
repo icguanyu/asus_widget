@@ -105,8 +105,6 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 8px 24px 0px #0000001a;
-
   .head {
     width: 100%;
     background-color: #006ce1;

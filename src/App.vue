@@ -4,10 +4,11 @@
     :class="{
       'position-right': config.position == 'right',
       'position-left': config.position == 'left',
+      'position-fixed': !display,
     }"
   >
     <div
-      class="body"
+      class="container"
       :class="{
         'element-hide': !display,
       }"
@@ -136,24 +137,24 @@ p {
 }
 .app {
   position: relative;
-  position: fixed;
+  left: 0;
+  top: 0;
   pointer-events: none;
   width: 100%;
   height: 100%;
-  padding: 15px;
-  .body {
+  // padding: 15px;
+  .container {
     z-index: 1;
     pointer-events: initial;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-radius: 16px;
     overflow: auto;
     // border: 1px solid #eee;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 2px 3px 8px #ccc;
-    transition: all 0.5s;
-    background: #fff;
+    // box-shadow: 2px 3px 8px #ccc;
+    transition: all 0.4s;
+    // background: #fff;
     .params {
       background-color: #eee;
       padding: 10px;
@@ -181,13 +182,16 @@ p {
   transform: scale(0);
   opacity: 0;
 }
+.position-fixed {
+  position: fixed;
+}
 .position-right {
-  .body {
+  .container {
     transform-origin: bottom right;
   }
 }
 .position-left {
-  .body {
+  .container {
     transform-origin: bottom left;
   }
 }
