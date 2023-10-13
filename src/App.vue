@@ -81,7 +81,7 @@ export default {
       const vm = this;
       window.addEventListener("message", (event) => {
         // console.log("小工具的event", event);
-
+        vm.event = event;
         if (event.origin === vm.parentUrl) {
           console.log("來自父層的資料:", event.data);
           // position: left / right
