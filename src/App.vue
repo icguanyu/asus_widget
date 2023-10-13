@@ -142,11 +142,11 @@ p {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    // border-radius: 16px;
+    border-radius: 16px;
     overflow: auto;
     // border: 1px solid #eee;
     font-family: Arial, Helvetica, sans-serif;
-    // box-shadow: 2px 3px 8px #ccc;
+    box-shadow: 2px 3px 8px #ccc;
     transition: all 0.5s;
     background: #fff;
     .params {
@@ -216,7 +216,7 @@ p {
   bottom: 0;
   left: 0;
 }
-.toggle-hide {
+.toggle-hide{
   display: none;
 }
 </style>
