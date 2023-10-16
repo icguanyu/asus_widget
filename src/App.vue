@@ -201,7 +201,7 @@ p {
   position: absolute;
   pointer-events: initial;
   background-color: rgb(0, 86, 247);
-  box-shadow: 2px 3px 8px #ddd;
+  // box-shadow: 2px 3px 8px #ddd;
   bottom: 0;
   right: 0;
   width: 45px;
