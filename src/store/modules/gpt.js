@@ -332,7 +332,7 @@ const actions = {
     dispatch("closeRoom");
     const url = process.env.VUE_APP_URL;
     window.open(
-      `${url}/?country=${state.botRoom.countryId}&skipPolicy=1&chatBotRoomId=${state.botRoom.chatBotRoomId}`,
+      `${url}?country=${state.botRoom.countryId}&skipPolicy=1&chatBotRoomId=${state.botRoom.chatBotRoomId}`,
       "_blank"
     );
   },
