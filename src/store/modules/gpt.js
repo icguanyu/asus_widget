@@ -330,8 +330,10 @@ const actions = {
   // },
   transferToAgent({ state, dispatch }) {
     dispatch("closeRoom");
-    router.push(
-      `/?country=${state.botRoom.countryId}&skipPolicy=1&chatBotRoomId=${state.botRoom.chatBotRoomId}`
+    const url = process.env.VUE_APP_URL;
+    window.open(
+      `${url}?country=${state.botRoom.countryId}&skipPolicy=1&chatBotRoomId=${state.botRoom.chatBotRoomId}`,
+      "_blank"
     );
   },
 };

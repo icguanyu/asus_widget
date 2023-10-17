@@ -18,7 +18,7 @@
           <span class="el-dropdown-link">
             <img
               class="arrow_down"
-              src="@/assets/images/icons/menu.png"
+              src="@/assets/images/icons/menu.svg"
               alt=""
             />
           </span>
@@ -37,12 +37,12 @@
         <div class="arrow" @click="toggleDisplay">
           <img
             class="arrow_down"
-            src="@/assets/images/icons/arrow_down.png"
+            src="@/assets/images/icons/arrow_down.svg"
             alt=""
           />
           <img
             class="arrow_down_black"
-            src="@/assets/images/icons/arrow_down_black.png"
+            src="@/assets/images/icons/arrow_down_black.svg"
             alt=""
           />
         </div>
