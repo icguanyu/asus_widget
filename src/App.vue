@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       route: this.$route.path,
-      parentUrl: "https://asus-widget-test.netlify.app", // 要從 parent 來
+      parentUrl: "", // 要從 parent 來
       event: null,
     };
   },
@@ -81,23 +81,23 @@ export default {
     onMessage() {
       const vm = this;
       window.addEventListener("message", (event) => {
-        console.log("event.origin", event.origin);
+        const origin = event.origin;
+        vm.parentUrl = origin
+        console.log("origin:", origin);
         vm.event = event;
-        if (event.origin === vm.parentUrl) {
-          console.log("來自父層的資料:", event.data);
-          // position: left / right
-          // country:
-          const { countryId } = event.data;
-          vm.$store.commit("global/setConfig", event.data);
-          vm.$store.dispatch("gpt/initSettingMetas", countryId);
+        console.log("來自父層的資料:", event.data);
+        // position: left / right
+        // country:
+        const { countryId } = event.data;
+        vm.$store.commit("global/setConfig", event.data);
+        vm.$store.dispatch("gpt/initSettingMetas", countryId);
 
-          const lang = languages.includes(countryId) ? countryId : "TW";
+        const lang = languages.includes(countryId) ? countryId : "TW";
 
-          vm.$i18n.locale = lang;
-          // 回覆消息到父層
-          const replyMessage = "Hello 我是小工具!";
-          event.source.postMessage(replyMessage, vm.parentUrl);
-        }
+        vm.$i18n.locale = lang;
+        // 回覆消息到父層
+        const replyMessage = "Hello 我是小工具!";
+        event.source.postMessage(replyMessage, origin);
       });
     },
     test() {
