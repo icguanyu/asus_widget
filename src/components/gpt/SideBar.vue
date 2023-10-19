@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="head">
-      <img src="@/assets/images/asus_white.png" alt="" />
+      <img src="@/assets/images/asus_white.svg" alt="" />
     </div>
     <div class="body" v-if="setting">
       <div class="ads">
