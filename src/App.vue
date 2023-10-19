@@ -68,13 +68,18 @@ export default {
       this.route = val;
     },
     display(val) {
-      this.event.source.postMessage({ display: val }, this.parentUrl);
+      if (this.event) {
+        this.event.source.postMessage({ display: val }, this.parentUrl);
+      }
     },
   },
 
   mounted() {
-    this.onMessage();
-    // this.$router.push("/gpt");
+    if (process.env.NODE_ENV === "production") {
+      this.onMessage();
+    } else {
+      console.log("dev mode.");
+    }
     this.route = this.$route;
   },
   methods: {
@@ -82,27 +87,22 @@ export default {
       const vm = this;
       window.addEventListener("message", (event) => {
         const origin = event.origin;
-        vm.parentUrl = origin
         console.log("origin:", origin);
+        vm.parentUrl = origin;
         vm.event = event;
         console.log("來自父層的資料:", event.data);
         // position: left / right
         // country:
-        const { countryId } = event.data;
+        const countryId = event.data.countryId.toUpperCase(); //強制大寫
         vm.$store.commit("global/setConfig", event.data);
         vm.$store.dispatch("gpt/initSettingMetas", countryId);
 
         const lang = languages.includes(countryId) ? countryId : "TW";
-
         vm.$i18n.locale = lang;
         // 回覆消息到父層
-        const replyMessage = "Hello 我是小工具!";
+        const replyMessage = "ASUS Chat Bot 載入成功";
         event.source.postMessage(replyMessage, origin);
       });
-    },
-    test() {
-      console.log("父呼叫子");
-      this.$store.dispatch("global/toggleDisplay");
     },
     toggleDisplay() {
       this.$store.dispatch("global/toggleDisplay");

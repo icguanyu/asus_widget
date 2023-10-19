@@ -126,14 +126,21 @@ export default {
       // 取回原本的 botRoom 資料 以及 basic/tree...
       this.initBotRoom();
     } else {
-      this.$store.dispatch("gpt/createNewRoom");
+      // 失去 session 離開 room
+      const chatBotRoomId = this.$route.params.id;
+      const sessionId = localStorage.getItem("AC_GPT_SESSIONID"); // 存在localstorage 的 sessionId
+      if (chatBotRoomId && sessionId) {
+        this.$store.dispatch("gpt/leaveRoom", { chatBotRoomId, sessionId });
+      }
+      this.$router.push("/");
     }
   },
   methods: {
     async initBotRoom() {
       try {
         const res = await ChatBotMessage.GetMessageList(this.params);
-        // console.log("initBotRoom", res);
+        console.log("initBotRoom", res);
+        console.log("this.$store", this.$store);
         const countryId = res.data.countryId;
         this.$store.commit("gpt/setBotRoom", res.data);
         this.$store.dispatch("gpt/initSettingMetas", countryId);
