@@ -53,6 +53,9 @@ const actions = {
       const res = await ChatBotRoom.Create(params);
       // console.log("create room", res);
       // 存下sessionId , 前往 room
+      // localStorage 用來離開聊天室
+      // sessionStorage 用來偵測是否關閉視窗回來
+      localStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       sessionStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       commit("setBotRoom", res.data);
       router.push(`/${res.data.chatBotRoomId}`);
@@ -70,9 +73,13 @@ const actions = {
     // 建立新 room
     dispatch("createRoom");
   },
+  async leaveRoom({ commit }, payload) {
+    await ChatBotRoom.Leave(payload);
+    localStorage.removeItem("AC_GPT_SESSIONID");
+    commit("finishRoom", payload.chatBotRoomId);
+  },
   // 取得文案與決策樹資料
   async initSettingMetas({ state, dispatch, commit }, payload) {
-    commit("initSettingMetas", payload);
     try {
       const basic = await GetChatGPTBasicSetting.get(payload);
       const beforeChat = await SettingMetas.GetBeforeChat(payload);

@@ -38,16 +38,18 @@ export default {
     };
   },
   async mounted() {
-    this.initSettingMetas();
-    const countryId = this.config.countryId;
+    let countryId =
+      process.env.NODE_ENV === "development" ? "US" : this.config.countryId;
+    // 開發模式預設 US
+
     const lang = languages.includes(countryId) ? countryId : "TW";
+    this.initSettingMetas(countryId);
     this.$i18n.locale = lang;
   },
   methods: {
-    initSettingMetas() {
-      // console.log("初始化 SettingMetas");
-      const config = this.$store.state.global.config;
-      this.$store.dispatch("gpt/initSettingMetas", config.countryId);
+    initSettingMetas(countryId = "TW") {
+      // 預設TW
+      this.$store.dispatch("gpt/initSettingMetas", countryId);
     },
     createBotRoom() {
       this.$store.dispatch("gpt/createRoom");

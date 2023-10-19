@@ -17,7 +17,7 @@
       ></div>
       <!-- {{ inputTime }}s -->
       <div class="submit" :class="{ disabled: loading }" @click="beforeSubmit">
-        <img src="@/assets/images/icons/submit.png" alt="" />
+        <img src="@/assets/images/icons/submit.svg" alt="" />
       </div>
     </div>
 

@@ -3,7 +3,7 @@
     <el-row class="head" :class="{ light: routeName !== 'gpt-room' }">
       <el-col :span="6">
         <div class="logo">
-          <img id="logo-white" src="@/assets/images/asus_white.png" alt="" />
+          <img id="logo-white" src="@/assets/images/asus_white.svg" alt="" />
           <!-- <img id="logo-blue" src="@/assets/images/asus_blue.png" alt="" /> -->
         </div>
       </el-col>
