@@ -86,9 +86,8 @@ export default {
     onMessage() {
       const vm = this;
       window.addEventListener("message", (event) => {
-        console.log("(外掛)來自父層的資料:", event.data);
+        console.log("(子)來自父的資料:", event.data);
         const origin = event.data.parentUrl;
-        console.log("origin:", origin);
         vm.parentUrl = origin;
         vm.event = event;
 
