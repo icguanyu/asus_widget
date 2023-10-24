@@ -86,11 +86,12 @@ export default {
     onMessage() {
       const vm = this;
       window.addEventListener("message", (event) => {
-        const origin = event.origin;
+        console.log("(外掛)來自父層的資料:", event.data);
+        const origin = event.data.parentUrl;
         console.log("origin:", origin);
         vm.parentUrl = origin;
         vm.event = event;
-        console.log("來自父層的資料:", event.data);
+
         // position: left / right
         // country:
         const countryId = event.data.countryId.toUpperCase(); //強制大寫
