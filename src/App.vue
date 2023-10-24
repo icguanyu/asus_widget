@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       route: this.$route.path,
-      parentUrl: "https://asus-widget-test.netlify.app", // 要從 parent 來
+      parentUrl: "", // 要從 parent 來
       event: null,
     };
   },
@@ -68,41 +68,41 @@ export default {
       this.route = val;
     },
     display(val) {
-      this.event.source.postMessage({ display: val }, this.parentUrl);
+      if (this.event) {
+        this.event.source.postMessage({ display: val }, this.parentUrl);
+      }
     },
   },
 
   mounted() {
-    this.onMessage();
-    // this.$router.push("/gpt");
+    if (process.env.NODE_ENV === "production") {
+      this.onMessage();
+    } else {
+      console.log("dev mode.");
+    }
     this.route = this.$route;
   },
   methods: {
     onMessage() {
       const vm = this;
       window.addEventListener("message", (event) => {
-        console.log("event.origin", event.origin);
+        const origin = event.origin;
+        console.log("origin:", origin);
+        vm.parentUrl = origin;
         vm.event = event;
-        if (event.origin === vm.parentUrl) {
-          console.log("來自父層的資料:", event.data);
-          // position: left / right
-          // country:
-          const { countryId } = event.data;
-          vm.$store.commit("global/setConfig", event.data);
-          vm.$store.dispatch("gpt/initSettingMetas", countryId);
+        console.log("來自父層的資料:", event.data);
+        // position: left / right
+        // country:
+        const countryId = event.data.countryId.toUpperCase(); //強制大寫
+        vm.$store.commit("global/setConfig", event.data);
+        vm.$store.dispatch("gpt/initSettingMetas", countryId);
 
-          const lang = languages.includes(countryId) ? countryId : "TW";
-
-          vm.$i18n.locale = lang;
-          // 回覆消息到父層
-          const replyMessage = "Hello 我是小工具!";
-          event.source.postMessage(replyMessage, vm.parentUrl);
-        }
+        const lang = languages.includes(countryId) ? countryId : "TW";
+        vm.$i18n.locale = lang;
+        // 回覆消息到父層
+        const replyMessage = "ASUS Chat Bot 載入成功";
+        event.source.postMessage(replyMessage, origin);
       });
-    },
-    test() {
-      console.log("父呼叫子");
-      this.$store.dispatch("global/toggleDisplay");
     },
     toggleDisplay() {
       this.$store.dispatch("global/toggleDisplay");
