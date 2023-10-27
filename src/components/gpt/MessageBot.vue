@@ -1,26 +1,34 @@
 <template>
   <div class="bot">
     <div class="content">
-      <div class="kb-list" v-if="kbList.length">
-        <div
-          class="kb"
-          :class="{ first: idx === 0 }"
-          v-for="(i, idx) in kbList"
-          :key="idx"
-        >
+      <div class="kb-list">
+        <div class="kb fisrt" v-if="kbList.first">
           <div class="kb-title">
-            {{ i.Title }}
+            {{ kbList.first.Title }}
           </div>
-          <a class="kb-link" :href="i.Url" target="_blank">{{ i.Url }}</a>
-          <a :href="i.Url" target="_blank" class="kb-summary">
-            <div class="summary">{{ i.Summary }}</div>
+          <a class="kb-link" :href="kbList.first.Url" target="_blank">{{
+            kbList.first.Url
+          }}</a>
+          <a :href="kbList.first.Url" target="_blank" class="kb-summary">
+            <div class="summary">{{ kbList.first.Summary }}</div>
             <!-- <p>點選此處開啟連結</p> -->
           </a>
         </div>
+        <div class="kb others">
+          <p>{{ $t("GPT.LAYOUT.READMORE") }}</p>
+          <a
+            class="kb-link"
+            :href="kb.Url"
+            target="_blank"
+            v-for="(kb, index) in kbList.others"
+            :key="index"
+            >{{ kb.Title }}</a
+          >
+        </div>
         <div class="options">
-          <div class="more" @click="showAll = !showAll">
+          <!-- <div class="more" @click="showAll = !showAll">
             {{ showAll ? $t("GPT.LAYOUT.COLLAPSE") : $t("GPT.LAYOUT.READMORE") }}
-          </div>
+          </div> -->
           <div>
             <i class="el-icon-loading" v-if="loading"></i>
             <div class="isLike" v-else>
@@ -81,15 +89,13 @@ export default {
     },
     kbList() {
       const result = JSON.parse(this.message.content).Result;
-      if (result) {
-        if (result.KbList.length) {
-          return this.showAll ? result.KbList : [result.KbList[0]];
-        } else {
-          return [];
-        }
-      } else {
-        return [];
-      }
+
+      const first = result ? result.KbList.shift() : null; // 第一則
+      const others = result ? result.KbList : [];
+      return {
+        first,
+        others,
+      };
     },
   },
 };

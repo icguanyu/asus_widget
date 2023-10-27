@@ -65,6 +65,8 @@ import MessageToAgent from "@/components/gpt/MessageToAgent";
 import MessageLink from "@/components/gpt/MessageLink";
 import MessageOptionSelected from "@/components/gpt/MessageOptionSelected";
 import MessageBot from "@/components/gpt/MessageBot";
+
+import { languages } from "@/plugins/languages";
 export default {
   name: "gpt-room",
   components: {
@@ -139,9 +141,11 @@ export default {
     async initBotRoom() {
       try {
         const res = await ChatBotMessage.GetMessageList(this.params);
-        console.log("initBotRoom", res);
-        console.log("this.$store", this.$store);
+        // console.log("initBotRoom", res);
+        // console.log("this.$store", this.$store);
         const countryId = res.data.countryId;
+        const lang = languages.includes(countryId) ? countryId : "TW";
+        this.$i18n.locale = lang;
         this.$store.commit("gpt/setBotRoom", res.data);
         this.$store.dispatch("gpt/initSettingMetas", countryId);
       } catch (error) {
@@ -214,13 +218,14 @@ export default {
         background-size: cover;
       }
       .message {
+        max-width: 500px;
         font-size: 13px;
-        line-height: 17.75px;
+        line-height: 18px;
         flex: 1;
         overflow: hidden;
         // overflow-x: auto;
-        display: flex;
-        align-items: flex-end;
+        // display: flex;
+        // align-items: flex-end;
         color: #181818;
         .infos {
           font-size: 12px;

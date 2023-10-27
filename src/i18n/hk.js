@@ -192,5 +192,31 @@ const lan = {
       P1: "謝謝您，本次視訊對話已結束，您可以關閉此視窗。",
     },
   },
+  GPT: {
+    LAYOUT: {
+      AGREE: "同意",
+      START: "開始",
+      CANCEL: "取消",
+      WAIT: "請稍後",
+      INPUT: "輸入文字",
+      TRANSFER_TOAGENT: "轉接專員",
+      READMORE: "您也可以參考以下關聯FAQ，謝謝。",
+      COLLAPSE: "收合",
+    },
+    HEAD: {
+      LEAVE: "結束對話",
+      CREATE_NEW: "建立新的交談",
+    },
+    ENTRANCE: {
+      POLICY: "隱私權條款",
+      AGREE: "按下同意後開始對話",
+    },
+    MESSAGE: {
+      WAIT: "請稍候，正在幫您尋找解決辦法中。",
+    },
+    END: "對話已結束",
+    END_MSG: "很開心為您服務，對話已結束。",
+    BACKHOME: "返回首頁",
+  },
 };
 export default lan;

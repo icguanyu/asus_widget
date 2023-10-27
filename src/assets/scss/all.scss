@@ -1,4 +1,9 @@
+@font-face {
+  font-family: "Microsoft Sans Serif";
+  src: url("/public/static/micross.ttf");
+}
 @import "~boxicons/css/boxicons.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap");
 @import "custom-element";
 html {
   height: -webkit-fill-available;
@@ -10,8 +15,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   width: 100%;
-  font-family: Arial, "Noto Sans TC", "PingFang SC", sans-serif, "微軟正黑體",
-    monospace, Helvetica;
+  font-family: "Microsoft Sans Serif", Arial, sans-serif, "微軟正黑體";
   margin: 0;
   overflow: auto;
   // padding-top: constant(safe-area-inset-top); /* iOS 11.0-iOS 11.1 */

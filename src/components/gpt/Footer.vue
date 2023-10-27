@@ -155,7 +155,7 @@ export default {
       border: 1px solid #818181;
       padding: 10px;
       background: #fff;
-      margin-right: 10px;
+      margin-right: 12px;
       border-radius: 8px;
       max-height: 150px;
       overflow: auto;

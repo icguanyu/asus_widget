@@ -3,7 +3,7 @@
     <div class="privacy" v-loading="loading">
       <div class="welcome">
         <img src="@/assets/images/avatar-genio.png" alt="" />
-        <h1>Hello Genio</h1>
+        <h1>Welcome</h1>
       </div>
       <div class="privacy-title">{{ $t("GPT.ENTRANCE.POLICY") }}</div>
 
@@ -39,11 +39,12 @@ export default {
   },
   async mounted() {
     let countryId =
-      process.env.NODE_ENV === "development" ? "US" : this.config.countryId;
+      process.env.NODE_ENV === "development" ? "TW" : this.config.countryId;
     // 開發模式預設 US
 
     const lang = languages.includes(countryId) ? countryId : "TW";
     this.initSettingMetas(countryId);
+    console.log("lang", lang);
     this.$i18n.locale = lang;
   },
   methods: {
@@ -98,10 +99,11 @@ export default {
       }
       h1 {
         margin: 0;
-        font-weight: bold;
+        font-family: Noto Sans TC;
+        font-weight: 700;
         color: $primary;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 32.76px;
       }
     }
     .privacy-title {

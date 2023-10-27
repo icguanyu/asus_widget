@@ -79,7 +79,7 @@ const actions = {
     commit("finishRoom", payload.chatBotRoomId);
   },
   // 取得文案與決策樹資料
-  async initSettingMetas({ state, dispatch, commit }, payload) {
+  async initSettingMetas({ state, dispatch, commit }, payload = "TW") {
     try {
       const basic = await GetChatGPTBasicSetting.get(payload);
       const beforeChat = await SettingMetas.GetBeforeChat(payload);

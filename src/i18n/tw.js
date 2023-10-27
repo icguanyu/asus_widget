@@ -199,7 +199,7 @@ const lan = {
       WAIT: "請稍後",
       INPUT: "輸入文字",
       TRANSFER_TOAGENT: "轉接專員",
-      READMORE: "查看相關內容",
+      READMORE: "您也可以參考以下關聯FAQ，謝謝。",
       COLLAPSE: "收合",
     },
     HEAD: {

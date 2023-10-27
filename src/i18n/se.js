@@ -202,5 +202,31 @@ const lan = {
       P1: "Thank you, this video chat is over, you can close this window.",
     },
   },
+  GPT: {
+    LAYOUT: {
+      AGREE: "Agree",
+      START: "Start",
+      CANCEL: "Cancel",
+      WAIT: "Please wait",
+      INPUT: "Enter your question here",
+      TRANSFER_TOAGENT: "Transfer to agent.",
+      READMORE: "You can also refer to the following related FAQ, thank you.",
+      COLLAPSE: "Hide",
+    },
+    HEAD: {
+      LEAVE: "Leave",
+      CREATE_NEW: "Start Over",
+    },
+    ENTRANCE: {
+      POLICY: "Privacy Policy",
+      AGREE: "Click Agree to start the conversation",
+    },
+    MESSAGE: {
+      WAIT: "Please wait, we are looking for a solution for you.",
+    },
+    END: "Conversation Ended",
+    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support.",
+    BACKHOME: "Restart Conversation",
+  },
 };
 export default lan;
