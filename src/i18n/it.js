@@ -199,8 +199,35 @@ const lan = {
     },
     END: {
       H1: "La chiamata video è terminata",
-      P1: "Grazie, questa video chat video si è conclusa, puoi chiudere questa finestra.",
+      P1:
+        "Grazie, questa video chat video si è conclusa, puoi chiudere questa finestra.",
     },
+  },
+  GPT: {
+    LAYOUT: {
+      AGREE: "Agree",
+      START: "Start",
+      CANCEL: "Cancel",
+      WAIT: "Please wait",
+      INPUT: "Eenter text",
+      TRANSFER_TOAGENT: "Transfer to agent.",
+      READMORE: "You can also refer to the following related FAQ, thank you.",
+      COLLAPSE: "Hide",
+    },
+    HEAD: {
+      LEAVE: "Leave",
+      CREATE_NEW: "Create New Room",
+    },
+    ENTRANCE: {
+      POLICY: "Privacy Policy",
+      AGREE: "Click Agree to start the conversation",
+    },
+    MESSAGE: {
+      WAIT: "Please wait, we are looking for a solution for you.",
+    },
+    END: "Conversation ended",
+    END_MSG: "We're happy to serve you. The conversation is over.",
+    BACKHOME: "Return to homepage",
   },
 };
 export default lan;

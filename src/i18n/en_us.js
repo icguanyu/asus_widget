@@ -212,7 +212,7 @@ const lan = {
       WAIT: "Please wait",
       INPUT: "Eenter text",
       TRANSFER_TOAGENT: "Transfer to agent.",
-      READMORE: "Read More",
+      READMORE: "You can also refer to the following related FAQ, thank you.",
       COLLAPSE: "Hide",
     },
     HEAD: {

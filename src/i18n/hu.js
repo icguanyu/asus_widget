@@ -124,8 +124,7 @@ const lan = {
   CHATROOM: {
     TYPING: "Munkatársunk gépel...",
     HEAD: {
-      CLOSE_AMD_SURVEY:
-        "Csevegés befejezése",
+      CLOSE_AMD_SURVEY: "Csevegés befejezése",
       TERMINATE: "Csevegés befejezése",
     },
     FOOTER: { CHAT_FINISH: "A csevegés befejeződött" },
@@ -205,6 +204,32 @@ const lan = {
       H1: "Video Call has ended",
       P1: "Thank you, this video chat is over, you can close this window.",
     },
+  },
+  GPT: {
+    LAYOUT: {
+      AGREE: "Agree",
+      START: "Start",
+      CANCEL: "Cancel",
+      WAIT: "Please wait",
+      INPUT: "Eenter text",
+      TRANSFER_TOAGENT: "Transfer to agent.",
+      READMORE: "You can also refer to the following related FAQ, thank you.",
+      COLLAPSE: "Hide",
+    },
+    HEAD: {
+      LEAVE: "Leave",
+      CREATE_NEW: "Create New Room",
+    },
+    ENTRANCE: {
+      POLICY: "Privacy Policy",
+      AGREE: "Click Agree to start the conversation",
+    },
+    MESSAGE: {
+      WAIT: "Please wait, we are looking for a solution for you.",
+    },
+    END: "Conversation ended",
+    END_MSG: "We're happy to serve you. The conversation is over.",
+    BACKHOME: "Return to homepage",
   },
 };
 export default lan;

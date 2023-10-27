@@ -93,7 +93,7 @@ export default {
 
         // position: left / right
         // country:
-        const countryId = event.data.countryId.toUpperCase(); //強制大寫
+        const countryId = event.data.countryId?.toUpperCase(); //強制大寫
         vm.$store.commit("global/setConfig", event.data);
         vm.$store.dispatch("gpt/initSettingMetas", countryId);
 
