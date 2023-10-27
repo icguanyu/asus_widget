@@ -44,7 +44,6 @@ export default {
 
     const lang = languages.includes(countryId) ? countryId : "TW";
     this.initSettingMetas(countryId);
-    console.log("lang", lang);
     this.$i18n.locale = lang;
   },
   methods: {
