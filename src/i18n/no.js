@@ -207,14 +207,14 @@ const lan = {
       START: "Start",
       CANCEL: "Cancel",
       WAIT: "Please wait",
-      INPUT: "Eenter text",
+      INPUT: "Enter your question here",
       TRANSFER_TOAGENT: "Transfer to agent.",
       READMORE: "You can also refer to the following related FAQ, thank you.",
       COLLAPSE: "Hide",
     },
     HEAD: {
       LEAVE: "Leave",
-      CREATE_NEW: "Create New Room",
+      CREATE_NEW: "Start Over",
     },
     ENTRANCE: {
       POLICY: "Privacy Policy",
@@ -223,9 +223,9 @@ const lan = {
     MESSAGE: {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
-    END: "Conversation ended",
-    END_MSG: "We're happy to serve you. The conversation is over.",
-    BACKHOME: "Return to homepage",
+    END: "Conversation Ended",
+    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support.",
+    BACKHOME: "Restart Conversation",
   },
 };
 export default lan;

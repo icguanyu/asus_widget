@@ -218,13 +218,14 @@ export default {
         background-size: cover;
       }
       .message {
+        max-width: 500px;
         font-size: 13px;
-        line-height: 17.75px;
+        line-height: 18px;
         flex: 1;
         overflow: hidden;
         // overflow-x: auto;
-        display: flex;
-        align-items: flex-end;
+        // display: flex;
+        // align-items: flex-end;
         color: #181818;
         .infos {
           font-size: 12px;
