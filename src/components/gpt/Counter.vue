@@ -1,6 +1,6 @@
 <template>
   <div class="gpt-counter">
-    <!-- <div>
+    <div>
       閒置/提示/斷線：{{ idleTime }}/<span v-if="setting"
         >{{ setting.ChatGPT_IdleNoticeTime }}/{{
           parseInt(this.setting.ChatGPT_IdleNoticeTime) +
@@ -13,7 +13,7 @@
       總閒置：{{ idleTime }}+{{ parseInt((backTime - leaveTime) / 1000) }}={{
         totalIdleTime
       }}s
-    </p> -->
+    </p>
   </div>
 </template>
 
