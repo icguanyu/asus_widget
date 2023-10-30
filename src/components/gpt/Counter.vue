@@ -1,6 +1,6 @@
 <template>
   <div class="gpt-counter">
-    <!-- <div>
+    <div>
       閒置/提示/斷線：{{ idleTime }}/<span v-if="setting"
         >{{ setting.ChatGPT_IdleNoticeTime }}/{{
           parseInt(this.setting.ChatGPT_IdleNoticeTime) +
@@ -13,7 +13,7 @@
       總閒置：{{ idleTime }}+{{ parseInt((backTime - leaveTime) / 1000) }}={{
         totalIdleTime
       }}s
-    </p> -->
+    </p>
   </div>
 </template>
 
@@ -66,7 +66,7 @@ export default {
             // 客戶要求先不顯示閒置提示訊息。
             // this.sendMessage("ChatGPT_IdleNotice");
           }
-          if (this.totalIdleTime > offlineNoiceTime) {
+          if (this.totalIdleTime > offlineNoiceTime && !this.isFinished) {
             // console.log("結束聊天!");
             this.sendMessage("ChatGPT_IdleDisconnect");
             this.stopIdleCountDown();

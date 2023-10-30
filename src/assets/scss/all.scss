@@ -44,6 +44,9 @@ h6 {
 .ql-editor {
   height: initial;
   padding: 0 !important;
+  p {
+    margin: 0;
+  }
 }
 
 // @media (max-width: 360px) {
