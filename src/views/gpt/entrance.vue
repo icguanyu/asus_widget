@@ -7,9 +7,11 @@
       </div>
       <div class="privacy-title">{{ $t("GPT.ENTRANCE.POLICY") }}</div>
 
-      <div class="privacy-content" v-if="setting">
-        {{ setting.ChatGPT_PrivacyNotice || "Not set." }}
-      </div>
+      <div
+        class="privacy-content ql-editor"
+        v-if="setting"
+        v-html="setting.ChatGPT_PrivacyNotice"
+      ></div>
 
       <p>{{ $t("GPT.ENTRANCE.AGREE") }}</p>
       <el-checkbox v-model="agree">{{ $t("GPT.LAYOUT.AGREE") }}</el-checkbox>
