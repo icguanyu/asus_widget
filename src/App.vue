@@ -86,13 +86,13 @@ export default {
     onMessage() {
       const vm = this;
       window.addEventListener("message", (event) => {
-        console.log("(子)來自父的資料:", event.data);
         const origin = event.data.parentUrl;
-        vm.parentUrl = origin;
+        if (!origin) {
+          return;
+        }
         vm.event = event;
+        vm.parentUrl = origin;
 
-        // position: left / right
-        // country:
         const countryId = event.data.countryId.toUpperCase(); //強制大寫
         vm.$store.commit("global/setConfig", event.data);
         vm.$store.dispatch("gpt/initSettingMetas", countryId);
