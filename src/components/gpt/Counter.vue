@@ -167,14 +167,13 @@ export default {
 
 <style lang="scss" scoped>
 .gpt-counter {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   font-size: 14px;
   line-height: 16px;
-
   padding: 5px;
-
   opacity: 0.5;
   z-index: 10;
   p {
