@@ -126,6 +126,7 @@
   align-items: flex-end;
   .content {
     max-width: 600px;
+    overflow-x: auto;
     padding: 12px;
     background-color: #f5f5f5;
     margin-top: 0;

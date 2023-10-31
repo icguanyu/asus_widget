@@ -215,7 +215,7 @@ const lan = {
     },
     END: "對話已結束",
     END_MSG: "很開心為您服務，對話已結束。",
-    BACKHOME: "返回首頁",
+    BACKHOME: "重新開始服務",
   },
 };
 export default lan;
