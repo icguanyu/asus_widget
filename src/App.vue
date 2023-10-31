@@ -100,7 +100,7 @@ export default {
         const lang = languages.includes(countryId) ? countryId : "TW";
         vm.$i18n.locale = lang;
         // 回覆消息到父層
-        const replyMessage = "ASUS Chat Bot 載入成功";
+        const replyMessage = "ASUS Chat Bot has been loaded.";
         event.source.postMessage(replyMessage, origin);
       });
     },
