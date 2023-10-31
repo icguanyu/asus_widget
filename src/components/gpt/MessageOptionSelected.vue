@@ -20,7 +20,12 @@
       <div class="item-infos">
         <div class="title">{{ content.title }}</div>
         <div class="sub-title">{{ content.subTitle }}</div>
-        <a class="buttonText" :href="content.linkUrl" target="_blank">
+        <a
+          class="buttonText"
+          :href="content.linkUrl"
+          target="_blank"
+          v-if="content.linkUrl && content.buttonText"
+        >
           <i class="bx bx-link-external"></i>
           <span>{{ content.buttonText }}</span>
         </a>

@@ -194,7 +194,7 @@ export default {
 }
 .rows {
   flex: 1;
-  padding: 10px;
+  padding: 10px 15px 10px 10px;
   .row {
     overflow: hidden;
     margin-bottom: 16px;
