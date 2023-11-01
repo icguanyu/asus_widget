@@ -216,7 +216,17 @@ const actions = {
         dispatch("createBotReplyMessage", "ChatGPT_BotReply"); // 後台設定的BOT回覆結果
       } else if (ReturnChatType2 || ReturnChatType) {
         // 偵測到第二層意圖
-        dispatch("handleReturnMessage", ReturnChatType2 || ReturnChatType);
+        const result2 = await dispatch("handleReturnMessage", ReturnChatType2);
+        if (result2 === false) {
+          // 往回尋求第一層
+          const result1 = await dispatch("handleReturnMessage", ReturnChatType);
+          if (result1 === false) {
+            dispatch(
+              "createToAgentMessage",
+              "ChatGPT_ToAgent_TerminationService"
+            );
+          }
+        }
       } else {
         dispatch("createToAgentMessage", "ChatGPT_ToAgent_TerminationService"); // 後台設定的轉接真人回覆
       }
@@ -245,10 +255,17 @@ const actions = {
     };
     find(state.tree[0].items);
     if (target) {
-      const { isToAgent, layout, desc } = target.editData;
+      const { isToAgent, layout, desc, toAgentDesc } = target.editData;
       if (isToAgent) {
+        // console.log('這個意圖有設定為 isToAgent');
         // 這個意圖有設定為 isToAgent
-        dispatch("createToAgentMessage", "ChatGPT_ToAgent_TerminationService");
+        //dispatch("createToAgentMessage", "ChatGPT_ToAgent_TerminationService");
+        const data = {
+          type: "System",
+          chatUserRole: "System",
+          content: toAgentDesc,
+        };
+        dispatch("createMessage", data);
       } else if (target.items.length) {
         // 意圖有子層
         const data = {
@@ -268,8 +285,9 @@ const actions = {
       }
     } else {
       // 意圖與tree對不上時
-      console.log(`找不到 ${ReturnMessage} 相對應的 Decision tree 資料`);
-      dispatch("createToAgentMessage", "ChatGPT_ToAgent_TerminationService");
+      console.log(`Decision tree 找不到 ${ReturnMessage} 的資料`);
+      // dispatch("createToAgentMessage", "ChatGPT_ToAgent_TerminationService");
+      return false;
     }
   },
   handleChatLike({ state, dispatch, commit }, { chatBotMessageId, likeFlag }) {

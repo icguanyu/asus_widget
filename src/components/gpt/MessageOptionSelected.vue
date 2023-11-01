@@ -19,7 +19,7 @@
       ></div>
       <div class="item-infos">
         <div class="title">{{ content.title }}</div>
-        <div class="sub-title">{{ content.subTitle }}</div>
+        <div class="sub-title gpt-ql-editor" v-html="content.subTitle"></div>
         <a
           class="buttonText"
           :href="content.linkUrl"

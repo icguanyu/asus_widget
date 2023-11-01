@@ -11,9 +11,9 @@
           <div
             class="item-image"
             v-if="item.editData.imageUrl"
-            :style="
-              `backgroundImage:url('${baseUrl + item.editData.imageUrl}')`
-            "
+            :style="`backgroundImage:url('${
+              baseUrl + item.editData.imageUrl
+            }')`"
           ></div>
           <div v-else class="item-default-image"></div>
           <div class="item-infos">
@@ -33,9 +33,10 @@
     <!--除了 card/gpt style 以外 只能是 link style-->
     <div class="link" v-else>
       <div class="option-items">
-        <div class="desc">
-          <p>{{ JSON.parse(message.content).desc }}</p>
-        </div>
+        <div
+          class="desc gpt-ql-editor"
+          v-html="JSON.parse(message.content).desc"
+        ></div>
         <div
           class="item"
           :class="{ disabled: isFinished }"
@@ -45,9 +46,7 @@
         >
           {{ item.editData.title }}
         </div>
-        <div class="item" v-if="filterOptions.length === 0">
-          尚無服務項目
-        </div>
+        <div class="item" v-if="filterOptions.length === 0">尚無服務項目</div>
       </div>
     </div>
     <div class="time">{{ message.createAt | localTime }}</div>
@@ -86,10 +85,12 @@ export default {
 
         if (item.editData.isToAgent) {
           //情境 1. 只純粹轉真人
-          this.$store.dispatch(
-            "gpt/createToAgentMessage",
-            "ChatGPT_ToAgent_TerminationService"
-          );
+          const data = {
+            type: "System",
+            chatUserRole: "System",
+            content: item.editData.toAgentDesc,
+          };
+          this.$store.dispatch("gpt/createMessage", data);
         } else if (item.items.length) {
           //情境 2. 選擇的項目有 child，送出選單(以及其layout)
           const data = {

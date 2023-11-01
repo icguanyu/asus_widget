@@ -4,16 +4,16 @@
       閒置/提示/斷線：{{ idleTime }}/<span v-if="setting"
         >{{ setting.ChatGPT_IdleNoticeTime }}/{{
           parseInt(this.setting.ChatGPT_IdleNoticeTime) +
-            parseInt(this.setting.ChatGPT_IdleDisconnectTime)
+          parseInt(this.setting.ChatGPT_IdleDisconnectTime)
         }}s</span
       >
     </div>
-    <p>剛剛螢幕離開了：{{ parseInt((backTime - leaveTime) / 1000) }}s</p>
     <p>
-      總閒置：{{ idleTime }}+{{ parseInt((backTime - leaveTime) / 1000) }}={{
-        totalIdleTime
+      剛剛螢幕離開了：{{
+        leaveTime ? parseInt((backTime - leaveTime) / 1000) : 0
       }}s
     </p>
+    <p>總閒置：{{ totalIdleTime }}s</p>
   </div>
 </template>
 
@@ -51,9 +51,9 @@ export default {
     //   }
     // },
     idleTime(val) {
-      this.totalIdleTime = parseInt(
-        val + (this.backTime - this.leaveTime) / 1000
-      );
+      this.totalIdleTime = this.leaveTime
+        ? parseInt(val + (this.backTime - this.leaveTime) / 1000)
+        : val;
       // console.log("this.totalIdleTime", this.totalIdleTime);
       if (this.setting) {
         const idleNoticeTime = this.setting.ChatGPT_IdleNoticeTime;
@@ -83,7 +83,7 @@ export default {
     initIdleCountDown() {
       const vm = this;
       if (vm.idleTimer == null) {
-        vm.idleTimer = setInterval(function() {
+        vm.idleTimer = setInterval(function () {
           if (vm.isFinished) {
             // room 已結束
             vm.stopIdleCountDown();
@@ -108,7 +108,7 @@ export default {
     throttling() {
       const vm = this;
       if (!vm.throttlingTimer) {
-        vm.throttlingTimer = setTimeout(function() {
+        vm.throttlingTimer = setTimeout(function () {
           vm.leaveTime = 0; // reset
           vm.backTime = 0; // reset
           vm.totalIdleTime = 0; // reset
@@ -172,9 +172,7 @@ export default {
   left: 0;
   font-size: 14px;
   line-height: 16px;
-
   padding: 5px;
-
   opacity: 0.5;
   z-index: 10;
   p {
