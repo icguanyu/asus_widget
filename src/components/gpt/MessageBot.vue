@@ -10,7 +10,11 @@
             kbList.first.Url
           }}</a>
           <a :href="kbList.first.Url" target="_blank" class="kb-summary">
-            <div class="summary">{{ kbList.first.Summary }}</div>
+            <!-- <div class="summary">{{ kbList.first.Summary }}</div> -->
+            <div class="summary">
+              {{ kbList.first.Summary.slice(0, 250) }}
+              <span v-if="kbList.first.Summary.length > 250">...</span>
+            </div>
             <!-- <p>點選此處開啟連結</p> -->
           </a>
         </div>

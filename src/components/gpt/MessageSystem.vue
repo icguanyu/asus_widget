@@ -1,8 +1,6 @@
 <template>
   <div class="text" :class="{ client: message.chatUserRole === 'Customer' }">
-    <div class="content">
-      {{ message.content }}
-    </div>
+    <div class="content gpt-ql-editor" v-html="message.content"></div>
     <div class="time">{{ message.createAt | localTime }}</div>
   </div>
 </template>
