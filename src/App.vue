@@ -45,7 +45,7 @@
       }"
       @click="toggleDisplay"
     >
-      <img src="@/assets/images/avatar-genio.png" alt="" />
+      <img src="@/assets/images/avatar-genio60.svg" alt="" />
     </div>
   </div>
 </template>
@@ -201,13 +201,11 @@ p {
   cursor: pointer;
   position: absolute;
   pointer-events: initial;
-  background-color: rgb(0, 86, 247);
   // box-shadow: 2px 3px 8px #ddd;
   bottom: 0;
   right: 0;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
