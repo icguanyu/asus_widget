@@ -198,6 +198,7 @@ p {
 }
 
 .toggle {
+  padding: 2px;
   cursor: pointer;
   position: absolute;
   pointer-events: initial;
