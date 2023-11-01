@@ -1,18 +1,16 @@
 <template>
   <div class="to-agnet">
     <div class="text" :class="{ client: message.chatUserRole === 'Customer' }">
-      <div class="content">
-        {{ message.content }}
-      </div>
+      <div class="content gpt-ql-editor" v-html="message.content"></div>
       <div class="time">{{ message.createAt | localTime }}</div>
     </div>
     <div class="btns" v-if="display">
       <button class="primary" @click="transferToAgent">
         {{ $t("GPT.LAYOUT.TRANSFER_TOAGENT") }}
       </button>
-      <button class="primary outline" @click="display = false">
+      <!-- <button class="primary outline" @click="display = false">
         {{ $t("GPT.LAYOUT.CANCEL") }}
-      </button>
+      </button> -->
     </div>
   </div>
 </template>

@@ -261,7 +261,7 @@ const actions = {
         // 這個意圖有設定為 isToAgent
         //dispatch("createToAgentMessage", "ChatGPT_ToAgent_TerminationService");
         const data = {
-          type: "System",
+          type: "ToAgent",
           chatUserRole: "System",
           content: toAgentDesc,
         };

@@ -86,7 +86,7 @@ export default {
         if (item.editData.isToAgent) {
           //情境 1. 只純粹轉真人
           const data = {
-            type: "System",
+            type: "ToAgent",
             chatUserRole: "System",
             content: item.editData.toAgentDesc,
           };
