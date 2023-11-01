@@ -73,7 +73,7 @@ export default {
             this.handleCloseRoom();
           }
         } else {
-          console.log("Notice: ChatGPT_IdleNoticeTime not set.");
+          // console.log("Notice: ChatGPT_IdleNoticeTime not set.");
           this.stopIdleCountDown();
         }
       }

@@ -13,27 +13,7 @@ axios.interceptors.response.use(
   },
   (err) => {
     if (err && err.response) {
-      console.log("axios interceptors response:");
-      switch (err.response.status) {
-        case 401:
-          console.log("401授權失敗");
-          break;
-        case 403:
-          console.log("403拒絕存取");
-          break;
-        case 404:
-          console.log("404找不到該頁面");
-          break;
-        case 500:
-          console.log("500伺服器出錯");
-          break;
-        case 503:
-          console.log("503服務失效");
-          break;
-        default:
-          // console.log(err.response);
-          console.log(`連接錯誤${err.response.status}`);
-      }
+      console.log(`${err.response.status} error`);
     } else {
       console.log("連接到服務器失敗");
     }

@@ -202,12 +202,12 @@ const actions = {
       const ReturnChatType2 = Result ? Result.ReturnChatType2 : "";
       const KbList = Result ? Result.KbList : [];
       // console.log("Result", Result);
-      console.dir({
-        Status,
-        ReturnChatType,
-        ReturnChatType2,
-        KbList: KbList.length,
-      });
+      // console.dir({
+      //   Status,
+      //   ReturnChatType,
+      //   ReturnChatType2,
+      //   KbList: KbList.length,
+      // });
       commit("setBotKeyName", { ReturnChatType, ReturnChatType2 });
 
       if (KbList.length) {
@@ -318,7 +318,7 @@ const actions = {
   checkUnlikeCounts({ state, dispatch }) {
     const counts = parseInt(state.setting.ChatGPT_Satisfaction);
     const unlikeCounts = state.unlikeCounts;
-    console.log(`檢查不滿意次數：${unlikeCounts}/${counts}`);
+    // console.log(`檢查不滿意次數：${unlikeCounts}/${counts}`);
     if (unlikeCounts >= counts) {
       // AP-1586 後台文案的輸入框拿掉，只出現 詢問是否轉真人的對話，即可
       // dispatch(
