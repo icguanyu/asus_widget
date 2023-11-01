@@ -214,7 +214,7 @@ export default {
         border-radius: 50%;
         background: #ccc;
         margin-right: 8px;
-        background-image: url("../../assets/images/avatar-genio.png");
+        background-image: url("../../assets/images/avatar-genio44.svg");
         background-size: cover;
       }
       .message {

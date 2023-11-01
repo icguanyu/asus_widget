@@ -2,7 +2,7 @@
   <div class="entrance">
     <div class="privacy" v-loading="loading">
       <div class="welcome">
-        <img src="@/assets/images/avatar-genio.png" alt="" />
+        <img src="@/assets/images/avatar-genio60.svg" alt="" />
         <h1>Welcome</h1>
       </div>
       <div class="privacy-title">{{ $t("GPT.ENTRANCE.POLICY") }}</div>
