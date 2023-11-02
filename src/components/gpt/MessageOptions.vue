@@ -101,7 +101,7 @@ export default {
           this.$store.dispatch("gpt/createOptionMessage", data);
         } else if (item.editData.chatGPTUrl) {
           // 情境 3. 有 chatGPTUrl
-          this.createProductReply(item.editData);
+          this.createProductReply(item.editData.chatGPTUrl);
         } else {
           // 情境 4. 都是意圖 不是 skill 也不是 技術支援
           this.createLinkMessage(item.editData.botKeyName);
@@ -138,11 +138,10 @@ export default {
     //   }
     // },
     // 送出 產品線回覆
-    async createProductReply(editData) {
+    async createProductReply(chatGPTUrl) {
       // 設定BOT參數
       this.$store.commit("gpt/setBotRender", {
-        bot: editData.chatGPTUrl,
-        BotScope: editData.botKeyName,
+        BotScope: chatGPTUrl,
       });
       await this.$store.dispatch(
         "gpt/createBotReplyMessage",
