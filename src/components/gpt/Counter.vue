@@ -27,6 +27,7 @@ export default {
       leaveTime: 0,
       backTime: 0,
       totalIdleTime: 0,
+      isEnd: false, //flag
     };
   },
   mounted() {
@@ -66,8 +67,12 @@ export default {
             // 客戶要求先不顯示閒置提示訊息。
             // this.sendMessage("ChatGPT_IdleNotice");
           }
-          if (this.totalIdleTime > offlineNoiceTime && !this.isFinished) {
-            // console.log("結束聊天!");
+          if (
+            this.totalIdleTime > offlineNoiceTime &&
+            !this.isFinished &&
+            !this.isEnd
+          ) {
+            this.isEnd = true;
             this.sendMessage("ChatGPT_IdleDisconnect");
             this.stopIdleCountDown();
             this.handleCloseRoom();
