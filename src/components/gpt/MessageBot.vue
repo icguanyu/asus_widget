@@ -3,11 +3,8 @@
     <div class="content">
       <div class="kb-list">
         <div class="kb fisrt" v-if="kbList.first">
-          <div class="kb-title">
-            {{ kbList.first.Title }}
-          </div>
           <a class="kb-link" :href="kbList.first.Url" target="_blank">{{
-            kbList.first.Url
+            kbList.first.Title
           }}</a>
           <a :href="kbList.first.Url" target="_blank" class="kb-summary">
             <!-- <div class="summary">{{ kbList.first.Summary }}</div> -->

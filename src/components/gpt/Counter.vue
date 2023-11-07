@@ -45,12 +45,12 @@ export default {
     });
   },
   watch: {
-    // isFinished(val) {
-    //   console.log("isFinished:", val);
-    //   if (val === false) {
-    //     this.initIdleCountDown();
-    //   }
-    // },
+    isFinished(val) {
+      if (val === false) {
+        this.initIdleCountDown();
+        this.isEnd = false;
+      }
+    },
     idleTime(val) {
       this.totalIdleTime = this.leaveTime
         ? parseInt(val + (this.backTime - this.leaveTime) / 1000)
@@ -165,6 +165,7 @@ export default {
     },
   },
   beforeDestroy() {
+    clearInterval(this.idleTimer);
     document.removeEventListener("visibilitychange", this.handleVisibility);
   },
 };

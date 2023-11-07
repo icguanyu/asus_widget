@@ -39,8 +39,6 @@ const state = {
 
 const actions = {
   async createRoom({ rootState, commit }) {
-    commit("toggleLoading", true);
-
     const { countryId, platform } = rootState.global.config;
     const locationCountry = await getUserIpCountry();
     const params = {
@@ -63,7 +61,6 @@ const actions = {
       console.log("catch", error);
       router.push(`/?country=${countryId}`);
     }
-    commit("toggleLoading", false);
   },
   async createNewRoom({ state, commit, dispatch }) {
     // 關閉當前 room
