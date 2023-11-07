@@ -40,13 +40,9 @@ export default {
     };
   },
   async mounted() {
-    let countryId =
-      process.env.NODE_ENV === "development" ? "TW" : this.config.countryId;
-    // 開發模式預設 US
-
+    const countryId = this.config.countryId.toUpperCase();
     const lang = languages.includes(countryId) ? countryId : "TW";
     this.initSettingMetas(countryId);
-    console.log("lang", lang);
     this.$i18n.locale = lang;
   },
   methods: {

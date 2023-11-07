@@ -46,7 +46,7 @@
         >
           {{ item.editData.title }}
         </div>
-        <div class="item" v-if="filterOptions.length === 0">尚無服務項目</div>
+        <div class="item" v-if="filterOptions.length === 0">No services yet.</div>
       </div>
     </div>
     <div class="time">{{ message.createAt | localTime }}</div>

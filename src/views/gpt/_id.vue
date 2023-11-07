@@ -143,7 +143,7 @@ export default {
         const res = await ChatBotMessage.GetMessageList(this.params);
         // console.log("initBotRoom", res);
         // console.log("this.$store", this.$store);
-        const countryId = res.data.countryId;
+        const countryId = res.data.countryId.toUpperCase();
         const lang = languages.includes(countryId) ? countryId : "TW";
         this.$i18n.locale = lang;
         this.$store.commit("gpt/setBotRoom", res.data);
