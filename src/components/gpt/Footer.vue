@@ -160,7 +160,7 @@ export default {
       max-height: 150px;
       overflow: auto;
       outline: none;
-      font-size: 14px;
+      font-size: 100%;
       line-height: 18px;
     }
     [contenteditable="true"]:empty:not(:focus):before {
