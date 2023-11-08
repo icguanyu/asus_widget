@@ -39,10 +39,10 @@ const state = {
 
 const actions = {
   async createRoom({ rootState, commit }) {
-    const { countryId, platform, aticket } = rootState.global.config;
+    const { countryId, platform, ASUSTicket } = rootState.global.config;
     const locationCountry = await getUserIpCountry();
     const params = {
-      aticket,
+      ASUSTicket,
       countryId,
       platform,
       device: checkDevice(),

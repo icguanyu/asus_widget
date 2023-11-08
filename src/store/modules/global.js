@@ -17,7 +17,7 @@ const getCookie = (cname) => {
 const state = {
   display: false,
   config: {
-    aticket: getCookie("aticket"),
+    ASUSTicket: getCookie("aticket"),
     countryId: "TW",
     platform: "",
     position: "left",
