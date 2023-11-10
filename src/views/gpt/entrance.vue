@@ -44,6 +44,12 @@ export default {
     const lang = languages.includes(countryId) ? countryId : "TW";
     this.initSettingMetas(countryId);
     this.$i18n.locale = lang;
+
+    const oldRoom = this.getCookie("bot_room_id");
+    console.log("oldRoom:", oldRoom);
+    if (oldRoom) {
+      this.$router.push(`/${oldRoom}`);
+    }
   },
   methods: {
     initSettingMetas(countryId = "TW") {
@@ -62,6 +68,21 @@ export default {
       console.log("window.dataLayer", window.dataLayer);
       this.$store.dispatch("gpt/createRoom");
     },
+    getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(";");
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
   },
   computed: {
     setting() {

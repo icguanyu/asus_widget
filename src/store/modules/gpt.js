@@ -1,3 +1,10 @@
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
 import router from "@/router";
 import {
   ChatBot,
@@ -54,6 +61,7 @@ const actions = {
       // 存下sessionId , 前往 room
       // localStorage 用來離開聊天室
       // sessionStorage 用來偵測是否關閉視窗回來
+      setCookie("bot_room_id", res.data.chatBotRoomId, 30);
       localStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       sessionStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       commit("setBotRoom", res.data);
@@ -331,6 +339,7 @@ const actions = {
     const { chatBotRoomId, sessionId } = state.botRoom;
     try {
       await ChatBotRoom.Leave({ chatBotRoomId, sessionId });
+      setCookie("bot_room_id", "", -1); // clear cookie
       if (payload) {
         dispatch("createBotReplyMessage", "ChatGPT_LeaveRoom");
       }
@@ -371,6 +380,7 @@ const mutations = {
       BotScope: "",
       userInput: "",
     };
+    setCookie("bot_room_id", "", -1); // clear cookie
     sessionStorage.removeItem("AC_GPT_BOTRENDER");
   },
   toggleLoading(state, payload) {
