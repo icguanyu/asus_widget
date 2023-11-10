@@ -51,6 +51,7 @@ export default {
       this.$store.dispatch("gpt/initSettingMetas", countryId);
     },
     createBotRoom() {
+      window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "data_layer_event",
         event_name_ga4: "start_genio",
