@@ -9,6 +9,14 @@
     />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+      if (self !== top) {
+        document.documentElement.style.display = "none";
+      } else {
+        document.documentElement.style.display = "block";
+      }
+      window.dataLayer = window.dataLayer || [];
+    </script>
   </head>
   <body>
     <noscript>
