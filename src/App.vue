@@ -59,8 +59,6 @@ export default {
   data() {
     return {
       route: this.$route.path,
-      parentUrl: "", // 要從 parent 來
-      event: null,
     };
   },
   watch: {
@@ -68,8 +66,11 @@ export default {
       this.route = val;
     },
     display(val) {
-      if (this.event) {
-        this.event.source.postMessage({ display: val }, this.parentUrl);
+      if (window.bot_event) {
+        window.bot_event.source.postMessage(
+          { display: val },
+          window.bot_parentUrl
+        );
       }
     },
   },
@@ -91,8 +92,8 @@ export default {
         if (!origin) {
           return;
         }
-        vm.event = event;
-        vm.parentUrl = origin;
+        window.bot_event = event;
+        window.bot_parentUrl = origin;
 
         const countryId = event.data.countryId.toUpperCase(); //強制大寫
         vm.$store.commit("global/setConfig", event.data);
@@ -100,9 +101,16 @@ export default {
 
         const lang = languages.includes(countryId) ? countryId : "TW";
         vm.$i18n.locale = lang;
-        // 回覆消息到父層
-        const replyMessage = "ASUS Chat Bot 載入成功";
-        event.source.postMessage(replyMessage, origin);
+
+        const oldRoom = event.data.roomId;
+        if (oldRoom) {
+          vm.$router.push(`/${oldRoom}`);
+          vm.toggleDisplay();
+          window.bot_event.source.postMessage(
+            { display: true },
+            window.bot_parentUrl
+          );
+        }
       });
     },
     // devTest() {

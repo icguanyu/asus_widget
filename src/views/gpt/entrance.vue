@@ -44,12 +44,6 @@ export default {
     const lang = languages.includes(countryId) ? countryId : "TW";
     this.initSettingMetas(countryId);
     this.$i18n.locale = lang;
-
-    const oldRoom = this.getCookie("bot_room_id");
-    console.log("oldRoom:", oldRoom);
-    if (oldRoom) {
-      this.$router.push(`/${oldRoom}`);
-    }
   },
   methods: {
     initSettingMetas(countryId = "TW") {
@@ -82,7 +76,7 @@ export default {
         }
       }
       return "";
-    }
+    },
   },
   computed: {
     setting() {

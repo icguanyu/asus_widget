@@ -1,10 +1,3 @@
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
 import router from "@/router";
 import {
   ChatBot,
@@ -45,7 +38,7 @@ const state = {
 };
 
 const actions = {
-  async createRoom({ rootState, commit }) {
+  async createRoom({ rootState, commit, dispatch }) {
     const { countryId, platform, ASUSTicket } = rootState.global.config;
     const locationCountry = await getUserIpCountry();
     const params = {
@@ -61,13 +54,22 @@ const actions = {
       // 存下sessionId , 前往 room
       // localStorage 用來離開聊天室
       // sessionStorage 用來偵測是否關閉視窗回來
-      setCookie("bot_room_id", res.data.chatBotRoomId, 30);
+
+      window.bot_event?.source.postMessage(
+        { roomId: res.data.chatBotRoomId },
+        window.bot_parentUrl
+      ); // send to parent
       localStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       sessionStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       commit("setBotRoom", res.data);
       router.push(`/${res.data.chatBotRoomId}`);
     } catch (error) {
       console.log("catch", error);
+      window.bot_event?.source.postMessage(
+        { roomId: "" },
+        window.bot_parentUrl
+      ); // send to parent (clear)
+      commit("global/cleanRoomId", { root: true });
       router.push(`/?country=${countryId}`);
     }
   },
@@ -82,6 +84,7 @@ const actions = {
   async leaveRoom({ commit }, payload) {
     await ChatBotRoom.Leave(payload);
     localStorage.removeItem("AC_GPT_SESSIONID");
+    commit("reset");
     commit("finishRoom", payload.chatBotRoomId);
   },
   // 取得文案與決策樹資料
@@ -339,10 +342,10 @@ const actions = {
     const { chatBotRoomId, sessionId } = state.botRoom;
     try {
       await ChatBotRoom.Leave({ chatBotRoomId, sessionId });
-      setCookie("bot_room_id", "", -1); // clear cookie
       if (payload) {
         dispatch("createBotReplyMessage", "ChatGPT_LeaveRoom");
       }
+      commit("reset");
       commit("finishRoom", chatBotRoomId);
     } catch (error) {
       console.log("catch", error);
@@ -380,8 +383,8 @@ const mutations = {
       BotScope: "",
       userInput: "",
     };
-    setCookie("bot_room_id", "", -1); // clear cookie
     sessionStorage.removeItem("AC_GPT_BOTRENDER");
+    window.bot_event?.source.postMessage({ roomId: "" }, window.bot_parentUrl); // send to parent (clear)
   },
   toggleLoading(state, payload) {
     state.loading = payload;
@@ -442,6 +445,7 @@ const mutations = {
     }
   },
   finishRoom(state) {
+    window.bot_event?.source.postMessage({ roomId: "" }, window.bot_parentUrl); // send to parent (clear)
     state.botRoom.isFinished = true;
   },
 };

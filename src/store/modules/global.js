@@ -21,6 +21,7 @@ const state = {
     countryId: "TW",
     platform: "",
     position: "left",
+    roomId: "", //若有 , 直接前往該 room
   },
 };
 
@@ -36,6 +37,9 @@ const mutations = {
   },
   setConfig(state, payload) {
     Object.assign(state.config, payload);
+  },
+  cleanRoomId(state) {
+    state.config.roomId = "";
   },
 };
 const getters = {};
