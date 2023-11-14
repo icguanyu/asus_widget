@@ -5,6 +5,10 @@
       請稍候，正在幫您尋找解決辦法中。<i class="el-icon-loading"></i>
     </div> -->
 
+    <div class="backTop" @click="scrollToTop" v-if="showBackTop">
+      <img src="@/assets/images/icons/backTop.svg" alt="" />
+    </div>
+
     <div v-if="botStart && !isFinished" class="contenteditable">
       <div
         contenteditable
@@ -38,6 +42,7 @@ export default {
       inputTime: 0,
       inputTimer: null,
       triggerTime: 2, //觸發GPT間隔 2 秒
+      showBackTop: false,
     };
   },
   watch: {
@@ -53,7 +58,7 @@ export default {
     },
     botStart(val) {
       if (val) {
-        this.$nextTick(function() {
+        this.$nextTick(function () {
           this.initEditor();
         });
       }
@@ -63,12 +68,16 @@ export default {
     if (this.isFinished !== true && this.botStart) {
       this.initEditor();
     }
+    const vm = this;
+    document.querySelector(".bot-room").addEventListener("scroll", (e) => {
+      vm.handleScroll(e);
+    });
   },
   methods: {
     initEditor() {
       const editor = document.querySelector("#content-box");
 
-      editor.addEventListener("paste", function(e) {
+      editor.addEventListener("paste", function (e) {
         e.preventDefault();
         var text = (e.originalEvent || e).clipboardData.getData("text/plain");
         // insert text manually
@@ -119,6 +128,13 @@ export default {
     handleEnd() {
       this.$store.commit("gpt/reset");
       this.$router.push("/end");
+    },
+    handleScroll(e) {
+      const scrollTop = e.target.scrollTop;
+      this.showBackTop = scrollTop >= 500 ? true : false;
+    },
+    scrollToTop() {
+      document.querySelector(".bot-room").scrollTop = 0;
     },
   },
   computed: {
@@ -183,6 +199,23 @@ export default {
     .disabled {
       cursor: not-allowed;
       opacity: 0.5;
+    }
+  }
+  .backTop {
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: -52px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
 }

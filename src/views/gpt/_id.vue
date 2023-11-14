@@ -48,7 +48,6 @@
         </div>
       </div> -->
     </div>
-
     <Footer />
   </div>
 </template>
@@ -191,6 +190,7 @@ export default {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 .rows {
   flex: 1;
