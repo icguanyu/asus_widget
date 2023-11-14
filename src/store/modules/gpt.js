@@ -8,7 +8,6 @@ import {
 } from "@/api/gpt";
 import { SettingMetas } from "@/api/settingMetas";
 import { checkDevice } from "@/plugins/checkDevice";
-import { getUserIpCountry } from "@/plugins/getUserIpCountry";
 import { getRandom } from "@/plugins/getRandom";
 const botRender = JSON.parse(sessionStorage.getItem("AC_GPT_BOTRENDER"));
 const state = {
@@ -40,13 +39,13 @@ const state = {
 const actions = {
   async createRoom({ rootState, commit, dispatch }) {
     const { countryId, platform, ASUSTicket } = rootState.global.config;
-    const locationCountry = await getUserIpCountry();
+    // const locationCountry = await getUserIpCountry();
     const params = {
       ASUSTicket,
       countryId,
       platform,
       device: checkDevice(),
-      locationCountry: locationCountry,
+      locationCountry: '', // AP-2339 移除IP偵測
     };
     try {
       const res = await ChatBotRoom.Create(params);
