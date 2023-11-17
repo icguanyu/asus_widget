@@ -87,6 +87,13 @@ export default {
   methods: {
     onMessage() {
       const vm = this;
+      window.dataLayer.push({
+        event: "data_layer_event",
+        event_name_ga4: "icon_impression_genio",
+        event_category_DL: "genio",
+        event_action_DL: "displayed",
+        event_label_DL: "icon_impression/genio",
+      });
       window.addEventListener("message", (event) => {
         const origin = event.data.parentUrl;
         if (!origin) {
@@ -137,6 +144,13 @@ export default {
     // },
     toggleDisplay() {
       this.$store.dispatch("global/toggleDisplay");
+      window.dataLayer.push({
+        event: "data_layer_event",
+        event_name_ga4: "icon_click_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "icon_click/genio",
+      });
     },
   },
   computed: {

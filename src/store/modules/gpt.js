@@ -45,7 +45,7 @@ const actions = {
       countryId,
       platform,
       device: checkDevice(),
-      locationCountry: '', // AP-2339 移除IP偵測
+      locationCountry: "", // AP-2339 移除IP偵測
     };
     try {
       const res = await ChatBotRoom.Create(params);
@@ -459,6 +459,7 @@ const getters = {
         return el;
       });
       return {
+        serviceType: true, // 預設選單
         parentLayout,
         desc,
         data: arr,

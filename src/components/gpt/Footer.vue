@@ -63,6 +63,17 @@ export default {
         });
       }
     },
+    isFinished(val) {
+      if (val) {
+        window.dataLayer.push({
+          event: "data_layer_event",
+          event_name_ga4: "close_chat2_impression_genio",
+          event_category_DL: "genio",
+          event_action_DL: "displayed",
+          event_label_DL: "close_chat2_impression/genio",
+        });
+      }
+    },
   },
   mounted() {
     if (this.isFinished !== true && this.botStart) {
@@ -126,6 +137,13 @@ export default {
       }
     },
     handleEnd() {
+      window.dataLayer.push({
+        event: "data_layer_event",
+        event_name_ga4: "close_chat2_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "close_chat2/genio",
+      });
       this.$store.commit("gpt/reset");
       this.$router.push("/end");
     },

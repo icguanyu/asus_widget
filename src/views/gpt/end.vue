@@ -18,6 +18,13 @@ export default {
   async mounted() {},
   methods: {
     back() {
+      window.dataLayer.push({
+        event: "data_layer_event",
+        event_name_ga4: "new_chat2_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "new_chat2/genio",
+      });
       const config = this.$store.state.global.config;
       this.$router.push(`/?country=${config.countryId}`);
     },

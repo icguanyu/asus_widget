@@ -39,6 +39,19 @@ export default {
       agree: false,
     };
   },
+  watch: {
+    agree(val) {
+      if (val) {
+        window.dataLayer.push({
+          event: "data_layer_event",
+          event_name_ga4: "agree_genio",
+          event_category_DL: "genio",
+          event_action_DL: "clicked",
+          event_label_DL: "agree/genio",
+        });
+      }
+    },
+  },
   async mounted() {
     const countryId = this.config.countryId.toUpperCase();
     const lang = languages.includes(countryId) ? countryId : "TW";

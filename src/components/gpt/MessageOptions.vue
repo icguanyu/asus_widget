@@ -46,7 +46,10 @@
         >
           {{ item.editData.title }}
         </div>
-        <div class="item" v-if="filterOptions.length === 0">No services yet.</div>
+        <div class="item" v-if="filterOptions.length === 0">
+          No services yet.
+        </div>
+        {{ serviceType }}
       </div>
     </div>
     <div class="time">{{ message.createAt | localTime }}</div>
@@ -71,6 +74,15 @@ export default {
     async createOptionSelectMessage(item) {
       if (this.isFinished) {
         return;
+      }
+      if (this.serviceType) {
+        window.dataLayer.push({
+          event: "data_layer_event",
+          event_name_ga4: "click_menu_genio",
+          event_category_DL: "genio",
+          event_action_DL: "clicked",
+          event_label_DL: `${item.editData.title}/click_menu`,
+        });
       }
       // const { botKeyName } = item.editData;
       // const parentBotKeyName = this.findParentBotKeyName(item.parentId);
@@ -198,6 +210,14 @@ export default {
     },
     tree() {
       return this.$store.state.gpt.tree;
+    },
+    serviceType() {
+      // 是否為第一層 service Type 選單
+      if (this.message) {
+        return JSON.parse(this.message.content).serviceType;
+      } else {
+        return false;
+      }
     },
   },
 };
