@@ -89,7 +89,7 @@ export default {
       const vm = this;
       window.dataLayer.push({
         event: "data_layer_event",
-        chatbot_session_id: "",
+        chatbot_session_id: this.chatbot_session_id,
         event_name_ga4: "icon_impression_genio",
         event_category_DL: "genio",
         event_action_DL: "displayed",
@@ -147,7 +147,7 @@ export default {
       this.$store.dispatch("global/toggleDisplay");
       window.dataLayer.push({
         event: "data_layer_event",
-        chatbot_session_id: "",
+        chatbot_session_id: this.chatbot_session_id,
         event_name_ga4: "icon_click_genio",
         event_category_DL: "genio",
         event_action_DL: "clicked",
@@ -172,6 +172,9 @@ export default {
     },
     config() {
       return this.$store.state.global.config;
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };
