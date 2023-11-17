@@ -67,6 +67,7 @@ export default {
       if (val) {
         window.dataLayer.push({
           event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
           event_name_ga4: "close_chat2_impression_genio",
           event_category_DL: "genio",
           event_action_DL: "displayed",
@@ -95,6 +96,15 @@ export default {
         document.execCommand("insertHTML", false, text);
       });
       this.contenteditable = editor;
+      // GA4 顯示 input 時
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "input_impression_genio",
+        event_category_DL: "genio",
+        event_action_DL: "displayed",
+        event_label_DL: "input_impression/genio",
+      });
     },
     beforeSubmit(e) {
       let innerHTML = this.contenteditable.innerHTML;
@@ -120,6 +130,16 @@ export default {
       this.$store.dispatch("gpt/createMessage", data);
       this.contenteditable.innerHTML = "";
       this.contenteditable.focus();
+
+      // GA4 送出訊息時
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "submit_message_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "submit_message/genio",
+      });
     },
     initTimer(val = true) {
       // 開始計時文字輸入間隔
@@ -139,6 +159,7 @@ export default {
     handleEnd() {
       window.dataLayer.push({
         event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
         event_name_ga4: "close_chat2_genio",
         event_category_DL: "genio",
         event_action_DL: "clicked",
@@ -167,6 +188,9 @@ export default {
     },
     botStart() {
       return this.$store.getters["gpt/botStart"];
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };

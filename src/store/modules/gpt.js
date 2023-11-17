@@ -37,7 +37,7 @@ const state = {
 };
 
 const actions = {
-  async createRoom({ rootState, commit, dispatch }) {
+  async createRoom({ rootState, commit, getters }) {
     const { countryId, platform, ASUSTicket } = rootState.global.config;
     // const locationCountry = await getUserIpCountry();
     const params = {
@@ -53,7 +53,6 @@ const actions = {
       // 存下sessionId , 前往 room
       // localStorage 用來離開聊天室
       // sessionStorage 用來偵測是否關閉視窗回來
-
       window.bot_event?.source.postMessage(
         { roomId: res.data.chatBotRoomId },
         window.bot_parentUrl
@@ -62,6 +61,16 @@ const actions = {
       sessionStorage.setItem("AC_GPT_SESSIONID", res.data.sessionId);
       commit("setBotRoom", res.data);
       router.push(`/${res.data.chatBotRoomId}`);
+
+      //GA4
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: getters.chatbot_session_id,
+        event_name_ga4: "start_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "start/genio",
+      });
     } catch (error) {
       console.log("catch", error);
       window.bot_event?.source.postMessage(
@@ -87,7 +96,7 @@ const actions = {
     commit("finishRoom", payload.chatBotRoomId);
   },
   // 取得文案與決策樹資料
-  async initSettingMetas({ state, dispatch, commit }, payload = "TW") {
+  async initSettingMetas({ state, dispatch, commit, getters }, payload = "TW") {
     try {
       const basic = await GetChatGPTBasicSetting.get(payload);
       const beforeChat = await SettingMetas.GetBeforeChat(payload);
@@ -108,12 +117,20 @@ const actions = {
     }
     commit("toggleLoading", false);
   },
-  async createWelcomeMessage({ state, dispatch }, payload = false) {
+  async createWelcomeMessage({ state, dispatch, getters }, payload = false) {
     //payload = GUI測試用
     if (payload || state.botRoom.messages.length === 0) {
       // 歡迎訊息 和 初始服務選單
       await dispatch("createBotReplyMessage", "ChatGPT_Welcome");
       await dispatch("createOptionMessage");
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: getters.chatbot_session_id,
+        event_name_ga4: "window_impression_genio",
+        event_category_DL: "genio",
+        event_action_DL: "displayed",
+        event_label_DL: "window_impression/genio",
+      });
     }
   },
   // 送出服務選單
@@ -172,7 +189,7 @@ const actions = {
     // console.log(payload, ":", data);
     return dispatch("createMessage", data);
   },
-  createMessage({ state, commit }, payload) {
+  createMessage({ state, commit, getters }, payload) {
     const { type, content, chatUserRole } = payload;
     const params = {
       chatBotRoomId: state.botRoom.chatBotRoomId,
@@ -185,6 +202,30 @@ const actions = {
     return new Promise((resolve, reject) => {
       ChatBotMessage.Create(params)
         .then((res) => {
+          // GA4 顯示轉接真人
+          if (type === "ToAgent") {
+            window.dataLayer.push({
+              event: "data_layer_event",
+              chatbot_session_id: getters.chatbot_session_id,
+              event_name_ga4: "to_agent_impression_genio",
+              event_category_DL: "genio",
+              event_action_DL: "displayed",
+              event_label_DL: "to_agent_impression/genio",
+            });
+          }
+          // 顯示連結按鈕
+          if (type === "OptionSelect" && chatUserRole === "System") {
+            const buttonText = JSON.parse(content).buttonText || "";
+            window.dataLayer.push({
+              event: "data_layer_event",
+              chatbot_session_id: getters.chatbot_session_id,
+              event_name_ga4: "link_impression_genio",
+              event_category_DL: "genio",
+              event_action_DL: "displayed",
+              event_label_DL: `${buttonText}/link_impression`,
+            });
+          }
+
           commit("pushMessage", res.data);
           resolve(res);
         })
@@ -195,7 +236,7 @@ const actions = {
         .finally(() => {});
     });
   },
-  async createChatRenderMessage({ state, commit, dispatch }) {
+  async createChatRenderMessage({ state, commit, dispatch, getters }) {
     if (!state.userInputs.length) {
       return;
     }
@@ -222,6 +263,16 @@ const actions = {
         // console.log("有KB List");
         // 一般 KB 回答
         dispatch("createBotReplyMessage", "ChatGPT_BotReply"); // 後台設定的BOT回覆結果
+
+        // GA4 顯示 讚與倒讚時
+        window.dataLayer.push({
+          event: "data_layer_event",
+          chatbot_session_id: getters.chatbot_session_id,
+          event_name_ga4: "like_impression_genio",
+          event_category_DL: "genio",
+          event_action_DL: "displayed",
+          event_label_DL: "like_impression/genio",
+        });
       } else if (ReturnChatType2 || ReturnChatType) {
         // 偵測到第二層意圖
         const result2 = await dispatch("handleReturnMessage", ReturnChatType2);
@@ -503,6 +554,16 @@ const getters = {
   botStart: (state) => {
     const { BotScope } = state.botRender;
     return BotScope ? true : false;
+  },
+  chatbot_session_id: (state) => {
+    const roomId = state.botRoom.chatBotRoomId;
+    if (roomId) {
+      return `${
+        process.env.VUE_APP_PRO_ENV
+      }_${new Date().getFullYear()}_${roomId}`;
+    } else {
+      return "";
+    }
   },
 };
 

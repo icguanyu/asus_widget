@@ -49,7 +49,6 @@
         <div class="item" v-if="filterOptions.length === 0">
           No services yet.
         </div>
-        {{ serviceType }}
       </div>
     </div>
     <div class="time">{{ message.createAt | localTime }}</div>
@@ -78,6 +77,7 @@ export default {
       if (this.serviceType) {
         window.dataLayer.push({
           event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
           event_name_ga4: "click_menu_genio",
           event_category_DL: "genio",
           event_action_DL: "clicked",
@@ -218,6 +218,9 @@ export default {
       } else {
         return false;
       }
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };

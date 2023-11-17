@@ -29,22 +29,28 @@ export default {
     };
   },
   methods: {
-    createNewRoom() {
-      // if (this.isFinished) {
-      //   return;
-      // }
-      this.$store.dispatch("gpt/createNewRoom");
-    },
     transferToAgent() {
       // if (this.isFinished) {
       //   return;
       // }
+      // GA4 點擊 轉接專員
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "to_agent_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "to_agent/genio",
+      });
       this.$store.dispatch("gpt/transferToAgent");
     },
   },
   computed: {
     isFinished() {
       return this.$store.state.gpt.botRoom.isFinished;
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };

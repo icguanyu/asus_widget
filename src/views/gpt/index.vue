@@ -76,6 +76,7 @@ export default {
     handleClickSetting() {
       window.dataLayer.push({
         event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
         event_name_ga4: "setting_genio",
         event_category_DL: "genio",
         event_action_DL: "clicked",
@@ -88,6 +89,7 @@ export default {
         this.$store.dispatch("gpt/createNewRoom");
         window.dataLayer.push({
           event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
           event_name_ga4: "new_chat1_genio",
           event_category_DL: "genio",
           event_action_DL: "clicked",
@@ -97,6 +99,7 @@ export default {
         this.$store.dispatch("gpt/closeRoom");
         window.dataLayer.push({
           event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
           event_name_ga4: "close_chat1_genio",
           event_category_DL: "genio",
           event_action_DL: "clicked",
@@ -108,6 +111,7 @@ export default {
       this.$store.dispatch("global/toggleDisplay");
       window.dataLayer.push({
         event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
         event_name_ga4: "minimize_genio",
         event_category_DL: "genio",
         event_action_DL: "clicked",
@@ -121,6 +125,9 @@ export default {
     },
     isFinished() {
       return this.$store.state.gpt.botRoom.isFinished;
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };

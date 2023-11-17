@@ -78,6 +78,15 @@ export default {
           chatBotMessageId: this.message.id,
           likeFlag: val,
         });
+        // GA4 按讚/倒讚
+        window.dataLayer.push({
+          event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
+          event_name_ga4: `${val ? "like" : "dislike"}_genio`,
+          event_category_DL: "genio",
+          event_action_DL: "clicked",
+          event_label_DL: `${val ? "like" : "dislike"}/genio`,
+        });
       } catch (error) {
         console.log("error", error);
       }
@@ -97,6 +106,9 @@ export default {
         first,
         others,
       };
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };

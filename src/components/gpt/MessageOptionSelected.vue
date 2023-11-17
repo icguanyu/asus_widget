@@ -25,6 +25,7 @@
           :href="content.linkUrl"
           target="_blank"
           v-if="content.linkUrl && content.buttonText"
+          @click="handleClickLink(content.buttonText)"
         >
           <i class="bx bx-link-external"></i>
           <span>{{ content.buttonText }}</span>
@@ -94,10 +95,24 @@ export default {
       }
       return str;
     },
+    handleClickLink(text) {
+      // GA4 連結點擊
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "click_link_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: `${text}/click_link`,
+      });
+    },
   },
   computed: {
     content() {
       return JSON.parse(this.message.content);
+    },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
     },
   },
 };
