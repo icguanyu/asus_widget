@@ -1,0 +1,39 @@
+name: apac-測試
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 測試上版
+jobs:
+  build_apac_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Zip dist folder
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r ${{ steps.date.outputs.date }}-chat-plugin(test).zip dist
+
+      - name: Upload to Slack
+        uses: adrey/slack-file-upload-action@master
+        with:
+          token: ${{ secrets.SLACK_TOKEN }}
+          path: ${{ steps.date.outputs.date }}-chat-plugin(test).zip
+          channel: frontend-notification
