@@ -3,17 +3,21 @@
     <div class="content">
       <div class="kb-list">
         <div class="kb fisrt" v-if="kbList.first">
-          <a class="kb-link" :href="kbList.first.Url" target="_blank">{{
-            kbList.first.Title
-          }}</a>
-          <a :href="kbList.first.Url" target="_blank" class="kb-summary">
+          <a
+            class="kb-link"
+            :href="kbList.first.Url"
+            target="_blank"
+            @click="handleLinkClick(kbList.first.Title)"
+            >{{ kbList.first.Title }}</a
+          >
+          <div class="kb-summary">
             <!-- <div class="summary">{{ kbList.first.Summary }}</div> -->
             <div class="summary">
               {{ kbList.first.Summary.slice(0, 250) }}
               <span v-if="kbList.first.Summary.length > 250">...</span>
             </div>
             <!-- <p>點選此處開啟連結</p> -->
-          </a>
+          </div>
         </div>
         <div class="kb others">
           <p>{{ $t("GPT.LAYOUT.READMORE") }}</p>
@@ -23,6 +27,7 @@
             target="_blank"
             v-for="(kb, index) in kbList.others"
             :key="index"
+            @click="handleLinkClick(kb.Title)"
             >{{ kb.Title }}</a
           >
         </div>
@@ -70,6 +75,19 @@ export default {
       showAll: false,
     };
   },
+  mounted() {
+    const result = JSON.parse(this.message.content).Result;
+    result.KbList.forEach((el) => {
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "text_link_impression_genio",
+        event_category_DL: "genio",
+        event_action_DL: "displayed",
+        event_label_DL: `${el.Title}/text_link_impression`,
+      });
+    });
+  },
   methods: {
     async handleChatLike(val) {
       this.loading = true;
@@ -92,6 +110,17 @@ export default {
       }
       this.loading = false;
     },
+    handleLinkClick(text) {
+      console.log("handleLinkClick", text);
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "text_click_link_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: `${text}/click_text_link`,
+      });
+    },
   },
   computed: {
     status() {
@@ -99,7 +128,6 @@ export default {
     },
     kbList() {
       const result = JSON.parse(this.message.content).Result;
-
       const first = result ? result.KbList.shift() : null; // 第一則
       const others = result ? result.KbList : [];
       return {
