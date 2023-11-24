@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueI18n from "vue-i18n";
-import store from "../store";
 
 import enLocale from "element-ui/lib/locale/lang/en";
 import zhLocale from "element-ui/lib/locale/lang/zh-TW";
@@ -54,6 +53,7 @@ import eg from "@/i18n/eg";
 import es from "@/i18n/es";
 import fi from "@/i18n/fi";
 import fr from "@/i18n/fr";
+import ca_fr from "@/i18n/ca-fr";
 import gb from "@/i18n/gb";
 import hu from "@/i18n/hu";
 import il from "@/i18n/il";
@@ -105,7 +105,8 @@ let messages = {
   EG: { ...eg, ...enLocale }, // Egypt 埃及 *
   ES: { ...es, ...esLocale }, // Spain 西班牙
   FI: { ...fi, ...fiLocale }, // Finland 芬蘭
-  FR: { ...fr, ...frLocale }, // France 法國
+  FR: { ...fr, ...frLocale }, // France 法國 (EMEA)
+  "CA-FR": { ...ca_fr, ...frLocale }, // France 法國 (ACI)
   GB: { ...gb, ...enLocale }, // United Kingdom 英國 *
   HU: { ...hu, ...huLocale }, // Hungary 匈牙利
   IL: { ...il, ...enLocale }, // Israel 以色列 *
@@ -131,10 +132,12 @@ let messages = {
   MIR: { ...en_us, ...enLocale }, // ACI (en_us)
   US: { ...en_us, ...enLocale }, // ACI (en_us)
   USES: { ...us_es, ...enLocale }, // ACI (us_es)
+  "CA-EN": { ...en_us, ...enLocale }, // ACI (en_us)
 };
 
 let lan;
-let country = store.state.global.config.country;
+let country = localStorage.getItem("asus_chat_webSiteCountry");
+
 import { languages } from "../plugins/languages";
 
 lan = getLan();

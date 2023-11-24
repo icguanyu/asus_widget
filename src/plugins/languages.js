@@ -22,6 +22,7 @@ export const languages = [
   "ES",
   "FI",
   "FR",
+  "CA-FR",
   "GB",
   "HU",
   "IL",
@@ -50,4 +51,5 @@ export const languages = [
   "US",
   "ZAEC",
   "USES",
+  "CA-EN",
 ]; // 當前擁有的語言包

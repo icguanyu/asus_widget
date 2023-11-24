@@ -122,7 +122,7 @@ const lan = {
   CHATROOM: {
     TYPING: "Agent is typing...",
     HEAD: {
-      CLOSE_AMD_SURVEY: "Leave Chat",
+      CLOSE_AMD_SURVEY: "End the Chat and begin the Survey",
       TERMINATE: "End the Chat",
     },
     FOOTER: { CHAT_FINISH: "Chat has ended" },
@@ -226,7 +226,7 @@ const lan = {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
     END: "Conversation Ended",
-    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support.",
+    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support",
     BACKHOME: "Restart Conversation",
   },
 };

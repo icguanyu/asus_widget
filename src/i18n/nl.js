@@ -204,29 +204,29 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
-      AGREE: "Agree",
-      START: "Start",
+      AGREE: "Akkoord",
+      START: "Beginnen",
       CANCEL: "Cancel",
-      WAIT: "Please wait",
-      INPUT: "Eenter text",
-      TRANSFER_TOAGENT: "Transfer to agent.",
-      READMORE: "You can also refer to the following related FAQ, thank you.",
-      COLLAPSE: "Hide",
+      WAIT: "Wachten svp",
+      INPUT: "Voer tekst in",
+      TRANSFER_TOAGENT: "Doorzetten naar een agent.",
+      READMORE: "U kunt ook de volgende gerelateerde veelgestelde vragen raadplegen, bedankt.",
+      COLLAPSE: "Verbergen",
     },
     HEAD: {
-      LEAVE: "Leave",
-      CREATE_NEW: "Create New Room",
+      LEAVE: "Verlaten",
+      CREATE_NEW: "Creeer nieuwe chatroom",
     },
     ENTRANCE: {
       POLICY: "Privacy Policy",
-      AGREE: "Click Agree to start the conversation",
+      AGREE: "Klik op akkoord om te starten met het gesprek",
     },
     MESSAGE: {
-      WAIT: "Please wait, we are looking for a solution for you.",
+      WAIT: "Gelieve wachten, we zijn op zoek naar een oplossing.",
     },
-    END: "Conversation ended",
-    END_MSG: "We're happy to serve you. The conversation is over.",
-    BACKHOME: "Return to homepage",
+    END: "Gesprek beeindigd",
+    END_MSG: "We zijn blij u te hebben geholpen. Het gesprek is beeindigd.",
+    BACKHOME: "Terug naar homepagina",
   },
 };
 export default lan;
