@@ -81,7 +81,7 @@ export default {
           event_name_ga4: "click_menu_genio",
           event_category_DL: "genio",
           event_action_DL: "clicked",
-          event_label_DL: `${item.editData.title}/click_menu`,
+          event_label_DL: `${item.editData.title}/click_menu/genio`,
         });
       }
       // const { botKeyName } = item.editData;

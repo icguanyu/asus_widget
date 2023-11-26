@@ -103,7 +103,7 @@ export default {
         event_name_ga4: "click_link_genio",
         event_category_DL: "genio",
         event_action_DL: "clicked",
-        event_label_DL: `${text}/click_link`,
+        event_label_DL: `${text}/click_link/genio`,
       });
     },
   },

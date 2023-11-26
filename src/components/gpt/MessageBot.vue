@@ -84,7 +84,7 @@ export default {
         event_name_ga4: "text_link_impression_genio",
         event_category_DL: "genio",
         event_action_DL: "displayed",
-        event_label_DL: `${el.Title}/text_link_impression`,
+        event_label_DL: `${el.Title}/text_link_impression/genio`,
       });
     });
   },
@@ -111,14 +111,13 @@ export default {
       this.loading = false;
     },
     handleLinkClick(text) {
-      console.log("handleLinkClick", text);
       window.dataLayer.push({
         event: "data_layer_event",
         chatbot_session_id: this.chatbot_session_id,
         event_name_ga4: "text_click_link_genio",
         event_category_DL: "genio",
         event_action_DL: "clicked",
-        event_label_DL: `${text}/click_text_link`,
+        event_label_DL: `${text}/click_text_link/genio`,
       });
     },
   },

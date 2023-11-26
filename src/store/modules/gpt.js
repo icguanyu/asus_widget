@@ -222,7 +222,7 @@ const actions = {
               event_name_ga4: "link_impression_genio",
               event_category_DL: "genio",
               event_action_DL: "displayed",
-              event_label_DL: `${buttonText}/link_impression`,
+              event_label_DL: `${buttonText}/link_impression/genio`,
             });
           }
 
