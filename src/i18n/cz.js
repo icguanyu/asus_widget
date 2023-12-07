@@ -203,13 +203,15 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "Welcome",
       AGREE: "Souhlasím",
       START: "Spustit",
       CANCEL: "Zrušit",
       WAIT: "Počkejte prosím",
       INPUT: "Vložit text",
       TRANSFER_TOAGENT: "Přepojení na agenta.",
-      READMORE: "Můžete se také podívat na následující související časté dotazy, děkujeme.",
+      READMORE:
+        "Můžete se také podívat na následující související časté dotazy, děkujeme.",
       COLLAPSE: "Skrýt",
     },
     HEAD: {

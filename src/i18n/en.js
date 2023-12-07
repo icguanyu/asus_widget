@@ -206,6 +206,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "Welcome",
       AGREE: "Agree",
       START: "Start",
       CANCEL: "Cancel",
@@ -227,7 +228,8 @@ const lan = {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
     END: "Conversation Ended",
-    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support.",
+    END_MSG:
+      "We are pleased to provide our service. Feel free to reach out for future support.",
     BACKHOME: "Restart Conversation",
   },
 };

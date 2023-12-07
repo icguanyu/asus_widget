@@ -211,13 +211,15 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "Welcome",
       AGREE: "Accepter",
       START: "Commencer",
       CANCEL: "Annuler",
       WAIT: "S'il vous plaît, attendez",
       INPUT: "Entrez votre question ici",
       TRANSFER_TOAGENT: "Transfert à l'agent.",
-      READMORE: "Vous pouvez également vous référer à la FAQ connexe suivante, merci.",
+      READMORE:
+        "Vous pouvez également vous référer à la FAQ connexe suivante, merci.",
       COLLAPSE: "Cacher",
     },
     HEAD: {
@@ -232,7 +234,8 @@ const lan = {
       WAIT: "Veuillez patienter, nous recherchons une solution pour vous.",
     },
     END: "Conversation terminée",
-    END_MSG: "Nous sommes heureux de fournir notre service. N'hésitez pas à nous contacter pour obtenir de l'aide future.",
+    END_MSG:
+      "Nous sommes heureux de fournir notre service. N'hésitez pas à nous contacter pour obtenir de l'aide future.",
     BACKHOME: "Redémarrer la conversation",
   },
 };

@@ -193,6 +193,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "歡迎",
       AGREE: "同意",
       START: "開始",
       CANCEL: "取消",

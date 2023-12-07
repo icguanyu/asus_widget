@@ -32,6 +32,7 @@ const lan = {
     BUTTON: "Ferdig",
   },
   LAYOUT: {
+    WELCOME: "Welcome",
     PREV_STEP: "Forrige",
     NEXT_STEP: "Neste",
     NOTSET: "Ikke angitt.",

@@ -205,6 +205,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "Welcome",
       AGREE: "De acuerdo",
       START: "Iniciar",
       CANCEL: "Cancelar",

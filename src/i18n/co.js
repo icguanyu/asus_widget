@@ -205,13 +205,15 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "Welcome",
       AGREE: "Aceptar",
       START: "Iniciar",
       CANCEL: "Cancelar",
       WAIT: "Por favor espere",
       INPUT: "Ingrese texto",
       TRANSFER_TOAGENT: "Transferir a un agente",
-      READMORE: "También puede consultar las siguientes preguntas frecuentes relacionadas, gracias.",
+      READMORE:
+        "También puede consultar las siguientes preguntas frecuentes relacionadas, gracias.",
       COLLAPSE: "Ocultar",
     },
     HEAD: {

@@ -3,7 +3,7 @@
     <div class="privacy" v-loading="loading">
       <div class="welcome">
         <img src="@/assets/images/avatar-genio60.svg" alt="" />
-        <h1>Welcome</h1>
+        <h1>{{ $t("GPT.LAYOUT.WELCOME") }}</h1>
       </div>
       <div class="privacy-title">{{ $t("GPT.ENTRANCE.POLICY") }}</div>
 
@@ -66,21 +66,6 @@ export default {
     },
     createBotRoom() {
       this.$store.dispatch("gpt/createRoom");
-    },
-    getCookie(cname) {
-      let name = cname + "=";
-      let decodedCookie = decodeURIComponent(document.cookie);
-      let ca = decodedCookie.split(";");
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == " ") {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
     },
   },
   computed: {

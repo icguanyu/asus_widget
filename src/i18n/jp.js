@@ -201,13 +201,15 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
+      WELCOME: "Welcome",
       AGREE: "同意",
       START: "開始",
       CANCEL: "キャンセル",
       WAIT: "お待ちください",
       INPUT: "テキストを入力してください",
       TRANSFER_TOAGENT: "エージェントに転送します",
-      READMORE: "以下の関連FAQもご覧いただけますので、よろしくお願いいたします。",
+      READMORE:
+        "以下の関連FAQもご覧いただけますので、よろしくお願いいたします。",
       COLLAPSE: "隠れる",
     },
     HEAD: {
