@@ -47,6 +47,7 @@ const actions = {
       device: checkDevice(),
       locationCountry: "", // AP-2339 移除IP偵測
     };
+    commit("toggleLoading", true);
     try {
       const res = await ChatBotRoom.Create(params);
       // console.log("create room", res);
@@ -80,6 +81,7 @@ const actions = {
       commit("global/cleanRoomId", { root: true });
       router.push(`/?country=${countryId}`);
     }
+    commit("toggleLoading", false);
   },
   async createNewRoom({ state, commit, dispatch }) {
     // 關閉當前 room
