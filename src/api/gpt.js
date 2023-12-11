@@ -7,6 +7,9 @@ export const ChatBot = {
   ChatLike: (data) => {
     return request.post("/api/ChatBot/ChatLike", data);
   },
+  CreateSurvey: (data) => {
+    return request.post("/api/ChatBot/ChatBotRoom/CreateSurvey", data);
+  },
 };
 
 export const ChatBotRoom = {

@@ -11,9 +11,11 @@
             :name="i"
             :id="i"
             :value="i.toString()"
-            v-model="form.score"
+            v-model="form.surveyScore"
           />
-          <label :for="i" :class="{ active: i <= form.score }">{{ i }}</label>
+          <label :for="i" :class="{ active: i <= form.surveyScore }">{{
+            i
+          }}</label>
         </div>
       </div>
       <div class="score-text">
@@ -25,7 +27,7 @@
         type="textarea"
         placeholder="留下您的反饋"
         :autosize="{ minRows: 4, maxRows: 6 }"
-        v-model="form.note"
+        v-model="form.surveyFeedback"
         maxlength="100"
         show-word-limit
       ></el-input>
@@ -34,7 +36,10 @@
     </div>
 
     <div class="buttons">
-      <el-button type="primary" @click="handleSurvey" :disabled="!form.score"
+      <el-button
+        type="primary"
+        @click="handleSurvey"
+        :disabled="loading || !form.surveyScore"
         >送出</el-button
       >
       <el-button
@@ -48,29 +53,39 @@
 </template>
 
 <script>
+import { ChatBot } from "@/api/gpt";
 export default {
   name: "gpt-survey",
   data() {
     return {
+      loading: false,
       form: {
         chatBotRoomId: "",
-        countryId: "",
-        score: "",
-        note: "",
+        sessionId: "",
+        surveyScore: "",
+        surveyFeedback: "",
       },
     };
   },
   async mounted() {
     this.form.chatBotRoomId = this.botRoom.chatBotRoomId;
-    this.form.countryId = this.botRoom.countryId;
+    this.form.sessionId = this.botRoom.sessionId;
   },
   methods: {
     // 送出滿意度，感謝畫面
-    handleSurvey() {
-      // API...
-      console.log("送出滿意度", this.form);
-      this.$store.commit("gpt/reset");
-      this.$router.push("/end");
+    async handleSurvey() {
+      this.loading = true;
+      try {
+        await ChatBot.CreateSurvey(this.form);
+        this.$store.commit("gpt/reset");
+        this.$router.push("/end");
+      } catch (error) {
+        // console.log("catch", error.data);
+        if (error.data === "Survey is existed") {
+          this.$router.push("/end");
+        }
+      }
+      this.loading = false;
     },
   },
   computed: {

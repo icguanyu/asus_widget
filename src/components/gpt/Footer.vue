@@ -157,19 +157,19 @@ export default {
       }
     },
     handleEnd() {
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "close_chat2_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "close_chat2/genio",
+      });
       if (this.countryId.toUpperCase() === "TW") {
         //只有 tw 先進入滿意度調查，其他 country 後補
         //需調整 GTM
         this.$router.push("/survey");
       } else {
-        window.dataLayer.push({
-          event: "data_layer_event",
-          chatbot_session_id: this.chatbot_session_id,
-          event_name_ga4: "close_chat2_genio",
-          event_category_DL: "genio",
-          event_action_DL: "clicked",
-          event_label_DL: "close_chat2/genio",
-        });
         this.$store.commit("gpt/reset");
         this.$router.push("/end");
       }

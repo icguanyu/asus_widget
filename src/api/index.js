@@ -32,7 +32,7 @@ axios.interceptors.response.use(
           break;
         default:
           // console.log(err.response);
-          console.log(`連接錯誤${err.response.status}`);
+          console.log(`Something went wrong : ${err.response.status}.`);
       }
     } else {
       console.log("連接到服務器失敗");
