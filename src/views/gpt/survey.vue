@@ -42,12 +42,7 @@
         :disabled="loading || !form.surveyScore"
         >送出</el-button
       >
-      <el-button
-        type="primary"
-        plain
-        @click="$router.push(`/${form.chatBotRoomId}`)"
-        >取消</el-button
-      >
+      <el-button type="primary" plain @click="back">取消</el-button>
     </div>
   </div>
 </template>
@@ -72,11 +67,30 @@ export default {
     this.form.sessionId = this.botRoom.sessionId;
   },
   methods: {
+    back() {
+      this.$router.push(`/${this.form.chatBotRoomId}`);
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "click_cancel_survey_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "cancel_survey/genio",
+      });
+    },
     // 送出滿意度，感謝畫面
     async handleSurvey() {
       this.loading = true;
       try {
         await ChatBot.CreateSurvey(this.form);
+        window.dataLayer.push({
+          event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
+          event_name_ga4: "click_submit_survey_genio",
+          event_category_DL: "genio",
+          event_action_DL: "clicked",
+          event_label_DL: `${this.form.surveyScore}/submit_survey/genio`,
+        });
         this.$store.commit("gpt/reset");
         this.$router.push("/end");
       } catch (error) {
