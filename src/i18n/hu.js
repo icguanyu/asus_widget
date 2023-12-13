@@ -207,7 +207,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
-      WELCOME: "Welcome",
+      WELCOME: "Üdvözöljük!",
       AGREE: "Elfogadás",
       START: "Kezdés",
       CANCEL: "Megszakítás",

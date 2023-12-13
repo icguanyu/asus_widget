@@ -203,7 +203,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
-      WELCOME: "Welcome",
+      WELCOME: "Vítáme Vás",
       AGREE: "Souhlasím",
       START: "Spustit",
       CANCEL: "Zrušit",
