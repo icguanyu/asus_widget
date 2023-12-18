@@ -78,9 +78,11 @@ const lan = {
     NAME: "İsim",
     TEL: "Telefon numarası",
     BIRTHDAY: "Doğum tarihi",
+    LABEL_EMAIL: "Email",
     EMAIL: "Email",
     DEVICEINFO: "Ürün bilgileriniz",
     DEVICENAME: "Ürün ismi",
+    LABEL_DEVICESN: "Serial Number",
     DEVICESN: "Ürün seri numarası",
     PREPARE: "Chat odası oluşturuluyor, konuşmaya hazırlanın",
     START: "Konuşmayı başlat",
@@ -211,7 +213,8 @@ const lan = {
       WAIT: "Lütfen bekleyin",
       INPUT: "Metin girin",
       TRANSFER_TOAGENT: "Temsilciye aktar",
-      READMORE: "Ayrıca aşağıdaki ilgili SSS'e de başvurabilirsiniz, teşekkür ederim.",
+      READMORE:
+        "Ayrıca aşağıdaki ilgili SSS'e de başvurabilirsiniz, teşekkür ederim.",
       COLLAPSE: "Gizle",
     },
     HEAD: {

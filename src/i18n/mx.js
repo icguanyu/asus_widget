@@ -79,9 +79,11 @@ const lan = {
     NAME: "Nombre",
     TEL: "Número de teléfono",
     BIRTHDAY: "Fecha de nacimiento",
+    LABEL_EMAIL: "Email",
     EMAIL: "Correo electrónico",
     DEVICEINFO: "Información de su producto",
     DEVICENAME: "Nombre del producto",
+    LABEL_DEVICESN: "Serial Number",
     DEVICESN: "Número de serie del producto",
     PREPARE: "Creando la sala de chat, preparándose para chatear",
     START: "Iniciar chat",
@@ -212,7 +214,8 @@ const lan = {
       WAIT: "Espere...",
       INPUT: "Ingrese texto",
       TRANSFER_TOAGENT: "Transferir a un agente.",
-      READMORE: "También puede consultar las siguientes preguntas frecuentes relacionadas, gracias.",
+      READMORE:
+        "También puede consultar las siguientes preguntas frecuentes relacionadas, gracias.",
       COLLAPSE: "Ocultar",
     },
     HEAD: {

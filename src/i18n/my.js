@@ -80,9 +80,11 @@ const lan = {
     NAME: "Name",
     TEL: "Phone Number",
     BIRTHDAY: "Birthday",
+    LABEL_EMAIL: "Email",
     EMAIL: "Email",
     DEVICEINFO: "Your product information",
     DEVICENAME: "Product name",
+    LABEL_DEVICESN: "Serial Number",
     DEVICESN: "Product Serial Number",
     PREPARE: "Creating the Chat room, getting ready to Chat",
     START: "Start the Chat",
@@ -227,7 +229,8 @@ const lan = {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
     END: "Conversation Ended",
-    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support.",
+    END_MSG:
+      "We are pleased to provide our service. Feel free to reach out for future support.",
     BACKHOME: "Restart Conversation",
   },
 };

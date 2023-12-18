@@ -77,9 +77,11 @@ const lan = {
     NAME: "Nome",
     TEL: "Numero di telefono",
     BIRTHDAY: "Data di nascita",
+    LABEL_EMAIL: "Email",
     EMAIL: "E-Mail",
     DEVICEINFO: "Aggiungi le informazioni del tuo prodotto",
     DEVICENAME: "Nome del prodotto",
+    LABEL_DEVICESN: "Serial Number",
     DEVICESN: "Numero di serie del prodotto",
     PREPARE:
       "Preparazione della chat in corso... a breve un'operatore sarà disponibile",
