@@ -99,6 +99,8 @@ let messages = {
   // 以下EMEA (* = element使用英文)
   AR: { ...ar, ...arLocale }, // Arabic 阿拉伯
   AE: { ...ae, ...enLocale }, // United Arab Emirates 阿拉伯聯合大公國 *
+  "ME-EN": { ...ae, ...enLocale }, // United Arab Emirates 阿拉伯聯合大公國 *
+  "ME-AR": { ...ae, ...enLocale }, // United Arab Emirates 阿拉伯聯合大公國 *
   CZ: { ...cz, ...czLocale }, // Czech Republic 捷克
   DE: { ...de, ...deLocale }, // Germany 德國
   DK: { ...dk, ...daLocale }, // Denmark 丹麥
@@ -116,10 +118,13 @@ let messages = {
   PL: { ...pl, ...plLocale }, // Poland 波蘭
   PT: { ...pt, ...ptLocale }, // Portugal 葡萄牙
   RO: { ...ro, ...roLocale }, // Romania 羅馬尼亞
-  SA: { ...sa, ...enLocale }, // Saudi Arabia 沙烏地阿拉伯 *
+  SA: { ...ae, ...enLocale }, // Saudi Arabia 沙烏地阿拉伯 *
+  "SA-EN": { ...ae, ...enLocale }, // Saudi Arabia 沙烏地阿拉伯 *
+  "SA-AR": { ...ae, ...enLocale }, // Saudi Arabia 沙烏地阿拉伯 *
   SE: { ...se, ...seLocale }, // Sweden	瑞典
   TR: { ...tr, ...trLocale }, // Turkey 土耳其
   UA: { ...ua, ...uaLocale }, // Ukraine 烏克蘭
+  "UA-UA": { ...ua, ...uaLocale }, // Ukraine 烏克蘭
   ZA: { ...za, ...zaLocale }, // South Africa	南非
   UK: { ...uk, ...enLocale }, // United Kingdom 英國 *
   MX: { ...mx, ...esLocale }, // Colombia 哥倫比亞 (element使用西班牙)
