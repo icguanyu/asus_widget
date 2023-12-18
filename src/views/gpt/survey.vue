@@ -3,18 +3,17 @@
     <div class="wrap">
       <img src="@/assets/images/chat_star.png" alt="" />
       <p>請為本次ASUS虛擬助手服務評價分數</p>
-
       <div class="scores">
-        <div class="score-group" v-for="i in 10" :key="i">
+        <div class="score-group" v-for="i in 11" :key="i">
           <input
             type="radio"
-            :name="i"
-            :id="i"
-            :value="i.toString()"
+            :name="i - 1"
+            :id="i - 1"
+            :value="(i - 1).toString()"
             v-model="form.surveyScore"
           />
-          <label :for="i" :class="{ active: i <= form.surveyScore }">{{
-            i
+          <label :for="i - 1" :class="{ active: i - 1 <= form.surveyScore }">{{
+            i - 1
           }}</label>
         </div>
       </div>
@@ -57,7 +56,7 @@ export default {
       form: {
         chatBotRoomId: "",
         sessionId: "",
-        surveyScore: "",
+        surveyScore: "0",
         surveyFeedback: "",
       },
     };
