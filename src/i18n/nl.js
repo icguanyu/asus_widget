@@ -49,8 +49,7 @@ const lan = {
     SAT_SURVEY: "Service Agreement",
     CONFIRM_COUNTRY: {
       H1: "Beste klant van ASUS,",
-      P1:
-        'U bezoekt nu "ASUS Online Klantenservice" van de Benelux die verschilt van uw huidige regio. Volgens de ASUS Garantie Termen is niet elk ASUS product van toepassing op ASUS International Garantie en Support service. Als de bovenstaande regionale site die je bezoekt niet de regio is waar je het ASUS-product hebt gekocht, of verschilt van uw huidige regio, het kan van invloed zijn op uw rechten. U kunt doorgaan met het gebruik van "ASUS Online Klantenservice" van de Benelux of kies "ASUS Online Customer Service" voor uw eigen regio.',
+      P1: 'U bezoekt nu "ASUS Online Klantenservice" van de Benelux die verschilt van uw huidige regio. Volgens de ASUS Garantie Termen is niet elk ASUS product van toepassing op ASUS International Garantie en Support service. Als de bovenstaande regionale site die je bezoekt niet de regio is waar je het ASUS-product hebt gekocht, of verschilt van uw huidige regio, het kan van invloed zijn op uw rechten. U kunt doorgaan met het gebruik van "ASUS Online Klantenservice" van de Benelux of kies "ASUS Online Customer Service" voor uw eigen regio.',
       P2: "",
       P3: "",
       B1: "Overschakelen naar ASUS",
@@ -92,8 +91,7 @@ const lan = {
       "U voldoet niet aan de leeftijd vereisten om ASUS Chat te gebruiken",
     REPEAT_ENTRY: {
       H1: "Bestaande chatruimte gedetecteerd",
-      P1:
-        "Weet je zeker dat je een nieuw gesprek wilt beginnen? Wanneer een nieuw gesprek wordt geopend, zal het oude gesprek eindigen.",
+      P1: "Weet je zeker dat je een nieuw gesprek wilt beginnen? Wanneer een nieuw gesprek wordt geopend, zal het oude gesprek eindigen.",
       B0: "Bevestigen",
       B1: "Annuleren",
     },
@@ -134,16 +132,14 @@ const lan = {
       DISSAT: "ontevreden",
       SAT_CHOOSE: "Wat voor soort diensten? (Meerdere diensten)",
       HEAD: "Was je tevreden met de Chat?",
-      DESC:
-        "Luisteren naar uw feedback is een drijvende kracht voor onze voortdurende verbetering. Laat ons weten of u suggesties heeft voor ASUS Service of ondersteuning.",
+      DESC: "Luisteren naar uw feedback is een drijvende kracht voor onze voortdurende verbetering. Laat ons weten of u suggesties heeft voor ASUS Service of ondersteuning.",
       OTHER_OPTION: "Overige",
       OTHER_REASON: "Vul alsjeblieft de andere reden in",
       SEND: "Verzenden",
     },
     CLOSE: {
       TITLE: "Weet u zeker dat u deze chat wilt beëindigen?",
-      P1:
-        'Klik op "Voltooien" om het venster te sluiten. Als je de Chat opnieuw wilt gebruiken, klik dan op "Start nieuwe Chat".',
+      P1: 'Klik op "Voltooien" om het venster te sluiten. Als je de Chat opnieuw wilt gebruiken, klik dan op "Start nieuwe Chat".',
       B0: "Voltooien",
       B1: "Annuleren",
     },
@@ -157,35 +153,27 @@ const lan = {
     CLOSE: "Sluit Venster.",
   },
   CHAT_CLOSE: {
-    H1:
-      "Uw netwerk is al meer dan 300 seconden offline geweest, daarom is het gesprek beëindigd.",
-    DESC:
-      "Als je een draadloos netwerk of een mobiel netwerk gebruikt, probeer dan een locatie te vinden met een beter signaal; of schakel over naar een bedrade netwerkverbinding, excuses voor het ongemak",
+    H1: "Uw netwerk is al meer dan 300 seconden offline geweest, daarom is het gesprek beëindigd.",
+    DESC: "Als je een draadloos netwerk of een mobiel netwerk gebruikt, probeer dan een locatie te vinden met een beter signaal; of schakel over naar een bedrade netwerkverbinding, excuses voor het ongemak",
     CLOSE: "Sluit Venster.",
   },
   SURVEY_DONE: {
     H1: "Dank u. U heeft de enquête over servicetevredenheid voltooid",
-    P1:
-      'Uw feedback is een drijvende kracht achter onze voortdurende verbetering. Bedankt dat u de tijd hebt genomen om de Service Tevredenheids onderzoek te voltooien. Als u extra Service of Support nodig heeft, klik dan op "Start nieuwe Chat". Als we uw zoekopdracht hebben beëindigd, klik dan op "Sluit het venster sluiten" om de Chat te voltooien',
+    P1: 'Uw feedback is een drijvende kracht achter onze voortdurende verbetering. Bedankt dat u de tijd hebt genomen om de Service Tevredenheids onderzoek te voltooien. Als u extra Service of Support nodig heeft, klik dan op "Start nieuwe Chat". Als we uw zoekopdracht hebben beëindigd, klik dan op "Sluit het venster sluiten" om de Chat te voltooien',
     AGAIN: "Chat starten",
     CLOSE: "Sluit Venster.",
   },
   AGENT_OFFLINE: {
-    H1:
-      "De internetverbinding van de agent reageert niet; uw Chat is momenteel onderbroken",
-    H2:
-      "Sluit het venster alstublieft niet; we zijn hard aan het werken om de Chat te hervatten",
-    DESC:
-      'U kunt ook kiezen om de Chat te beëindigen en te beginnen met de Enquête of klik op "Start nieuwe Chat", en we zullen direct een nieuwe agent toewijzen om door te gaan met je Chat. Onze excuses voor het ongemak dat is veroorzaakt',
+    H1: "De internetverbinding van de agent reageert niet; uw Chat is momenteel onderbroken",
+    H2: "Sluit het venster alstublieft niet; we zijn hard aan het werken om de Chat te hervatten",
+    DESC: 'U kunt ook kiezen om de Chat te beëindigen en te beginnen met de Enquête of klik op "Start nieuwe Chat", en we zullen direct een nieuwe agent toewijzen om door te gaan met je Chat. Onze excuses voor het ongemak dat is veroorzaakt',
     AGAIN: "Chat starten",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -213,7 +201,8 @@ const lan = {
       WAIT: "Wachten svp",
       INPUT: "Voer tekst in",
       TRANSFER_TOAGENT: "Doorzetten naar een agent.",
-      READMORE: "U kunt ook de volgende gerelateerde veelgestelde vragen raadplegen, bedankt.",
+      READMORE:
+        "U kunt ook de volgende gerelateerde veelgestelde vragen raadplegen, bedankt.",
       COLLAPSE: "Verbergen",
     },
     HEAD: {
@@ -230,6 +219,14 @@ const lan = {
     END: "Gesprek beeindigd",
     END_MSG: "We zijn blij u te hebben geholpen. Het gesprek is beeindigd.",
     BACKHOME: "Terug naar homepagina",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

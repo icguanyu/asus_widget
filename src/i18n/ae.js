@@ -232,6 +232,20 @@ const lan = {
     END_MSG:
       "We are pleased to provide our service. Feel free to reach out for future support.",
     BACKHOME: "Restart Conversation",
-  },
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },  SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },},
 };
 export default lan;

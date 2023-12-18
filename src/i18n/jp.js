@@ -48,8 +48,7 @@ const lan = {
     SAT_SURVEY: "サービス契約",
     CONFIRM_COUNTRY: {
       H1: "こんにちは",
-      P1:
-        "現在、ASUS JAPANのWEBサイトから「ASUSオンラインカスタマーサービス」にアクセスいただいております。本サービスは日本国内向けに販売された製品、もしくはインターナショナルワランティがついている製品が対象となっております。\nインターナショナルワランティがついていない、日本以外で販売された製品は、本サービスの適用対象外となる場合があります。詳細は製品保証書をご確認ください。日本以外で購入された製品の場合、ご購入の国または地域のASUSオンラインカスタマーサービスからお問い合わせください。",
+      P1: "現在、ASUS JAPANのWEBサイトから「ASUSオンラインカスタマーサービス」にアクセスいただいております。本サービスは日本国内向けに販売された製品、もしくはインターナショナルワランティがついている製品が対象となっております。\nインターナショナルワランティがついていない、日本以外で販売された製品は、本サービスの適用対象外となる場合があります。詳細は製品保証書をご確認ください。日本以外で購入された製品の場合、ご購入の国または地域のASUSオンラインカスタマーサービスからお問い合わせください。",
       P2: "",
       P3: "",
       B1: "ASUSに切り替える",
@@ -90,8 +89,7 @@ const lan = {
     AGE_LIMIT_DESC: "ASUSチャットを使用する年齢要求を満たしていません",
     REPEAT_ENTRY: {
       H1: "既存のチャットルームが検出されました",
-      P1:
-        "新しい会話を開始してもよろしいですか？新しい会話が開かれると、古い会話は終了します。",
+      P1: "新しい会話を開始してもよろしいですか？新しい会話が開かれると、古い会話は終了します。",
       B0: "確認",
       B1: "キャンセル",
     },
@@ -132,16 +130,14 @@ const lan = {
       DISSAT: "不満足です",
       SAT_CHOOSE: "どのような種類のサービスですか？（複数)",
       HEAD: "チャットに満足しましたか？",
-      DESC:
-        "お客様が弊社の商品やサービスに対して、どのような感想やご意見をお持ちかをおうかがいするためのアンケートを実施しております。",
+      DESC: "お客様が弊社の商品やサービスに対して、どのような感想やご意見をお持ちかをおうかがいするためのアンケートを実施しております。",
       OTHER_OPTION: "その他の理由",
       OTHER_REASON: "その他の理由を記入してください",
       SEND: "送信",
     },
     CLOSE: {
       TITLE: "このチャットを終了してもよろしいですか？",
-      P1:
-        "「終了」をクリックしてウィンドウを閉じます．チャットを再度使用する場合は，「新しいチャットを開始」をクリックしてください．",
+      P1: "「終了」をクリックしてウィンドウを閉じます．チャットを再度使用する場合は，「新しいチャットを開始」をクリックしてください．",
       B0: "終了",
       B1: "キャンセル",
     },
@@ -156,33 +152,26 @@ const lan = {
   },
   CHAT_CLOSE: {
     H1: "ネットワークが300秒以上中断されたため、この会話は終了しました。",
-    DESC:
-      "無線ネットワークまたはモバイルネットワークを使用する際、電波が弱い場合があるので、電波が良い場所でご利用ください。 大変お手数ですが、よろしくお願いいたします。",
+    DESC: "無線ネットワークまたはモバイルネットワークを使用する際、電波が弱い場合があるので、電波が良い場所でご利用ください。 大変お手数ですが、よろしくお願いいたします。",
     CLOSE: "ウィンドウを閉じます。",
   },
   SURVEY_DONE: {
     H1: "ありがとうございます。サービス満足度調査を完了しました。",
-    P1:
-      "より良いサービスの提供及びお客様に満足いただけるサービスを目指してります。ASUSでは、可能な限り最高の品質とサービスを提供させていただきます。\n この調査にご協力いただき、誠にありがとうございます。",
+    P1: "より良いサービスの提供及びお客様に満足いただけるサービスを目指してります。ASUSでは、可能な限り最高の品質とサービスを提供させていただきます。\n この調査にご協力いただき、誠にありがとうございます。",
     AGAIN: "新しいチャットを開始",
     CLOSE: "ウィンドウを閉じます。",
   },
   AGENT_OFFLINE: {
-    H1:
-      "エージェントのインターネット接続が応答していません。チャットは現在中断されています。",
-    H2:
-      "ウィンドウを閉じないでください。チャットを再開するために取り組んでいます。",
-    DESC:
-      "また、セッションを終了してアンケートを実行するか、それとも「新しいチャットを開始」をクリックすることもできます。 すぐに新しい担当者を割り当てます。 ご不便をおかけして申し訳ありません",
+    H1: "エージェントのインターネット接続が応答していません。チャットは現在中断されています。",
+    H2: "ウィンドウを閉じないでください。チャットを再開するために取り組んでいます。",
+    DESC: "また、セッションを終了してアンケートを実行するか、それとも「新しいチャットを開始」をクリックすることもできます。 すぐに新しい担当者を割り当てます。 ご不便をおかけして申し訳ありません",
     AGAIN: "新しいチャットを開始",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -228,6 +217,14 @@ const lan = {
     END: "会話が終了しました",
     END_MSG: "喜んでご対応させていただきます。 会話が終了しました。",
     BACKHOME: "ホームページに戻る",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

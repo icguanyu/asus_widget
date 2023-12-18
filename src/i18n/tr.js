@@ -48,8 +48,7 @@ const lan = {
     SAT_SURVEY: "Hizmet Sözleşmesi",
     CONFIRM_COUNTRY: {
       H1: "Sayın ASUS müşterisi",
-      P1:
-        "Şu anda bulunduğunuz bölgeden farklı olan Avustralya için ASUS Çevrimiçi Müşteri Hizmetlerini ziyaret ediyorsunuz. ASUS garanti koşullarına göre, her ASUS ürünü ASUS Uluslararası Garanti ve Destek hizmeti için geçerli değildir. Ziyaret ettiğiniz yukarıdaki bölgesel site ASUS ürününüzü satın aldığınız bölge değilse veya bulunduğunuz bölgeden farklıysa, haklarınızı etkileyebilir. Avustralya için ASUS Çevrimiçi Müşteri Hizmetlerini kullanmaya devam edebilir veya ASUS Çevrimiçi Müşteri Hizmetlerini bölgenize göre değiştirebilirsiniz.",
+      P1: "Şu anda bulunduğunuz bölgeden farklı olan Avustralya için ASUS Çevrimiçi Müşteri Hizmetlerini ziyaret ediyorsunuz. ASUS garanti koşullarına göre, her ASUS ürünü ASUS Uluslararası Garanti ve Destek hizmeti için geçerli değildir. Ziyaret ettiğiniz yukarıdaki bölgesel site ASUS ürününüzü satın aldığınız bölge değilse veya bulunduğunuz bölgeden farklıysa, haklarınızı etkileyebilir. Avustralya için ASUS Çevrimiçi Müşteri Hizmetlerini kullanmaya devam edebilir veya ASUS Çevrimiçi Müşteri Hizmetlerini bölgenize göre değiştirebilirsiniz.",
       P2: "",
       P3: "",
       B1: "Asus'a bağlanın",
@@ -91,8 +90,7 @@ const lan = {
       "ASUS Chat'i kullanmak için yaş gereksinimlerini karşılamıyorsunuz",
     REPEAT_ENTRY: {
       H1: "Mevcut sohbet odası algılandı",
-      P1:
-        "Yeni bir konuşma başlatmak istediğinizden emin misiniz? Yeni bir konuşma açıldığında, eski konuşma sona erer.",
+      P1: "Yeni bir konuşma başlatmak istediğinizden emin misiniz? Yeni bir konuşma açıldığında, eski konuşma sona erer.",
       B0: "Onayla",
       B1: "İptal et",
     },
@@ -135,16 +133,14 @@ const lan = {
       DISSAT: "Memnun değil",
       SAT_CHOOSE: "Hangi servis tipi? ( Birden fazla)",
       HEAD: "Konuşmadan memnun musunuz?",
-      DESC:
-        "Geri bildirimlerinizi dinlemek, sürekli gelişimimiz için teşvik edici bir güçtür. ASUS Servis veya Destek için herhangi bir öneriniz varsa, lütfen bize bildirin.",
+      DESC: "Geri bildirimlerinizi dinlemek, sürekli gelişimimiz için teşvik edici bir güçtür. ASUS Servis veya Destek için herhangi bir öneriniz varsa, lütfen bize bildirin.",
       OTHER_OPTION: "Diğer",
       OTHER_REASON: "Lütfen diğer nedenleri belirtiniz",
       SEND: "Gönder",
     },
     CLOSE: {
       TITLE: "Konuşmayı sonlandırmak istediğinizden emin misiniz?",
-      P1:
-        'Pencereyi kapatmak için "Son" u tıklayınız. Sohbeti tekrar kullanmanız gerekirse, konuşşma için başka bir talep iletmeniz gerekecektir".',
+      P1: 'Pencereyi kapatmak için "Son" u tıklayınız. Sohbeti tekrar kullanmanız gerekirse, konuşşma için başka bir talep iletmeniz gerekecektir".',
       B0: "Bitir",
       B1: "İptal",
     },
@@ -158,34 +154,27 @@ const lan = {
     CLOSE: "Pencereyi kapat",
   },
   CHAT_CLOSE: {
-    H1:
-      "Ağınız 300 saniyeden uzun süredir kapalı olduğundan dolayı bu konuşmayı sonlandırdık.",
-    DESC:
-      "Bir kablosuz ağ veya mobil ağ kullanıyorsanız, lütfen daha iyi sinyale sahip bir konum bulmaya çalışınız; veya kablolu ağ bağlantısına geçiniz, Verdiğimiz geçici rahatsızlıktan dolayı özür dileriz",
+    H1: "Ağınız 300 saniyeden uzun süredir kapalı olduğundan dolayı bu konuşmayı sonlandırdık.",
+    DESC: "Bir kablosuz ağ veya mobil ağ kullanıyorsanız, lütfen daha iyi sinyale sahip bir konum bulmaya çalışınız; veya kablolu ağ bağlantısına geçiniz, Verdiğimiz geçici rahatsızlıktan dolayı özür dileriz",
     CLOSE: "Pencereyi kapat",
   },
   SURVEY_DONE: {
     H1: "Teşekkürler, memnuniyet anketimizi tamamladınız",
-    P1:
-      'Geri bildiriminiz, sürekli gelişimimiz için teşvik edici bir güçtür. Hizmet Memnuniyeti Anketi\'ni tamamlamak için zaman ayırdığınızdan dolayı teşekkür ederiz. Herhangi bir ek hizmet veya desteğe ihtiyacınız varsa, lütfen "Yeni Sohbet Başlat" ı tıklayınız. Sorunuzu çözdüysek, konuşmayı bitirmek için lütfen "Pencereyi kapat" ı tıklayınız',
+    P1: 'Geri bildiriminiz, sürekli gelişimimiz için teşvik edici bir güçtür. Hizmet Memnuniyeti Anketi\'ni tamamlamak için zaman ayırdığınızdan dolayı teşekkür ederiz. Herhangi bir ek hizmet veya desteğe ihtiyacınız varsa, lütfen "Yeni Sohbet Başlat" ı tıklayınız. Sorunuzu çözdüysek, konuşmayı bitirmek için lütfen "Pencereyi kapat" ı tıklayınız',
     AGAIN: "Yeni bir konuşma başlat",
     CLOSE: "Pencereyi kapat",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Temsilcinin internet bağlantısı yanıt vermiyor; Sohbetiniz şu anda kesintiye uğradı",
+    H1: "Temsilcinin internet bağlantısı yanıt vermiyor; Sohbetiniz şu anda kesintiye uğradı",
     H2: "Lütfen pencereyi kapatmayın; Sohbeti sürdürmek için çok çalışıyoruz",
-    DESC:
-      "Ayrıca, ankete katılmak için oturumu sonlandırmayı seçebilir veya 'Yeni Sohbet Başlat'ı tıklayabilirsiniz; oturuma devam etmesi için hemen yeni bir temsilci atayacağız. Verdiğimiz geçici rahatsızlıktan dolayı üzgünüz",
+    DESC: "Ayrıca, ankete katılmak için oturumu sonlandırmayı seçebilir veya 'Yeni Sohbet Başlat'ı tıklayabilirsiniz; oturuma devam etmesi için hemen yeni bir temsilci atayacağız. Verdiğimiz geçici rahatsızlıktan dolayı üzgünüz",
     AGAIN: "Yeni bir konuşma başlat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -231,6 +220,14 @@ const lan = {
     END: "Sohbet sona erdi",
     END_MSG: "Size destek olabilmekten memnuniyet duyuyoruz. Sohbet sona erdi.",
     BACKHOME: "Anasayfaya dön",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

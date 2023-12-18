@@ -50,8 +50,7 @@ const lan = {
     SAT_SURVEY: "Szolgáltatási megállapodás",
     CONFIRM_COUNTRY: {
       H1: "Tisztelt ASUS Ügyfelünk,",
-      P1:
-        'Ön most az "ASUS Online ügyfélszolgálat" Magyarország oldalán van, amely eltér az Ön jelenlegi régiójától. Az ASUS garanciális feltételei szerint nem minden ASUS termékre vonatkozik az ASUS nemzetközi garancia- és támogatási szolgáltatása. Ha a fenti regionális oldal, amelyet meglátogat, nem az a régió, ahol az ASUS terméket vásárolta vagy eltér az Ön jelenlegi régiójától, ez befolyásolhatja az Ön jogait. Továbbra is használhatja az "ASUS Online ügyfélszolgálatot" Magyarország oldalát , vagy válassza az "ASUS Online ügyfélszolgálatot" az Ön régiójához.',
+      P1: 'Ön most az "ASUS Online ügyfélszolgálat" Magyarország oldalán van, amely eltér az Ön jelenlegi régiójától. Az ASUS garanciális feltételei szerint nem minden ASUS termékre vonatkozik az ASUS nemzetközi garancia- és támogatási szolgáltatása. Ha a fenti regionális oldal, amelyet meglátogat, nem az a régió, ahol az ASUS terméket vásárolta vagy eltér az Ön jelenlegi régiójától, ez befolyásolhatja az Ön jogait. Továbbra is használhatja az "ASUS Online ügyfélszolgálatot" Magyarország oldalát , vagy válassza az "ASUS Online ügyfélszolgálatot" az Ön régiójához.',
       P2: "",
       P3: "",
       B1: "Váltás ASUSra",
@@ -93,16 +92,14 @@ const lan = {
       "Nem felel meg az ASUS Chat használatához szükséges korhatárnak",
     REPEAT_ENTRY: {
       H1: "Létező csevegő szoba észlelve",
-      P1:
-        "Biztosan új beszélgetést akar indítani? Új beszélgetés megnyitásakor a régi beszélgetés véget ér.",
+      P1: "Biztosan új beszélgetést akar indítani? Új beszélgetés megnyitásakor a régi beszélgetés véget ér.",
       B0: "Megerősít",
       B1: "Mégse",
     },
   },
   CONNECTTING: {
     P1: "Kérjük, várjon egy pillanatot és ne zárja be az ablakot",
-    P2:
-      "A rendszer összekapcsolja Önt egy elérhető ügyfélszolgálati munkatársunkkal",
+    P2: "A rendszer összekapcsolja Önt egy elérhető ügyfélszolgálati munkatársunkkal",
     NOTE: "Súgó",
     BEFORE_LEAVE: "Biztosan be szeretné fejezni a csevegést?",
     B0: "Befejezés",
@@ -137,16 +134,14 @@ const lan = {
       DISSAT: "Elégedetlen",
       SAT_CHOOSE: "Szolgáltatás típusa? (Több választási lehetőség)",
       HEAD: "Elégedett volt a csevegéssel?",
-      DESC:
-        "Az Ön visszajelzéseire való odafigyelés a folyamatos fejlődésünk hajtóereje. Ha bármilyen javaslata van az ASUS szolgáltatásokkal vagy ügyfélszolgálattal kapcsolatban, kérjük, ossza meg velünk.",
+      DESC: "Az Ön visszajelzéseire való odafigyelés a folyamatos fejlődésünk hajtóereje. Ha bármilyen javaslata van az ASUS szolgáltatásokkal vagy ügyfélszolgálattal kapcsolatban, kérjük, ossza meg velünk.",
       OTHER_OPTION: "Egyéb",
       OTHER_REASON: "Kérem töltse ki az egyéb okot",
       SEND: "Küldés",
     },
     CLOSE: {
       TITLE: "Biztosan be szeretné fejezni a csevegést?",
-      P1:
-        'Kattintson a "Befejezés" gombra az ablak bezárásához. Ha újra használni szeretné a Chatet, akkor újabb Chat-kérelemre lesz szüksége.',
+      P1: 'Kattintson a "Befejezés" gombra az ablak bezárásához. Ha újra használni szeretné a Chatet, akkor újabb Chat-kérelemre lesz szüksége.',
       B0: "Befejezés",
       B1: "Mégse",
     },
@@ -160,35 +155,27 @@ const lan = {
     CLOSE: "Ablak bezárása",
   },
   CHAT_CLOSE: {
-    H1:
-      "Az Ön hálózata több mint 300 másodperce nem elérhető, ezért megszakítottuk a beszélgetést.",
-    DESC:
-      "Ha vezeték nélküli hálózatot vagy mobilhálózatot használ, kérjük, keressen egy olyan helyet, ahol jobb a jel; vagy váltson vezetékes hálózati kapcsolatra, elnézést a kellemetlenségekért",
+    H1: "Az Ön hálózata több mint 300 másodperce nem elérhető, ezért megszakítottuk a beszélgetést.",
+    DESC: "Ha vezeték nélküli hálózatot vagy mobilhálózatot használ, kérjük, keressen egy olyan helyet, ahol jobb a jel; vagy váltson vezetékes hálózati kapcsolatra, elnézést a kellemetlenségekért",
     CLOSE: "Ablak bezárása",
   },
   SURVEY_DONE: {
     H1: "Köszönjük. Ön kitöltötte a szolgáltatási elégedettségi felmérést",
-    P1:
-      'Az Ön visszajelzései a folyamatos fejlődésünk hajtóerejét jelentik. Köszönjük, hogy időt szakított a szolgáltatási elégedettségi felmérés kitöltésére. Ha további szolgáltatásra vagy támogatásra van szüksége, kérjük, kattintson az "Új csevegés indítása" gombra. Ha megoldottuk a kérdését, kérjük, kattintson az "Ablak bezárása" gombra a csevegés befejezéséhez',
+    P1: 'Az Ön visszajelzései a folyamatos fejlődésünk hajtóerejét jelentik. Köszönjük, hogy időt szakított a szolgáltatási elégedettségi felmérés kitöltésére. Ha további szolgáltatásra vagy támogatásra van szüksége, kérjük, kattintson az "Új csevegés indítása" gombra. Ha megoldottuk a kérdését, kérjük, kattintson az "Ablak bezárása" gombra a csevegés befejezéséhez',
     AGAIN: "Új csevegés indítása",
     CLOSE: "Ablak bezárása",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Az ügyfélszolgálati munkatárs internetkapcsolata nem válaszol; a csevegése jelenleg megszakadt",
-    H2:
-      "Kérjük, ne zárja be az ablakot; keményen dolgozunk a csevegés folytatásán",
-    DESC:
-      'Választhatja azt is, hogy befejezi a csevegést, hogy kitöltse a felmérést, vagy kattintson az "Új csevegés indítása" gombra és mi azonnal kijelölünk egy új munkatársat a munkamenet folytatásához. Elnézést az okozott kellemetlenségekért',
+    H1: "Az ügyfélszolgálati munkatárs internetkapcsolata nem válaszol; a csevegése jelenleg megszakadt",
+    H2: "Kérjük, ne zárja be az ablakot; keményen dolgozunk a csevegés folytatásán",
+    DESC: 'Választhatja azt is, hogy befejezi a csevegést, hogy kitöltse a felmérést, vagy kattintson az "Új csevegés indítása" gombra és mi azonnal kijelölünk egy új munkatársat a munkamenet folytatásához. Elnézést az okozott kellemetlenségekért',
     AGAIN: "Új csevegés indítása",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -233,6 +220,14 @@ const lan = {
     END: "A beszélgetés véget ért.",
     END_MSG: "Örömmel állunk rendelkezésére. A beszélgetés véget ért.",
     BACKHOME: "Visszalépés a kezdőlapra",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

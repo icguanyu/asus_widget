@@ -25,8 +25,7 @@ const lan = {
       "Pas de connexion Internet. Veuillez vérifier votre connexion réseau et réessayer.",
   },
   IDLE: {
-    HEAD:
-      "Vous êtes inactif depuis un moment. Souhaitez-vous continuer la session de chat?",
+    HEAD: "Vous êtes inactif depuis un moment. Souhaitez-vous continuer la session de chat?",
     BUTTON: "Continuer",
   },
   DISCONNECT: {
@@ -52,8 +51,7 @@ const lan = {
     SAT_SURVEY: "Enquête de satisfaction",
     CONFIRM_COUNTRY: {
       H1: "Cher(e) client(e) ASUS,",
-      P1:
-        "Vous visitez maintenant le service de chat en ligne ASUS pour l'Amérique du Nord, qui est différente de votre région actuelle. Selon les conditions de garantie ASUS, tous les produits ASUS ne sont pas concernés par le service de garantie et d'assistance internationale ASUS. Si le site régional ci-dessus que vous visitez ne correspond pas à la région dans laquelle vous avez acheté votre produit ASUS ou est différent de votre région actuelle, cela peut affecter vos droits. Vous pouvez continuer à utiliser le service de chat en ligne ASUS pour l'Amérique du Nord ou modifier le service de chat en ligne ASUS en fonction de votre région.",
+      P1: "Vous visitez maintenant le service de chat en ligne ASUS pour l'Amérique du Nord, qui est différente de votre région actuelle. Selon les conditions de garantie ASUS, tous les produits ASUS ne sont pas concernés par le service de garantie et d'assistance internationale ASUS. Si le site régional ci-dessus que vous visitez ne correspond pas à la région dans laquelle vous avez acheté votre produit ASUS ou est différent de votre région actuelle, cela peut affecter vos droits. Vous pouvez continuer à utiliser le service de chat en ligne ASUS pour l'Amérique du Nord ou modifier le service de chat en ligne ASUS en fonction de votre région.",
       P2: "",
       P3: "",
       B1: "Passer à ASUS",
@@ -95,15 +93,13 @@ const lan = {
       "Vous ne répondez pas aux critères d'âge pour utiliser ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Salon de discussion existant détecté",
-      P1:
-        "Êtes-vous sûr de vouloir démarrer une nouvelle conversation ? Lorsqu'une nouvelle conversation est ouverte, l'ancienne conversation se terminera.",
+      P1: "Êtes-vous sûr de vouloir démarrer une nouvelle conversation ? Lorsqu'une nouvelle conversation est ouverte, l'ancienne conversation se terminera.",
       B0: "Valider",
       B1: "Abandonner",
     },
   },
   CONNECTTING: {
-    P1:
-      "Veuillez patienter un instant, et ne fermez pas la fenêtre de discussion",
+    P1: "Veuillez patienter un instant, et ne fermez pas la fenêtre de discussion",
     P2: "ASUS Chat est en train de vous connecter à un agent disponible",
     NOTE: "Indication",
     BEFORE_LEAVE: "Etes-vous sûr de vouloir terminer votre chat ASUS ?",
@@ -140,23 +136,20 @@ const lan = {
       DISSAT: "Non satisfait(e)",
       SAT_CHOOSE: "Quel type de Services? (Multiple)",
       HEAD: "Avez-vous été satisfait du service de messagerie en ligne ?",
-      DESC:
-        "Nous vous encourageons à nous faire part de vos commentaires pour améliorer continuellement nos services. N'hésitez pas à nous contacter si vous avez des propositions au service d'ASUS.\n",
+      DESC: "Nous vous encourageons à nous faire part de vos commentaires pour améliorer continuellement nos services. N'hésitez pas à nous contacter si vous avez des propositions au service d'ASUS.\n",
       OTHER_OPTION: "Autre",
       OTHER_REASON: 'Veuillez remplir la section "Autre raison".',
       SEND: "Envoyer",
     },
     CLOSE: {
       TITLE: "Êtes-vous sûr de vouloir terminer le Chat ?",
-      P1:
-        'Cliquez sur "Terminer" pour fermer la fenêtre. Si vous avez besoin d\'utiliser le Chat à nouveau, veuillez cliquer sur "Démarrer un nouveau Chat".',
+      P1: 'Cliquez sur "Terminer" pour fermer la fenêtre. Si vous avez besoin d\'utiliser le Chat à nouveau, veuillez cliquer sur "Démarrer un nouveau Chat".',
       B0: "Terminer",
       B1: "Annuler",
     },
   },
   ERROR: {
-    H1:
-      "La session de clavardage n'existe pas ou le dialogue est déjà terminé.",
+    H1: "La session de clavardage n'existe pas ou le dialogue est déjà terminé.",
     CLOSE: "Fermer la session",
   },
   CHAT_END: {
@@ -164,35 +157,27 @@ const lan = {
     CLOSE: "Fermer la session",
   },
   CHAT_CLOSE: {
-    H1:
-      "Votre réseau est déconnecté depuis plus de 300 secondes, nous avons donc terminé cette conversation.",
-    DESC:
-      "Si vous utilisez un réseau sans fil ou un réseau mobile, veuillez vous déplacer vers un endroit où le signal est plus fort ou changer de réseau pour une connexion filaire. Nous sommes désolés pour tout inconvénient.",
+    H1: "Votre réseau est déconnecté depuis plus de 300 secondes, nous avons donc terminé cette conversation.",
+    DESC: "Si vous utilisez un réseau sans fil ou un réseau mobile, veuillez vous déplacer vers un endroit où le signal est plus fort ou changer de réseau pour une connexion filaire. Nous sommes désolés pour tout inconvénient.",
     CLOSE: "Fermer la session",
   },
   SURVEY_DONE: {
     H1: "Merci d'avoir répondu à l'enquête de satisfaction",
-    P1:
-      "Vos commentaires sont essentiels à notre demarche d'amélioration continue. Merci d'avoir pris le temps pour compléter le sondage de satisfaction du service. . Si vous avez besoin d'un service ou d'une assistance supplémentaire, veuillez cliquer sur \"Commencer une nouvelle discussion\". Veuillez cliquer sur \"Fermer la session\" pour terminer la discussion si nous avons résolu votre demande.",
+    P1: "Vos commentaires sont essentiels à notre demarche d'amélioration continue. Merci d'avoir pris le temps pour compléter le sondage de satisfaction du service. . Si vous avez besoin d'un service ou d'une assistance supplémentaire, veuillez cliquer sur \"Commencer une nouvelle discussion\". Veuillez cliquer sur \"Fermer la session\" pour terminer la discussion si nous avons résolu votre demande.",
     AGAIN: "Commencer une nouvelle discussion ",
     CLOSE: "Fermer la session",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Nous sommes désolés, il semble que la connexion Internet de l'agent ne réponde pas. Votre session de Chat est temporairement interrompue. Veuillez patienter pendant que nous essayons de résoudre le problème.",
-    H2:
-      "Merci de ne pas fermer cette fenêtre. Nous travaillons dur pour reprendre la session de chat pour votre commodité.",
-    DESC:
-      "Vous pouvez également choisir de mettre fin à la session de chat et de commencer l'enquête, ou de cliquer sur « Démarrer un nouveau chat » et nous affecterons immédiatement un nouvel agent pour continuer votre chat. Nous nous excusons pour tout désagrément qui aurait pu être causé. ",
+    H1: "Nous sommes désolés, il semble que la connexion Internet de l'agent ne réponde pas. Votre session de Chat est temporairement interrompue. Veuillez patienter pendant que nous essayons de résoudre le problème.",
+    H2: "Merci de ne pas fermer cette fenêtre. Nous travaillons dur pour reprendre la session de chat pour votre commodité.",
+    DESC: "Vous pouvez également choisir de mettre fin à la session de chat et de commencer l'enquête, ou de cliquer sur « Démarrer un nouveau chat » et nous affecterons immédiatement un nouvel agent pour continuer votre chat. Nous nous excusons pour tout désagrément qui aurait pu être causé. ",
     AGAIN: "Commencer une nouvelle discussion",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Impossible d'utiliser la caméra et le microphone",
     H1: "Prêt à nous rejoindre?",
-    P1:
-      "Pour que le personnel du service client ASUS puisse vous aider à résoudre le problème plus efficacement, vous devez autoriser l'appareil à accéder à votre caméra et à votre microphone pour rejoindre la salle de chat vidéo, et assurez-vous que votre connexion au réseau mobile est stable et fonctionne normalement.",
-    P2:
-      "Vous pouvez toujours allumer et éteindre librement la caméra et fermez votre microphone",
+    P1: "Pour que le personnel du service client ASUS puisse vous aider à résoudre le problème plus efficacement, vous devez autoriser l'appareil à accéder à votre caméra et à votre microphone pour rejoindre la salle de chat vidéo, et assurez-vous que votre connexion au réseau mobile est stable et fonctionne normalement.",
+    P2: "Vous pouvez toujours allumer et éteindre librement la caméra et fermez votre microphone",
     VIDEO_STATE: "Statut de la vidéo",
     VIDEO_ON: "La vidéo est activée.",
     VIDEO_OFF: "La vidéo est désactivée",
@@ -239,6 +224,14 @@ const lan = {
     END_MSG:
       "Nous sommes heureux de fournir notre service. N'hésitez pas à nous contacter pour obtenir de l'aide future.",
     BACKHOME: "Redémarrer la conversation",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

@@ -49,8 +49,7 @@ const lan = {
     SAT_SURVEY: "Souhlas s podmínkami",
     CONFIRM_COUNTRY: {
       H1: "Vážený zákazníku ASUS,",
-      P1:
-        'Nyní vstupujete na "Online zákaznický servis ASUS" na českém webu, který se liší od vašeho aktuálního regionu. Podle záručních podmínek společnosti ASUS se ne na každý produkt ASUS vztahuje mezinárodní záruka a podpora společnosti ASUS. Pokud výše uvedená regionální stránka, kterou navštěvujete, není regionem, kde jste produkt ASUS zakoupili, nebo se liší od vašeho aktuálního regionu, může to mít vliv na vaše práva. I nadále můžete používat "Online zákaznický servis ASUS" na české stránce , nebo zvolit "Online zákaznický servis ASUS" pro váš region.',
+      P1: 'Nyní vstupujete na "Online zákaznický servis ASUS" na českém webu, který se liší od vašeho aktuálního regionu. Podle záručních podmínek společnosti ASUS se ne na každý produkt ASUS vztahuje mezinárodní záruka a podpora společnosti ASUS. Pokud výše uvedená regionální stránka, kterou navštěvujete, není regionem, kde jste produkt ASUS zakoupili, nebo se liší od vašeho aktuálního regionu, může to mít vliv na vaše práva. I nadále můžete používat "Online zákaznický servis ASUS" na české stránce , nebo zvolit "Online zákaznický servis ASUS" pro váš region.',
       P2: "",
       P3: "",
       B1: "Přejít na ASUS",
@@ -92,8 +91,7 @@ const lan = {
       "Nesplňujete věkové požadavky, abyste mohli používat ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Zjištěna existující chatovací místnost",
-      P1:
-        "Opravdu chcete zahájit novou konverzaci? Když bude otevřena nová konverzace, stará konverzace bude ukončena.",
+      P1: "Opravdu chcete zahájit novou konverzaci? Když bude otevřena nová konverzace, stará konverzace bude ukončena.",
       B0: "Potvrdit",
       B1: "Zrušit",
     },
@@ -134,16 +132,14 @@ const lan = {
       DISSAT: "Nespokojen/á",
       SAT_CHOOSE: "Jaký typ služeb? (Více možností volby)",
       HEAD: "Byli jste spokojeni s chatem?",
-      DESC:
-        "Vaše zpětná vazba je pro nás hnací silou pro neustálé zlepšování. Pokud máte nějaké návrhy pro servis nebo podporu společnosti ASUS, dejte nám prosím vědět.",
+      DESC: "Vaše zpětná vazba je pro nás hnací silou pro neustálé zlepšování. Pokud máte nějaké návrhy pro servis nebo podporu společnosti ASUS, dejte nám prosím vědět.",
       OTHER_OPTION: "Jiné",
       OTHER_REASON: "Vyplňte jiný důvod, prosím",
       SEND: "Odeslat",
     },
     CLOSE: {
       TITLE: "Jste si jisti, že chcete ukončit chat?",
-      P1:
-        'Kliknutím na tlačítko "Ukončit" zavřete okno. Pokud budete chtít chat znovu použít, bude nutné znovu požádat o chat".',
+      P1: 'Kliknutím na tlačítko "Ukončit" zavřete okno. Pokud budete chtít chat znovu použít, bude nutné znovu požádat o chat".',
       B0: "Ukončit",
       B1: "Zrušit",
     },
@@ -157,34 +153,27 @@ const lan = {
     CLOSE: "Zavřít okno",
   },
   CHAT_CLOSE: {
-    H1:
-      "Vaše síť byla nefunkční déle než 300 sekund, proto jsme tuto konverzaci ukončili.",
-    DESC:
-      "Pokud používáte bezdrátovou síť nebo mobilní síť, zkuste najít místo s lepším signálem; nebo přepněte na pevné síťové připojení. Omlouváme se za nepříjemnosti.",
+    H1: "Vaše síť byla nefunkční déle než 300 sekund, proto jsme tuto konverzaci ukončili.",
+    DESC: "Pokud používáte bezdrátovou síť nebo mobilní síť, zkuste najít místo s lepším signálem; nebo přepněte na pevné síťové připojení. Omlouváme se za nepříjemnosti.",
     CLOSE: "Zavřít okno",
   },
   SURVEY_DONE: {
     H1: "Děkujeme. Dokončili jste průzkum spokojenosti",
-    P1:
-      'Vaše zpětná vazba je hnací silou pro naše neustálé zlepšování. Děkujeme, že jste si našli čas na vyplnění dotazníku spokojenosti se službami. Pokud budete potřebovat další služby nebo podporu, klikněte na tlačítko "Zahájit nový chat". Pokud jsme váš dotaz vyřešili, klikněte na "Zavřít okno" a ukončete chat.',
+    P1: 'Vaše zpětná vazba je hnací silou pro naše neustálé zlepšování. Děkujeme, že jste si našli čas na vyplnění dotazníku spokojenosti se službami. Pokud budete potřebovat další služby nebo podporu, klikněte na tlačítko "Zahájit nový chat". Pokud jsme váš dotaz vyřešili, klikněte na "Zavřít okno" a ukončete chat.',
     AGAIN: "Zahájit nový chat",
     CLOSE: "Zavřít okno",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Internetové připojení agenta nereaguje; Váš chat je v současné době přerušen",
+    H1: "Internetové připojení agenta nereaguje; Váš chat je v současné době přerušen",
     H2: "Prosím, nezavírejte okno; usilovně pracujeme na obnovení chatu",
-    DESC:
-      'Můžete také ukončit relaci a provést průzkum nebo kliknout na tlačítko "Zahájit nový chat" a my vám okamžitě přidělíme nového agenta, který bude v relaci pokračovat. Omlouváme se za způsobené nepříjemnosti.',
+    DESC: 'Můžete také ukončit relaci a provést průzkum nebo kliknout na tlačítko "Zahájit nový chat" a my vám okamžitě přidělíme nového agenta, který bude v relaci pokračovat. Omlouváme se za způsobené nepříjemnosti.',
     AGAIN: "Zahájit nový chat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -230,6 +219,14 @@ const lan = {
     END: "Konverzace skončila",
     END_MSG: "Jsme rádi, že Vám můžeme pomoci. Konverzace je skončena.",
     BACKHOME: "Zpět na domovskou stránku",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

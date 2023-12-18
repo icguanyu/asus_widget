@@ -49,8 +49,7 @@ const lan = {
     SAT_SURVEY: "Termos de Serviço",
     CONFIRM_COUNTRY: {
       H1: "Estimado cliente ASUS,",
-      P1:
-        "Agora está a visitar o “Asus Online Customer Service” em Portugal que é diferente de sua região atual. De acordo com os Termos de Garantia ASUS, nem todos os produtos ASUS são aplicáveis ao serviço de Garantia e Suporte Internacional ASUS. Se o site regional acima que está a visitar não for a região onde comprou o produto ASUS, ou for diferente da sua região atual, isso pode afetar o seu direito. Pode continuar a usar o “ASUS Online Customer Service” em Portugal ou escolher “Asus Online Customer Service” para a sua região.",
+      P1: "Agora está a visitar o “Asus Online Customer Service” em Portugal que é diferente de sua região atual. De acordo com os Termos de Garantia ASUS, nem todos os produtos ASUS são aplicáveis ao serviço de Garantia e Suporte Internacional ASUS. Se o site regional acima que está a visitar não for a região onde comprou o produto ASUS, ou for diferente da sua região atual, isso pode afetar o seu direito. Pode continuar a usar o “ASUS Online Customer Service” em Portugal ou escolher “Asus Online Customer Service” para a sua região.",
       P2: "",
       P3: "",
       B1: "Mudar para ASUS",
@@ -92,8 +91,7 @@ const lan = {
       "Não cumpre os requisitos de idade para utilizar o ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Sala de chat existente detectada",
-      P1:
-        "Tem certeza de que deseja iniciar uma conversa nova? Quando uma nova conversa é aberta, a conversa antiga será encerrada.",
+      P1: "Tem certeza de que deseja iniciar uma conversa nova? Quando uma nova conversa é aberta, a conversa antiga será encerrada.",
       B0: "Confirmar",
       B1: "Cancelar",
     },
@@ -135,16 +133,14 @@ const lan = {
       DISSAT: "Insatisfeito",
       SAT_CHOOSE: "Que tipo de Serviços? (Múltiplo)",
       HEAD: "Ficou satisfeito com o chat?",
-      DESC:
-        "Ouvir os seus comentários é uma força motriz para a nossa melhoria contínua. Se tiver alguma sugestão para o serviço ou suporte da ASUS, informe-nos.",
+      DESC: "Ouvir os seus comentários é uma força motriz para a nossa melhoria contínua. Se tiver alguma sugestão para o serviço ou suporte da ASUS, informe-nos.",
       OTHER_OPTION: "Outro",
       OTHER_REASON: "Por favor, preencha o outro motivo",
       SEND: "Enviar",
     },
     CLOSE: {
       TITLE: "Tem certeza de que deseja encerrar o ASUS Chat?",
-      P1:
-        'Clique em "Terminar" para fechar a janela. Se precisar de usar o chat novamente, é necessário efetuar um novo pedido de chat".',
+      P1: 'Clique em "Terminar" para fechar a janela. Se precisar de usar o chat novamente, é necessário efetuar um novo pedido de chat".',
       B0: "Terminar",
       B1: "Cancelar",
     },
@@ -158,35 +154,27 @@ const lan = {
     CLOSE: "Feche a janela",
   },
   CHAT_CLOSE: {
-    H1:
-      "A sua rede está em baixo há mais de 300 segundos, pelo que terminámos esta conversa.",
-    DESC:
-      "Se utilizar uma rede sem fios ou uma rede móvel, por favor tente encontrar um local com melhor sinal; ou mude para uma ligação de rede com fios, pedimos desculpa pelo inconveniente",
+    H1: "A sua rede está em baixo há mais de 300 segundos, pelo que terminámos esta conversa.",
+    DESC: "Se utilizar uma rede sem fios ou uma rede móvel, por favor tente encontrar um local com melhor sinal; ou mude para uma ligação de rede com fios, pedimos desculpa pelo inconveniente",
     CLOSE: "Feche a janela",
   },
   SURVEY_DONE: {
     H1: "Obrigado. Já completou o inquérito de satisfação do serviço",
-    P1:
-      'O seu feedback é uma força motriz para a nossa melhoria contínua. Obrigado por ter tido tempo para completar o Inquérito de Satisfação do Serviço. Se necessitar de Serviço ou Suporte adicional, por favor clique em "Iniciar novo Chat". Por favor clique em "Fechar a janela" para terminar o Chat, se tivermos resolvido a sua dúvida.',
+    P1: 'O seu feedback é uma força motriz para a nossa melhoria contínua. Obrigado por ter tido tempo para completar o Inquérito de Satisfação do Serviço. Se necessitar de Serviço ou Suporte adicional, por favor clique em "Iniciar novo Chat". Por favor clique em "Fechar a janela" para terminar o Chat, se tivermos resolvido a sua dúvida.',
     AGAIN: "Iniciar novo Chat",
     CLOSE: "Feche a janela",
   },
   AGENT_OFFLINE: {
-    H1:
-      "A ligação à Internet do agente não responde; o seu Chat está actualmente interrompido",
-    H2:
-      "Por favor, não feche a janela; estamos a trabalhar arduamente para retomar o Chat",
-    DESC:
-      "Também pode escolher terminar a sessão para realizar um inquérito, ou clicar em 'Iniciar novo Chat', e designaremos imediatamente um novo agente para continuar a sessão. Desculpe por qualquer inconveniente causado",
+    H1: "A ligação à Internet do agente não responde; o seu Chat está actualmente interrompido",
+    H2: "Por favor, não feche a janela; estamos a trabalhar arduamente para retomar o Chat",
+    DESC: "Também pode escolher terminar a sessão para realizar um inquérito, ou clicar em 'Iniciar novo Chat', e designaremos imediatamente um novo agente para continuar a sessão. Desculpe por qualquer inconveniente causado",
     AGAIN: "Iniciar novo Chat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Impossibilidade de utilizar a câmara e o microfone",
     H1: "Pronto para se juntar?",
-    P1:
-      "Para que o pessoal do serviço de apoio ao cliente da ASUS possa ajudá-lo a resolver o problema de forma mais eficiente, deve permitir que o dispositivo aceda à sua câmara e microfone para entrar na sala de conversação por vídeo e certifique-se de que a sua ligação à rede móvel está estável e a funcionar normalmente",
-    P2:
-      "Depois de aceder, pode ainda definir livremente o botão da lente e o silenciador do microfone.",
+    P1: "Para que o pessoal do serviço de apoio ao cliente da ASUS possa ajudá-lo a resolver o problema de forma mais eficiente, deve permitir que o dispositivo aceda à sua câmara e microfone para entrar na sala de conversação por vídeo e certifique-se de que a sua ligação à rede móvel está estável e a funcionar normalmente",
+    P2: "Depois de aceder, pode ainda definir livremente o botão da lente e o silenciador do microfone.",
     VIDEO_STATE: "Estado do vídeo",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -214,7 +202,8 @@ const lan = {
       WAIT: "Por favor, aguarde",
       INPUT: "Introduzir texto",
       TRANSFER_TOAGENT: "Transferir para o agente.",
-      READMORE: "Pode também consultar as seguintes FAQ relacionadas, obrigado.",
+      READMORE:
+        "Pode também consultar as seguintes FAQ relacionadas, obrigado.",
       COLLAPSE: "Ocultar",
     },
     HEAD: {
@@ -231,6 +220,14 @@ const lan = {
     END: "Conversa terminada",
     END_MSG: "Temos todo o gosto em servi-lo. A conversa terminou.",
     BACKHOME: "Regressar à página inicial",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

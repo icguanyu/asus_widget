@@ -48,8 +48,7 @@ const lan = {
     SAT_SURVEY: "Perjanjian Layanan",
     CONFIRM_COUNTRY: {
       H1: "Pelanggan yang terhormat",
-      P1:
-        "Anda saat ini mengunjungi “ASUS Online Customer Service” di situs Indonesia yang berbeda dari wilayah Anda saat ini. Berdasarkan Kebijakan atas Garansi ASUS, tidak semua produk ASUS berlaku untuk layanan Garansi dan Dukungan Internasional ASUS. Jika situs wilayah di atas yang Anda kunjungi bukan wilayah tempat Anda membeli produk ASUS, atau berbeda dari wilayah Anda saat ini, hal itu dapat memengaruhi hak Anda. Anda dapat terus menggunakan “ASUS Online Customer Service” di situs Indonesia, atau pilih “ASUS Online Customer Service” untuk wilayah Anda.",
+      P1: "Anda saat ini mengunjungi “ASUS Online Customer Service” di situs Indonesia yang berbeda dari wilayah Anda saat ini. Berdasarkan Kebijakan atas Garansi ASUS, tidak semua produk ASUS berlaku untuk layanan Garansi dan Dukungan Internasional ASUS. Jika situs wilayah di atas yang Anda kunjungi bukan wilayah tempat Anda membeli produk ASUS, atau berbeda dari wilayah Anda saat ini, hal itu dapat memengaruhi hak Anda. Anda dapat terus menggunakan “ASUS Online Customer Service” di situs Indonesia, atau pilih “ASUS Online Customer Service” untuk wilayah Anda.",
       P2: "",
       P3: "",
       B1: "Pindah ke ASUS",
@@ -91,8 +90,7 @@ const lan = {
       "Kamu tidak memenuhi persyaratan untuk menggunakan Layanan Chat ASUS",
     REPEAT_ENTRY: {
       H1: "Ruang Obrolan masih terisi",
-      P1:
-        "Apakah Anda yakin ingin memulai percakapan baru? Saat percakapan baru dibuka, percakapan lama akan berakhir.",
+      P1: "Apakah Anda yakin ingin memulai percakapan baru? Saat percakapan baru dibuka, percakapan lama akan berakhir.",
       B0: "Konfirmasi",
       B1: "Batal",
     },
@@ -135,16 +133,14 @@ const lan = {
       DISSAT: "Tidak Puas",
       SAT_CHOOSE: "Jenis Layanan? (Bisa lebih dari satu)",
       HEAD: "Apakah Anda Puas dengan layanan Chat yang diberikan?",
-      DESC:
-        "Saran dan Pendapat anda adalah hal yang berharga untuk selalu meningkatkan Layanan Kami Selanjutnya, Silakan berikan Saran atau Pendapat anda untuk layanan ASUS.",
+      DESC: "Saran dan Pendapat anda adalah hal yang berharga untuk selalu meningkatkan Layanan Kami Selanjutnya, Silakan berikan Saran atau Pendapat anda untuk layanan ASUS.",
       OTHER_OPTION: "Lain",
       OTHER_REASON: "Alasan lain",
       SEND: "Kirim",
     },
     CLOSE: {
       TITLE: "Anda yakin ingin mengakhiri?",
-      P1:
-        'Klik “Akhiri" Untuk menutup. Anda dapat memulai kembali layanan chat, dengan melakukan login kembali".',
+      P1: 'Klik “Akhiri" Untuk menutup. Anda dapat memulai kembali layanan chat, dengan melakukan login kembali".',
       B0: "Tutup",
       B1: "Batal",
     },
@@ -158,35 +154,27 @@ const lan = {
     CLOSE: "Tutup",
   },
   CHAT_CLOSE: {
-    H1:
-      "Jaringan Anda terputus selama lebih dari 300 detik, sehingga kami telah menghentikan percakapan ini.",
-    DESC:
-      "Jika Anda menggunakan jaringan nirkabel atau jaringan seluler, cobalah mencari lokasi dengan sinyal yang lebih baik; atau beralih ke koneksi jaringan kabel, maaf atas ketidaknyamanannya',",
+    H1: "Jaringan Anda terputus selama lebih dari 300 detik, sehingga kami telah menghentikan percakapan ini.",
+    DESC: "Jika Anda menggunakan jaringan nirkabel atau jaringan seluler, cobalah mencari lokasi dengan sinyal yang lebih baik; atau beralih ke koneksi jaringan kabel, maaf atas ketidaknyamanannya',",
     CLOSE: "Tutup",
   },
   SURVEY_DONE: {
     H1: "Terima Kasih. Anda telah menyelesaikan Layanan Survey kepuasan",
-    P1:
-      'Kami sangat menghargai Saran Anda untuk kemajuan Asus selanjutnya. Terima kasih telah meluangkan waktu untuk mengisi survei kepuasan ini. Jika Anda memiliki pertanyaan lain atau memerlukan dukungan dari agent kami, silakan klik "Hubungi kami - Online chat". atau silakan kilk " Tutup Layanan" untuk mengakhiri',
+    P1: 'Kami sangat menghargai Saran Anda untuk kemajuan Asus selanjutnya. Terima kasih telah meluangkan waktu untuk mengisi survei kepuasan ini. Jika Anda memiliki pertanyaan lain atau memerlukan dukungan dari agent kami, silakan klik "Hubungi kami - Online chat". atau silakan kilk " Tutup Layanan" untuk mengakhiri',
     AGAIN: "Hubungi kami-Online Chat kembali",
     CLOSE: "Tutup",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Koneksi Internet agen tidak merespons; Obrolan Anda saat ini terganggu",
-    H2:
-      "Tolong jangan tutup jendela Obrolan; kami berusaha keras untuk melanjutkan Obrolan",
-    DESC:
-      "Anda juga dapat memilih untuk mengakhiri sesi untuk melakukan survei, atau klik 'Mulai Obrolan baru', dan kami akan segera menetapkan agen baru untuk melanjutkan sesi. Maaf atas ketidaknyamanan yang terjadi',",
+    H1: "Koneksi Internet agen tidak merespons; Obrolan Anda saat ini terganggu",
+    H2: "Tolong jangan tutup jendela Obrolan; kami berusaha keras untuk melanjutkan Obrolan",
+    DESC: "Anda juga dapat memilih untuk mengakhiri sesi untuk melakukan survei, atau klik 'Mulai Obrolan baru', dan kami akan segera menetapkan agen baru untuk melanjutkan sesi. Maaf atas ketidaknyamanan yang terjadi',",
     AGAIN: "Mulai Obrolan Baru",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Tidak dapat menggunakan kamera dan mikrofon",
     H1: "Siap bergabung?",
-    P1:
-      "Agar staf layanan pelanggan ASUS dapat membantu Anda menyelesaikan masalah dengan lebih efisien, Anda harus mengizinkan perangkat mengakses kamera dan mikrofon Anda untuk bergabung ke ruang obrolan video, dan pastikan koneksi jaringan seluler Anda stabil dan berfungsi normal",
-    P2:
-      "Setelah mengakses, Anda masih dapat dengan bebas mengatur pengalihan kamera anda dan mematikan mikropon.",
+    P1: "Agar staf layanan pelanggan ASUS dapat membantu Anda menyelesaikan masalah dengan lebih efisien, Anda harus mengizinkan perangkat mengakses kamera dan mikrofon Anda untuk bergabung ke ruang obrolan video, dan pastikan koneksi jaringan seluler Anda stabil dan berfungsi normal",
+    P2: "Setelah mengakses, Anda masih dapat dengan bebas mengatur pengalihan kamera anda dan mematikan mikropon.",
     VIDEO_STATE: "Status Video",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -202,8 +190,7 @@ const lan = {
     },
     END: {
       H1: "Panggilan Video telah berakhir",
-      P1:
-        "Terima kasih, video chat ini telah selesai, Anda dapat menutup jendela ini.",
+      P1: "Terima kasih, video chat ini telah selesai, Anda dapat menutup jendela ini.",
     },
   },
   GPT: {
@@ -233,6 +220,14 @@ const lan = {
     END: "Percakapan berakhir",
     END_MSG: "Kami dengan senang hati melayani Anda. Percakapan selesai.",
     BACKHOME: "Kembali ke beranda",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

@@ -25,8 +25,7 @@ const lan = {
       "No hay conexión a internet. Por favor, vuelve a conectarte a Internet e inténtalo de nuevo.",
   },
   IDLE: {
-    HEAD:
-      "Has estado inactivo durante un tiempo. ¿Te gustaría continuar el chat?",
+    HEAD: "Has estado inactivo durante un tiempo. ¿Te gustaría continuar el chat?",
     BUTTON: "Continuar",
   },
   DISCONNECT: {
@@ -49,8 +48,7 @@ const lan = {
     SAT_SURVEY: "Acuerdo de servicio",
     CONFIRM_COUNTRY: {
       H1: "Estimado cliente,",
-      P1:
-        'Está visitando "Servicio en Línea de ASUS" España que es diferente de su región actual. De acuerdo con los términos de la garantía de ASUS, no todos los productos de ASUS son aplicables al servicio de garantía y soporte internacional de ASUS. Si el sitio que está visitando no es la región donde compró el producto ASUS, o es diferente de su región actual, podría afectar la politica de garantía y sus derechos. Puede seguir utilizando el "Servicio en Línea de ASUS" de España , o elegir el "Servicio en Línea de ASUS" para su región.\n',
+      P1: 'Está visitando "Servicio en Línea de ASUS" España que es diferente de su región actual. De acuerdo con los términos de la garantía de ASUS, no todos los productos de ASUS son aplicables al servicio de garantía y soporte internacional de ASUS. Si el sitio que está visitando no es la región donde compró el producto ASUS, o es diferente de su región actual, podría afectar la politica de garantía y sus derechos. Puede seguir utilizando el "Servicio en Línea de ASUS" de España , o elegir el "Servicio en Línea de ASUS" para su región.\n',
       P2: "",
       P3: "",
       B1: "Cambiar a ASUS",
@@ -92,8 +90,7 @@ const lan = {
       "No cumples con los requisitos de edad para usar el chat de ASUS",
     REPEAT_ENTRY: {
       H1: "Sala de chat existente detectada",
-      P1:
-        "¿Está seguro de que desea iniciar una nueva conversación? Cuando se abre una nueva conversación, la antigua terminará.",
+      P1: "¿Está seguro de que desea iniciar una nueva conversación? Cuando se abre una nueva conversación, la antigua terminará.",
       B0: "Confirmar",
       B1: "Cancelar",
     },
@@ -135,16 +132,14 @@ const lan = {
       DISSAT: "Insatisfecho",
       SAT_CHOOSE: "¿Qué tipo de servicio? (múltiples)",
       HEAD: "¿Está satisfecho con el chat?",
-      DESC:
-        "Sus comentarios nos ayudan a mejorar. Si tiene alguna sugerencia para el servicio o soporte de ASUS, por favor dejenoslo saber.",
+      DESC: "Sus comentarios nos ayudan a mejorar. Si tiene alguna sugerencia para el servicio o soporte de ASUS, por favor dejenoslo saber.",
       OTHER_OPTION: "Otros",
       OTHER_REASON: "Por favor, indique otra razón",
       SEND: "Enviar",
     },
     CLOSE: {
       TITLE: "¿Está seguro que desea abandonar este chat?",
-      P1:
-        'Haga clic en "Finalizar" para cerrar la ventana. Si necesita utilizar el chat de nuevo, por favor haga clic en "Iniciar nuevo chat".',
+      P1: 'Haga clic en "Finalizar" para cerrar la ventana. Si necesita utilizar el chat de nuevo, por favor haga clic en "Iniciar nuevo chat".',
       B0: "Finalizar",
       B1: "Cancelar",
     },
@@ -158,35 +153,27 @@ const lan = {
     CLOSE: "Cerrar la ventana",
   },
   CHAT_CLOSE: {
-    H1:
-      "Ha estado inactivo por más de 300 segundos, por lo que la conversación ha finalizado.",
-    DESC:
-      "Si utiliza una red inalámbrica o una red móvil, por favor intente encontrar una ubicación con mejor señal; o cambiar a una conexión de red por cable, disculpe las molestias",
+    H1: "Ha estado inactivo por más de 300 segundos, por lo que la conversación ha finalizado.",
+    DESC: "Si utiliza una red inalámbrica o una red móvil, por favor intente encontrar una ubicación con mejor señal; o cambiar a una conexión de red por cable, disculpe las molestias",
     CLOSE: "Cerrar la ventana",
   },
   SURVEY_DONE: {
     H1: "Gracias. Ha completado la encuesta de satisfacción",
-    P1:
-      'Su opinión es muy importante para ayudarnos a mejorar. Gracias por tomarse el tiempo de completar la encuesta de satisfacción. Si necesita algún servicio o soporte adicional, por favor haga clic en "iniciar nuevo chat". Si hemos resuelto su consulta, por favor haga clic en "cerar ventana" para finalizar el chat.',
+    P1: 'Su opinión es muy importante para ayudarnos a mejorar. Gracias por tomarse el tiempo de completar la encuesta de satisfacción. Si necesita algún servicio o soporte adicional, por favor haga clic en "iniciar nuevo chat". Si hemos resuelto su consulta, por favor haga clic en "cerar ventana" para finalizar el chat.',
     AGAIN: "Iniciar un nuevo chat",
     CLOSE: "Cerrar la ventana",
   },
   AGENT_OFFLINE: {
-    H1:
-      "La conexión a Internet del asesor no responde; su chat será interrumpida.",
-    H2:
-      "Por favor, no cierre la ventana; estamos trabajando para reanudar el chat",
-    DESC:
-      "También puede elegir finalizar la sesión para realizar la encuesta, o hacer clic en 'Iniciar nuevo chat', y asignaremos inmediatamente un nuevo asesor para continuar el chat. Disculpe las molestias causadas",
+    H1: "La conexión a Internet del asesor no responde; su chat será interrumpida.",
+    H2: "Por favor, no cierre la ventana; estamos trabajando para reanudar el chat",
+    DESC: "También puede elegir finalizar la sesión para realizar la encuesta, o hacer clic en 'Iniciar nuevo chat', y asignaremos inmediatamente un nuevo asesor para continuar el chat. Disculpe las molestias causadas",
     AGAIN: "Iniciar un nuevo chat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -232,6 +219,14 @@ const lan = {
     END: "Conversaciónn finalizada",
     END_MSG: "Nos alegra ayudarte. La conversación ha finalizado.",
     BACKHOME: "Regresar al inicio",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

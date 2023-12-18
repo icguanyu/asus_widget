@@ -25,8 +25,7 @@ const lan = {
       "Aucune connexion internet. Merci de vous connecter à réseau internet et de réessayer par la suite.",
   },
   IDLE: {
-    HEAD:
-      "Vous êtes inactif depuis un moment. Souhaitez-vous continuer le tchat ?",
+    HEAD: "Vous êtes inactif depuis un moment. Souhaitez-vous continuer le tchat ?",
     BUTTON: "Continuer",
   },
   DISCONNECT: {
@@ -52,8 +51,7 @@ const lan = {
     SAT_SURVEY: "Enquête de satisfaction",
     CONFIRM_COUNTRY: {
       H1: "Cher(e) client(e) ASUS,",
-      P1:
-        "Vous visitez maintenant le service à la clientèle en ligne d'ASUS en France, qui est différent de votre région . Selon les conditions de garantie d'ASUS, tous les produits ASUS ne sont pas éligibles au service de garantie et d'assistance international d'ASUS. Si le site régional ci-dessus que vous visitez n'est pas la région où vous avez acheté votre produit ASUS ou est différent de votre région actuelle, cela peut affecter vos droits. Vous pouvez continuer à utiliser le service clientèle en ligne d'ASUS France ou changer le service pour une autre région.",
+      P1: "Vous visitez maintenant le service à la clientèle en ligne d'ASUS en France, qui est différent de votre région . Selon les conditions de garantie d'ASUS, tous les produits ASUS ne sont pas éligibles au service de garantie et d'assistance international d'ASUS. Si le site régional ci-dessus que vous visitez n'est pas la région où vous avez acheté votre produit ASUS ou est différent de votre région actuelle, cela peut affecter vos droits. Vous pouvez continuer à utiliser le service clientèle en ligne d'ASUS France ou changer le service pour une autre région.",
       P2: "",
       P3: "",
       B1: "Basculer vers ASUS",
@@ -95,17 +93,14 @@ const lan = {
       "Vous ne répondez pas aux critères d'âge pour utiliser le service tchat d'ASUS",
     REPEAT_ENTRY: {
       H1: "Détection d'un salon de discussion existant",
-      P1:
-        "Êtes-vous sûr de vouloir démarrer une nouvelle conversation ? Lorsqu'une nouvelle conversation est ouverte, l'ancienne conversation sera clôturée.",
+      P1: "Êtes-vous sûr de vouloir démarrer une nouvelle conversation ? Lorsqu'une nouvelle conversation est ouverte, l'ancienne conversation sera clôturée.",
       B0: "Confirmer",
       B1: "Annuler",
     },
   },
   CONNECTTING: {
-    P1:
-      "Veuillez patienter un instant s'il vous plaît, et ne fermez pas la fenêtre de discussion",
-    P2:
-      "Le service tchat d'ASUS est en train de vous connecter à un agent disponible",
+    P1: "Veuillez patienter un instant s'il vous plaît, et ne fermez pas la fenêtre de discussion",
+    P2: "Le service tchat d'ASUS est en train de vous connecter à un agent disponible",
     NOTE: "Indication",
     BEFORE_LEAVE: "Etes-vous sûr de vouloir terminer votre tchat ASUS ?",
     B0: "Fin",
@@ -141,16 +136,14 @@ const lan = {
       DISSAT: "Non satisfait(e)",
       SAT_CHOOSE: "Quel type de service ? (Multiple)",
       HEAD: "Avez-vous été satisfait du service de messagerie en ligne ",
-      DESC:
-        "Consulter vos commentaires est essentiel à notre démarche d'amélioration continue. Si vous avez des suggestions pour ASUS Service ou Support, merci de nous en faire part.",
+      DESC: "Consulter vos commentaires est essentiel à notre démarche d'amélioration continue. Si vous avez des suggestions pour ASUS Service ou Support, merci de nous en faire part.",
       OTHER_OPTION: "Autre",
       OTHER_REASON: "Veuillez renseigner l'autre raison",
       SEND: "Envoyer",
     },
     CLOSE: {
       TITLE: "Êtes-vous sûr de vouloir terminer le tchat ?",
-      P1:
-        'Cliquez sur "Terminer" pour fermer la fenêtre. Si vous avez besoin d\'utiliser à nouveau le tchat, veuillez cliquer sur "Commencer un nouveau tchat".',
+      P1: 'Cliquez sur "Terminer" pour fermer la fenêtre. Si vous avez besoin d\'utiliser à nouveau le tchat, veuillez cliquer sur "Commencer un nouveau tchat".',
       B0: "Terminer",
       B1: "Annuler",
     },
@@ -164,35 +157,27 @@ const lan = {
     CLOSE: "Fermer la fenêtre",
   },
   CHAT_CLOSE: {
-    H1:
-      "Votre réseau est déconnecté depuis plus de 300 secondes, nous avons donc terminé cette conversation.",
-    DESC:
-      "Si vous utilisez un réseau sans fil ou un réseau mobile, veuillez essayer de trouver un emplacement avec un meilleur signal ; ou basculer vers une connexion réseau câblée, désolé pour la gêne occasionnée",
+    H1: "Votre réseau est déconnecté depuis plus de 300 secondes, nous avons donc terminé cette conversation.",
+    DESC: "Si vous utilisez un réseau sans fil ou un réseau mobile, veuillez essayer de trouver un emplacement avec un meilleur signal ; ou basculer vers une connexion réseau câblée, désolé pour la gêne occasionnée",
     CLOSE: "Fermer la fenêtre",
   },
   SURVEY_DONE: {
     H1: "Merci d'avoir répondu à l'enquête de satisfaction !",
-    P1:
-      'Vos commentaires sont essentiels à notre demarche d\'amélioration continue. Merci d\'avoir pris le temps de compléter le questionnaire de satisfaction. Si vous avez besoin d\'un support supplémentaire, veuillez cliquer sur "Démarrer un nouveau tchat". Si nous avons résolu votre requête, veuillez cliquer sur "Fermer la fenêtre" pour finaliser le tchat',
+    P1: 'Vos commentaires sont essentiels à notre demarche d\'amélioration continue. Merci d\'avoir pris le temps de compléter le questionnaire de satisfaction. Si vous avez besoin d\'un support supplémentaire, veuillez cliquer sur "Démarrer un nouveau tchat". Si nous avons résolu votre requête, veuillez cliquer sur "Fermer la fenêtre" pour finaliser le tchat',
     AGAIN: "Commencer un nouveau tchat",
     CLOSE: "Fermer la fenêtre",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Il semble y avoir un problème avec la connexion Internet, ce qui a interrompu votre session de chat pour le moment",
-    H2:
-      "Nous sommes en train de résoudre un problème technique qui affecte la connexion Internet de l'agent tchat. Veuillez patienter un instant et ne pas fermer la fenêtre, nous faisons tout notre possible pour rétablir le tchat dès que possible",
-    DESC:
-      'Vous pouvez également choisir de terminer la session pour compléter une enquête de satisfaction, ou cliquer sur "Démarrer un nouveau tchat", et nous assignerons immédiatement un nouvel agent pour poursuivre la session. Désolé pour la gêne occasionnée',
+    H1: "Il semble y avoir un problème avec la connexion Internet, ce qui a interrompu votre session de chat pour le moment",
+    H2: "Nous sommes en train de résoudre un problème technique qui affecte la connexion Internet de l'agent tchat. Veuillez patienter un instant et ne pas fermer la fenêtre, nous faisons tout notre possible pour rétablir le tchat dès que possible",
+    DESC: 'Vous pouvez également choisir de terminer la session pour compléter une enquête de satisfaction, ou cliquer sur "Démarrer un nouveau tchat", et nous assignerons immédiatement un nouvel agent pour poursuivre la session. Désolé pour la gêne occasionnée',
     AGAIN: "Commencer un nouveau tchat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -237,6 +222,14 @@ const lan = {
     END: "Fin de la conversation",
     END_MSG: "Nous sommes heureux de vous servir. La conversation est terminée",
     BACKHOME: "Retour à la page d'accueil",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

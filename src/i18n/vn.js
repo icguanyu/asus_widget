@@ -25,8 +25,7 @@ const lan = {
       "Không có kết nối Internet. Vui lòng kết nối với Internet và thử lại.",
   },
   IDLE: {
-    HEAD:
-      "Bạn đã tạm dừng hoạt động trong một thời gian. Bạn có muốn tiếp tục cuộc hội thoại?",
+    HEAD: "Bạn đã tạm dừng hoạt động trong một thời gian. Bạn có muốn tiếp tục cuộc hội thoại?",
     BUTTON: "Tiếp tục",
   },
   DISCONNECT: {
@@ -52,8 +51,7 @@ const lan = {
     SAT_SURVEY: "Thỏa thuận dịch vụ",
     CONFIRM_COUNTRY: {
       H1: "Kính chào Quý khách hàng",
-      P1:
-        "Bạn hiện đang truy cập Dịch vụ khách hàng trực tuyến ASUS cho Việt Nam, dịch vụ khác với khu vực hiện tại của bạn. Theo Điều khoản bảo hành của ASUS, không phải mọi sản phẩm ASUS đều được áp dụng cho dịch vụ Hỗ trợ và Bảo hành Quốc tế. Nếu trang Web khu vực mà bạn đang truy cập ở trên không phải là khu vực của bạn mua sản phẩm ASUS hoặc khác với khu vực hiện tại của bạn, điều đó có thể ảnh hưởng đến quyền lợi của bạn. Bạn có thể tiếp tục sử dụng Dịch vụ khách hàng trực tuyến ASUS cho Việt Nam hoặc thay đổi Dịch vụ khách hàng trực tuyến ASUS cho khu vực của bạn.",
+      P1: "Bạn hiện đang truy cập Dịch vụ khách hàng trực tuyến ASUS cho Việt Nam, dịch vụ khác với khu vực hiện tại của bạn. Theo Điều khoản bảo hành của ASUS, không phải mọi sản phẩm ASUS đều được áp dụng cho dịch vụ Hỗ trợ và Bảo hành Quốc tế. Nếu trang Web khu vực mà bạn đang truy cập ở trên không phải là khu vực của bạn mua sản phẩm ASUS hoặc khác với khu vực hiện tại của bạn, điều đó có thể ảnh hưởng đến quyền lợi của bạn. Bạn có thể tiếp tục sử dụng Dịch vụ khách hàng trực tuyến ASUS cho Việt Nam hoặc thay đổi Dịch vụ khách hàng trực tuyến ASUS cho khu vực của bạn.",
       P2: "",
       P3: "",
       B1: "Chuyển sang ASUS",
@@ -94,8 +92,7 @@ const lan = {
     AGE_LIMIT_DESC: "Bạn không đáp ứng yêu cầu về độ tuổi để sử dụng ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Đã phát hiện phòng Chat hiện có",
-      P1:
-        "Bạn có chắc chắn muốn bắt đầu một cuộc trò chuyện mới không? Khi một cuộc trò chuyện mới được mở, cuộc trò chuyện cũ sẽ kết thúc.",
+      P1: "Bạn có chắc chắn muốn bắt đầu một cuộc trò chuyện mới không? Khi một cuộc trò chuyện mới được mở, cuộc trò chuyện cũ sẽ kết thúc.",
       B0: "Xác nhận",
       B1: "Hủy",
     },
@@ -139,16 +136,14 @@ const lan = {
       DISSAT: "Không hài lòng",
       SAT_CHOOSE: "Những loại dịch vụ nào? (nhiều)",
       HEAD: "Bạn có hài lòng với dịch vụ Chat trực tuyến của ASUS không?",
-      DESC:
-        "Lắng nghe phản hồi của bạn là động lực để chúng tôi không ngừng cải thiện. Xin vui lòng cho chúng tôi biết nếu bạn có bất kỳ đề xuất nào về Dịch vụ hoặc Hỗ trợ của ASUS.",
+      DESC: "Lắng nghe phản hồi của bạn là động lực để chúng tôi không ngừng cải thiện. Xin vui lòng cho chúng tôi biết nếu bạn có bất kỳ đề xuất nào về Dịch vụ hoặc Hỗ trợ của ASUS.",
       OTHER_OPTION: "Khác",
       OTHER_REASON: "Vui lòng điền vào các lý do khác",
       SEND: "Gửi",
     },
     CLOSE: {
       TITLE: "Bạn có chắc chắn muốn kết thúc dịch vụ Chat không?",
-      P1:
-        'Nhấp vào "Kết thúc" để đóng cửa sổ. Nếu bạn cần sử dụng lại Chat lần nữa, vui lòng nhấp vào "Bắt đầu trò chuyện mới".',
+      P1: 'Nhấp vào "Kết thúc" để đóng cửa sổ. Nếu bạn cần sử dụng lại Chat lần nữa, vui lòng nhấp vào "Bắt đầu trò chuyện mới".',
       B0: "Kết thúc",
       B1: "Hủy",
     },
@@ -162,35 +157,27 @@ const lan = {
     CLOSE: "Đóng cửa sổ",
   },
   CHAT_CLOSE: {
-    H1:
-      "Do kết nối của bạn đã ngừng hoạt động hơn 300 giây nên hệ thống đã kết thúc cuộc hội thoại này.",
-    DESC:
-      "Nếu bạn đang sử dụng mạng không dây hoặc mạng di động, vui lòng di chuyển đến vị trí có tín hiệu mạnh hơn; hoặc chuyển sang kết nối mạng có dây. Chúng tôi xin lỗi vì sự bất tiện này",
+    H1: "Do kết nối của bạn đã ngừng hoạt động hơn 300 giây nên hệ thống đã kết thúc cuộc hội thoại này.",
+    DESC: "Nếu bạn đang sử dụng mạng không dây hoặc mạng di động, vui lòng di chuyển đến vị trí có tín hiệu mạnh hơn; hoặc chuyển sang kết nối mạng có dây. Chúng tôi xin lỗi vì sự bất tiện này",
     CLOSE: "Đóng cửa sổ",
   },
   SURVEY_DONE: {
     H1: "Cảm ơn bạn. Bạn đã hoàn thành khảo sát Sự hài lòng về Dịch vụ",
-    P1:
-      'Cảm ơn bạn đã dành thời gian để hoàn thành Khảo sát sự hài lòng về Dịch vụ. Phản hồi của bạn là động lực giúp chúng tôi không ngừng cải thiện chất lượng dịch vụ. Nếu bạn cần hỗ trợ hoặc tìm hiểu thêm về Dịch vụ, vui lòng nhấp vào "Bắt đầu cuộc trò chuyện mới". Xin vui lòng nhấp vào "Đóng cửa sổ" để kết thúc trò chuyện nếu chúng tôi đã giải đáp xong yêu cầu của bạn',
+    P1: 'Cảm ơn bạn đã dành thời gian để hoàn thành Khảo sát sự hài lòng về Dịch vụ. Phản hồi của bạn là động lực giúp chúng tôi không ngừng cải thiện chất lượng dịch vụ. Nếu bạn cần hỗ trợ hoặc tìm hiểu thêm về Dịch vụ, vui lòng nhấp vào "Bắt đầu cuộc trò chuyện mới". Xin vui lòng nhấp vào "Đóng cửa sổ" để kết thúc trò chuyện nếu chúng tôi đã giải đáp xong yêu cầu của bạn',
     AGAIN: "Bắt đầu cuộc trò chuyện mới",
     CLOSE: "Đóng cửa sổ",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Kết nối Internet của nhân viên chăm sóc khách hàng đang không có phản hồi; cuộc trò chuyện của bạn hiện đang bị gián đoạn",
-    H2:
-      "Vui lòng không đóng cửa sổ; chúng tôi đang nỗ lực để tiếp tục trò chuyện",
-    DESC:
-      'Bạn cũng có thể chọn kết thúc trò chuyện và bắt đầu Khảo sát hoặc nhấp vào "Bắt đầu trò chuyện mới", chúng tôi sẽ ngay lập tức chỉ định một nhân viên mới để tiếp tục cuộc Trò chuyện của bạn. Chúng tôi xin lỗi vì sự bất tiện này',
+    H1: "Kết nối Internet của nhân viên chăm sóc khách hàng đang không có phản hồi; cuộc trò chuyện của bạn hiện đang bị gián đoạn",
+    H2: "Vui lòng không đóng cửa sổ; chúng tôi đang nỗ lực để tiếp tục trò chuyện",
+    DESC: 'Bạn cũng có thể chọn kết thúc trò chuyện và bắt đầu Khảo sát hoặc nhấp vào "Bắt đầu trò chuyện mới", chúng tôi sẽ ngay lập tức chỉ định một nhân viên mới để tiếp tục cuộc Trò chuyện của bạn. Chúng tôi xin lỗi vì sự bất tiện này',
     AGAIN: "Bắt đầu cuộc trò chuyện mới",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -235,6 +222,14 @@ const lan = {
     END: "Hội thoại kết thúc",
     END_MSG: "Chúng tôi rất vui được phục vụ bạn. Cuộc trò chuyện đã kết thúc.",
     BACKHOME: "Quay lại trang chủ",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

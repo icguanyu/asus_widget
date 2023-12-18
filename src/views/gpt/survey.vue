@@ -2,7 +2,7 @@
   <div class="gpt-survey">
     <div class="wrap">
       <img src="@/assets/images/chat_star.png" alt="" />
-      <p>請為本次ASUS虛擬助手服務評價分數</p>
+      <p>{{ $t("GPT.SURVEY.DESC") }}</p>
       <div class="scores">
         <div class="score-group" v-for="i in 11" :key="i">
           <input
@@ -18,13 +18,13 @@
         </div>
       </div>
       <div class="score-text">
-        <span>不滿意</span>
-        <span>非常滿意</span>
+        <span>{{ $t("GPT.SURVEY.SAT") }}</span>
+        <span>{{ $t("GPT.SURVEY.DISSAT") }}</span>
       </div>
 
       <el-input
         type="textarea"
-        placeholder="留下您的反饋"
+        :placeholder="$t('GPT.SURVEY.DESC')"
         :autosize="{ minRows: 4, maxRows: 6 }"
         v-model="form.surveyFeedback"
         maxlength="100"
@@ -39,9 +39,11 @@
         type="primary"
         @click="handleSurvey"
         :disabled="loading || !form.surveyScore"
-        >送出</el-button
+        >{{ $t("GPT.SURVEY.SEND") }}</el-button
       >
-      <el-button type="primary" plain @click="back">取消</el-button>
+      <el-button type="primary" plain @click="back">
+        {{ $t("GPT.SURVEY.BACK") }}
+      </el-button>
     </div>
   </div>
 </template>

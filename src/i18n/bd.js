@@ -25,8 +25,7 @@ const lan = {
       "No internet connection. Please check your network connection and try again.",
   },
   IDLE: {
-    HEAD:
-      "You have been idle for a while. Would you like to continue the Chat session?",
+    HEAD: "You have been idle for a while. Would you like to continue the Chat session?",
     BUTTON: "Continue",
   },
   DISCONNECT: {
@@ -50,8 +49,7 @@ const lan = {
     SAT_SURVEY: "Service Agreement",
     CONFIRM_COUNTRY: {
       H1: "Dear ASUS Customer,",
-      P1:
-        "You are now visiting ASUS Online Chat Service for Bangladesh, which is different from your current region. According to the ASUS Warranty Terms, not every ASUS product is applicable for ASUS International Warranty and Support service. If the above regional site you are visiting is not the region where you bought your ASUS product or is different from your current region, it may affect your rights. You can continue using ASUS Online Chat Service for Bangladesh or change the ASUS Online Chat Service to your region.",
+      P1: "You are now visiting ASUS Online Chat Service for Bangladesh, which is different from your current region. According to the ASUS Warranty Terms, not every ASUS product is applicable for ASUS International Warranty and Support service. If the above regional site you are visiting is not the region where you bought your ASUS product or is different from your current region, it may affect your rights. You can continue using ASUS Online Chat Service for Bangladesh or change the ASUS Online Chat Service to your region.",
       P2: "",
       P3: "",
       B1: "Switch to ASUS",
@@ -92,8 +90,7 @@ const lan = {
     AGE_LIMIT_DESC: "You do not meet the age requirements to use ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Existing chat room detected",
-      P1:
-        "Are you sure you want to start a new conversation? When a new conversation is started, the old conversation will end.",
+      P1: "Are you sure you want to start a new conversation? When a new conversation is started, the old conversation will end.",
       B0: "Confirm",
       B1: "Cancel",
     },
@@ -135,16 +132,14 @@ const lan = {
       DISSAT: "Dissatisfied",
       SAT_CHOOSE: "What type of Services? (multiple)",
       HEAD: "Were you satisfied with the Chat Service?",
-      DESC:
-        "Listening to your feedback is a driving force for our continuous improvement. Please let us know if you have any suggestions for ASUS Service or Support.",
+      DESC: "Listening to your feedback is a driving force for our continuous improvement. Please let us know if you have any suggestions for ASUS Service or Support.",
       OTHER_OPTION: "Other",
       OTHER_REASON: "Please fill in the Other reason",
       SEND: "Submit",
     },
     CLOSE: {
       TITLE: "Are you sure you want to end the Chat?",
-      P1:
-        'Click "Finish" to close the window. If you need to Chat again, please click "Start new Chat".',
+      P1: 'Click "Finish" to close the window. If you need to Chat again, please click "Start new Chat".',
       B0: "End Chat",
       B1: "Cancel",
     },
@@ -158,36 +153,27 @@ const lan = {
     CLOSE: "Close the window",
   },
   CHAT_CLOSE: {
-    H1:
-      "Your network has been down for more than 300 seconds, so we have terminated this Chat session.",
-    DESC:
-      "If you are using a wireless or a mobile network, please move to a location with a stronger signal, or switch to a wired connection. We are sorry for any inconvenience",
+    H1: "Your network has been down for more than 300 seconds, so we have terminated this Chat session.",
+    DESC: "If you are using a wireless or a mobile network, please move to a location with a stronger signal, or switch to a wired connection. We are sorry for any inconvenience",
     CLOSE: "Close the window",
   },
   SURVEY_DONE: {
-    H1:
-      "Thank you for your feedback. You have completed the Service Satisfaction Survey",
-    P1:
-      'Your feedback is a driving force for our continuous improvement. Thank you for taking the time to complete the Service Satisfaction Survey. If you require additional Service or Support, please click "Start new Chat". Click "Close the window" to finish the Chat if we have resolved your inquiry',
+    H1: "Thank you for your feedback. You have completed the Service Satisfaction Survey",
+    P1: 'Your feedback is a driving force for our continuous improvement. Thank you for taking the time to complete the Service Satisfaction Survey. If you require additional Service or Support, please click "Start new Chat". Click "Close the window" to finish the Chat if we have resolved your inquiry',
     AGAIN: "Start a new Chat",
     CLOSE: "Close the window",
   },
   AGENT_OFFLINE: {
-    H1:
-      "We're sorry, it seems the internet connection of the agent is not responding. Your Chat session is temporarily interrupted. Please wait while we attempt to resolve it.",
-    H2:
-      "Please do not close this window. We are working hard to resume the Chat session for your convenience.",
-    DESC:
-      'You can also choose to end the Chat session and begin the Survey, or click "Start new Chat" and we will immediately assign a new agent to continue your Chat. We apologize for any inconvenience caused',
+    H1: "We're sorry, it seems the internet connection of the agent is not responding. Your Chat session is temporarily interrupted. Please wait while we attempt to resolve it.",
+    H2: "Please do not close this window. We are working hard to resume the Chat session for your convenience.",
+    DESC: 'You can also choose to end the Chat session and begin the Survey, or click "Start new Chat" and we will immediately assign a new agent to continue your Chat. We apologize for any inconvenience caused',
     AGAIN: "Start a new Chat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -233,6 +219,14 @@ const lan = {
     END_MSG:
       "We are pleased to provide our service. Feel free to reach out for future support.",
     BACKHOME: "Restart Conversation",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

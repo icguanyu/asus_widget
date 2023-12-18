@@ -49,8 +49,7 @@ const lan = {
     SAT_SURVEY: "Serviceavtale",
     CONFIRM_COUNTRY: {
       H1: "Kjære ASUS-kunde,",
-      P1:
-        'Du besøker nå "ASUS Online Customer Service" i Norge som er forskjellig fra din nåværende region. I henhold til ASUS garantivilkår er ikke alle ASUS-produkter gjeldende for ASUS internasjonale garanti- og støttetjenester. Hvis den ovennevnte regionale siden du besøker ikke er regionen der du kjøpte ASUS-produktet, eller er forskjellig fra din nåværende region, kan det påvirke rettighetene dine. Du kan fortsette å bruke "ASUS Online Customer Service" i Norge, eller velg "ASUS Online Customer Service" for din region.',
+      P1: 'Du besøker nå "ASUS Online Customer Service" i Norge som er forskjellig fra din nåværende region. I henhold til ASUS garantivilkår er ikke alle ASUS-produkter gjeldende for ASUS internasjonale garanti- og støttetjenester. Hvis den ovennevnte regionale siden du besøker ikke er regionen der du kjøpte ASUS-produktet, eller er forskjellig fra din nåværende region, kan det påvirke rettighetene dine. Du kan fortsette å bruke "ASUS Online Customer Service" i Norge, eller velg "ASUS Online Customer Service" for din region.',
       P2: "",
       P3: "",
       B1: "Bytt til ASUS",
@@ -91,8 +90,7 @@ const lan = {
     AGE_LIMIT_DESC: "Du oppfyller ikke alderskravene for å bruke ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Eksisterende chat-rom oppdaget",
-      P1:
-        "Er du sikker på at du vil starte en ny samtale? Når en ny samtale åpnes, vil den gamle samtalen avsluttes.",
+      P1: "Er du sikker på at du vil starte en ny samtale? Når en ny samtale åpnes, vil den gamle samtalen avsluttes.",
       B0: "Bekreft",
       B1: "Avbryt",
     },
@@ -134,16 +132,14 @@ const lan = {
       DISSAT: "Utilfreds",
       SAT_CHOOSE: "Hvilke typer tjenester? (flere)",
       HEAD: "Var du fornøyd med chatten?",
-      DESC:
-        "Å lytte til tilbakemeldingene dine er en drivkraft for vår kontinuerlige forbedring. Hvis du har noen forslag til ASUS Service eller Support, vennligst gi oss beskjed.",
+      DESC: "Å lytte til tilbakemeldingene dine er en drivkraft for vår kontinuerlige forbedring. Hvis du har noen forslag til ASUS Service eller Support, vennligst gi oss beskjed.",
       OTHER_OPTION: "Annet",
       OTHER_REASON: "Vennligst fyll inn annen årsak",
       SEND: "Send",
     },
     CLOSE: {
       TITLE: "Er du sikker på at du vil avslutte chatten?",
-      P1:
-        'Klikk "Fullfør" for å lukke vinduet. Hvis du trenger å bruke chatten igjen, må du opprette en ny Chat".',
+      P1: 'Klikk "Fullfør" for å lukke vinduet. Hvis du trenger å bruke chatten igjen, må du opprette en ny Chat".',
       B0: "Fullfør",
       B1: "Avbryt",
     },
@@ -157,35 +153,27 @@ const lan = {
     CLOSE: "Lukk vinduet",
   },
   CHAT_CLOSE: {
-    H1:
-      "Din tilkobling har vært nede i mer enn 300 sekunder, så vi har avsluttet denne samtalen.",
-    DESC:
-      "Hvis du bruker et trådløst eller mobilnettverk, må du flytte til en posisjon med et sterkere signal; eller bytt til en kablet nettverkstilkobling. Vi beklager eventuelle ulemper",
+    H1: "Din tilkobling har vært nede i mer enn 300 sekunder, så vi har avsluttet denne samtalen.",
+    DESC: "Hvis du bruker et trådløst eller mobilnettverk, må du flytte til en posisjon med et sterkere signal; eller bytt til en kablet nettverkstilkobling. Vi beklager eventuelle ulemper",
     CLOSE: "Lukk vinduet",
   },
   SURVEY_DONE: {
     H1: "Tusen takk. Du har gjennomført vår kundeundersøkelse",
-    P1:
-      'Tilbakemeldingene dine er en drivkraft for vår kontinuerlige forbedring. Takk for at du tok deg tid til å fullføre undersøkelsen om tjenestetilfredshet. Hvis du trenger ytterligere tjeneste eller støtte, vennligst klikk "Start ny chat". Hvis vi har løst spørsmålet ditt, klikk "Lukk vinduet" for å avslutte chatten',
+    P1: 'Tilbakemeldingene dine er en drivkraft for vår kontinuerlige forbedring. Takk for at du tok deg tid til å fullføre undersøkelsen om tjenestetilfredshet. Hvis du trenger ytterligere tjeneste eller støtte, vennligst klikk "Start ny chat". Hvis vi har løst spørsmålet ditt, klikk "Lukk vinduet" for å avslutte chatten',
     AGAIN: "Start ny chat",
     CLOSE: "Lukk vinduet",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Internett tilkoblingen til agenten svarer ikke; chatten er for øyeblikket avbrutt",
-    H2:
-      "Vennligst ikke lukk vinduet; vi arbeider hardt for å gjenoppta chatten",
-    DESC:
-      'Du kan og velge å avslutte chatten for å gjennomføre en spørreundersøkelse, eller klikk "Start ny chat", og vi skal umiddelbart tilordne en ny agent for å fortsette chatten. Beklager for enhver ulempe forårsaket',
+    H1: "Internett tilkoblingen til agenten svarer ikke; chatten er for øyeblikket avbrutt",
+    H2: "Vennligst ikke lukk vinduet; vi arbeider hardt for å gjenoppta chatten",
+    DESC: 'Du kan og velge å avslutte chatten for å gjennomføre en spørreundersøkelse, eller klikk "Start ny chat", og vi skal umiddelbart tilordne en ny agent for å fortsette chatten. Beklager for enhver ulempe forårsaket',
     AGAIN: "Start ny chat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -227,8 +215,17 @@ const lan = {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
     END: "Conversation Ended",
-    END_MSG: "We are pleased to provide our service. Feel free to reach out for future support.",
+    END_MSG:
+      "We are pleased to provide our service. Feel free to reach out for future support.",
     BACKHOME: "Restart Conversation",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;

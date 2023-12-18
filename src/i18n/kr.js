@@ -48,8 +48,7 @@ const lan = {
     SAT_SURVEY: "서비스 규정",
     CONFIRM_COUNTRY: {
       H1: "친애하는 ASUS 고객님,",
-      P1:
-        '귀하는 현재 지역과 다른 한국의 "ASUS 온라인 고객 서비스"사이트를 접속하였습니다. ASUS 보증 조건에 따라, 일부 ASUS 제품은 국제 보증 및 지원 서비스가 적용되지 않습니다. 방문하시려는 위의 지역 사이트가 ASUS 제품을 구매한 지역이 아니거나 현재 거주하시는 지역과 다른 경우 서비스에 제한이 있을 수 있습니다. 한국 사이트에서 "ASUS 온라인 고객 서비스"를 계속 사용하거나 해당 지역에 대한 "ASUS 온라인 고객 서비스"를 선택할 수 있습니다.',
+      P1: '귀하는 현재 지역과 다른 한국의 "ASUS 온라인 고객 서비스"사이트를 접속하였습니다. ASUS 보증 조건에 따라, 일부 ASUS 제품은 국제 보증 및 지원 서비스가 적용되지 않습니다. 방문하시려는 위의 지역 사이트가 ASUS 제품을 구매한 지역이 아니거나 현재 거주하시는 지역과 다른 경우 서비스에 제한이 있을 수 있습니다. 한국 사이트에서 "ASUS 온라인 고객 서비스"를 계속 사용하거나 해당 지역에 대한 "ASUS 온라인 고객 서비스"를 선택할 수 있습니다.',
       P2: "",
       P3: "",
       B1: "ASUS로 전환",
@@ -91,8 +90,7 @@ const lan = {
       "ASUS 채팅을 사용할 수 있는 연령의 요구 사항을 충족하지 못했습니다.",
     REPEAT_ENTRY: {
       H1: "진행중인 채팅이 있습니다.",
-      P1:
-        "새로운 채팅을 시작하시겠습니까? 새로운 채팅이 열리면 이전 채팅은 종료됩니다.",
+      P1: "새로운 채팅을 시작하시겠습니까? 새로운 채팅이 열리면 이전 채팅은 종료됩니다.",
       B0: "확인",
       B1: "취소",
     },
@@ -133,16 +131,14 @@ const lan = {
       DISSAT: "불만족",
       SAT_CHOOSE: "어떤 유형의 서비스입니까?(중복 선택가능)",
       HEAD: "채팅 서비스에 만족하셨나요?",
-      DESC:
-        "귀하의 피드백을 듣는 것은 저희의 지속적인 발전을 위한 원동력입니다. ASUS 서비스 또는 지원에 대한 제안 사항이 있으면 알려주십시오.",
+      DESC: "귀하의 피드백을 듣는 것은 저희의 지속적인 발전을 위한 원동력입니다. ASUS 서비스 또는 지원에 대한 제안 사항이 있으면 알려주십시오.",
       OTHER_OPTION: "기타",
       OTHER_REASON: "기타 사유를 입력하십시오.",
       SEND: "발송",
     },
     CLOSE: {
       TITLE: "채팅을 종료하시겠습니까?",
-      P1:
-        '"종료"를 클릭하여 창을 닫으십시오. 다시 채팅을 원하시는 경우, "새 채팅 시작"을 클릭하십시오.',
+      P1: '"종료"를 클릭하여 창을 닫으십시오. 다시 채팅을 원하시는 경우, "새 채팅 시작"을 클릭하십시오.',
       B0: "종료",
       B1: "취소",
     },
@@ -157,31 +153,26 @@ const lan = {
   },
   CHAT_CLOSE: {
     H1: "네트워크가 300초 이상 중단되어, 채팅을 종료하였습니다.",
-    DESC:
-      "무선 네트워크 또는 모바일 네트워크를 사용하는 경우 신호가 더 좋은 위치를 찾거나 유선 네트워크 연결로 전환하여 주십시오. 불편을 끼쳐드려 죄송합니다.",
+    DESC: "무선 네트워크 또는 모바일 네트워크를 사용하는 경우 신호가 더 좋은 위치를 찾거나 유선 네트워크 연결로 전환하여 주십시오. 불편을 끼쳐드려 죄송합니다.",
     CLOSE: "창 닫기",
   },
   SURVEY_DONE: {
     H1: "감사합니다. 서비스 만족도 설문조사를 완료했습니다.",
-    P1:
-      '귀하의 피드백은 저희의 지속적인 발전의 원동력입니다. 시간을 내어 서비스 만족도 설문조사에 참여해 주셔서 감사합니다. 추가적인 서비스나 지원이 필요하신 경우 "새 채팅 시작"을 클립하십시오. 문제를 해결하신 경우 "창 닫기"를 선택하여 채팅을 종료하십시오.',
+    P1: '귀하의 피드백은 저희의 지속적인 발전의 원동력입니다. 시간을 내어 서비스 만족도 설문조사에 참여해 주셔서 감사합니다. 추가적인 서비스나 지원이 필요하신 경우 "새 채팅 시작"을 클립하십시오. 문제를 해결하신 경우 "창 닫기"를 선택하여 채팅을 종료하십시오.',
     AGAIN: "새 채팅 시작",
     CLOSE: "창 닫기",
   },
   AGENT_OFFLINE: {
     H1: "상담사의 인터넷 연결이 응답하지 않습니다. 현재 채팅이 중단되었습니다.",
     H2: "창을 닫지 마십시오. 채팅을 재개하기 위해 노력하고 있습니다.",
-    DESC:
-      "설문 조사 진행을 위해 채팅을 종료하거나 '새 채팅 시작'을 누를 수 있습니다. 채팅 서비스를 계속하기 위해 새로운 상담원을 즉시 배정해 드리겠습니다. 불편을 끼쳐드려 죄송합니다.",
+    DESC: "설문 조사 진행을 위해 채팅을 종료하거나 '새 채팅 시작'을 누를 수 있습니다. 채팅 서비스를 계속하기 위해 새로운 상담원을 즉시 배정해 드리겠습니다. 불편을 끼쳐드려 죄송합니다.",
     AGAIN: "새 대화 시작",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -227,6 +218,14 @@ const lan = {
     END_MSG:
       "고객님께 도움을 드릴 수 있어서 기쁩니다. 이상 대화를 종료하겠습니다. 궁금하신 점이 있으시다면 언제든 다시 찾아주세요.",
     BACKHOME: "홈페이지로 돌아가기",
+    SURVEY: {
+      DESC: "請為本次ASUS虛擬助手服務評價分數",
+      SAT: "滿意",
+      DISSAT: "不滿意",
+      FEEDBACK: "留下您的反饋",
+      SEND: "送出",
+      BACK: "返回",
+    },
   },
 };
 export default lan;
