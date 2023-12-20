@@ -80,7 +80,7 @@ export default {
       this.onMessage();
     } else {
       console.log("dev mode.");
-      // this.devTest();
+      this.devTest();
     }
     this.route = this.$route;
   },
@@ -121,28 +121,28 @@ export default {
         }
       });
     },
-    // devTest() {
-    //   const event = {
-    //     data: {
-    //       parentUrl: "https://asus-widget-test.netlify.app/", // 你的網站
-    //       countryId: "sg", // 自訂當前國家/地區
-    //       position: "left", // right or left
-    //       right: "10px", // position = right 時才有作用
-    //       left: "10px", // position = left 時才有作用
-    //       bottom: "60px", // 自訂距離底部位置
-    //       width: "320px", // 自訂寬
-    //       height: "600px", // 自訂高
-    //     },
-    //   };
+    devTest() {
+      const event = {
+        data: {
+          parentUrl: "https://asus-widget-test.netlify.app/", // 你的網站
+          countryId: "sg", // 自訂當前國家/地區
+          position: "left", // right or left
+          right: "10px", // position = right 時才有作用
+          left: "10px", // position = left 時才有作用
+          bottom: "60px", // 自訂距離底部位置
+          width: "320px", // 自訂寬
+          height: "600px", // 自訂高
+        },
+      };
 
-    //   const countryId = event.data.countryId.toUpperCase(); //強制大寫
-    //   this.$store.commit("global/setConfig", event.data);
-    //   this.$store.dispatch("gpt/initSettingMetas", countryId);
+      const countryId = event.data.countryId.toUpperCase(); //強制大寫
+      this.$store.commit("global/setConfig", event.data);
+      this.$store.dispatch("gpt/initSettingMetas", countryId);
 
-    //   const lang = languages.includes(countryId) ? countryId : "TW";
-    //   console.log("lang", lang);
-    //   this.$i18n.locale = lang;
-    // },
+      const lang = languages.includes(countryId) ? countryId : "TW";
+      console.log("lang", lang);
+      this.$i18n.locale = lang;
+    },
     toggleDisplay() {
       this.$store.dispatch("global/toggleDisplay");
       window.dataLayer.push({

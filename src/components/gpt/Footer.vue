@@ -64,8 +64,10 @@ export default {
       }
     },
     isFinished(val) {
+      const list = ["TW", "AU", "PH", "MY", "SG", "IN", "UK", "US", "CA-EN"]; // 要進入滿意度的國家
+      const country = this.countryId.toUpperCase();
       if (val) {
-        if (this.countryId.toUpperCase() === "TW") {
+        if (list.includes(country)) {
           // 顯示滿意度調查
           window.dataLayer.push({
             event: "data_layer_event",
@@ -170,8 +172,10 @@ export default {
       }
     },
     handleEnd() {
-      if (this.countryId.toUpperCase() === "TW") {
-        //只有 tw 先進入滿意度調查
+      const list = ["TW", "AU", "PH", "MY", "SG", "IN", "UK", "US", "CA-EN"]; // 要進入滿意度的國家
+      const country = this.countryId.toUpperCase();
+      if (list.includes(country)) {
+        //只有 list 先進入滿意度調查
         window.dataLayer.push({
           event: "data_layer_event",
           chatbot_session_id: this.chatbot_session_id,

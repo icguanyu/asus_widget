@@ -125,6 +125,7 @@ export default {
   overflow-y: auto;
   @include scrollbar();
   .wrap {
+    max-width: 400px;
     flex: 1;
     text-align: center;
     display: flex;
