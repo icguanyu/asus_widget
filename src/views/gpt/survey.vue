@@ -12,7 +12,7 @@
             :value="(i - 1).toString()"
             v-model="form.surveyScore"
           />
-          <label :for="i - 1" :class="{ active: i - 1 <= form.surveyScore }">{{
+          <label :for="i - 1" :class="{ active: i - 1 < form.surveyScore }">{{
             i - 1
           }}</label>
         </div>
@@ -58,7 +58,7 @@ export default {
       form: {
         chatBotRoomId: "",
         sessionId: "",
-        surveyScore: "0",
+        surveyScore: "",
         surveyFeedback: "",
       },
     };
