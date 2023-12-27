@@ -64,30 +64,16 @@ export default {
       }
     },
     isFinished(val) {
-      const list = ["TW", "AU", "PH", "MY", "SG", "IN", "UK", "US", "CA-EN"]; // 要進入滿意度的國家
-      const country = this.countryId.toUpperCase();
       if (val) {
-        if (list.includes(country)) {
-          // 顯示滿意度調查
-          window.dataLayer.push({
-            event: "data_layer_event",
-            chatbot_session_id: this.chatbot_session_id,
-            event_name_ga4: "survey_impression_genio",
-            event_category_DL: "genio",
-            event_action_DL: "displayed",
-            event_label_DL: "survey_impression/genio",
-          });
-        } else {
-          // 顯示對話結束
-          window.dataLayer.push({
-            event: "data_layer_event",
-            chatbot_session_id: this.chatbot_session_id,
-            event_name_ga4: "close_chat2_impression_genio",
-            event_category_DL: "genio",
-            event_action_DL: "displayed",
-            event_label_DL: "close_chat2_impression/genio",
-          });
-        }
+        // 顯示滿意度調查
+        window.dataLayer.push({
+          event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
+          event_name_ga4: "survey_impression_genio",
+          event_category_DL: "genio",
+          event_action_DL: "displayed",
+          event_label_DL: "survey_impression/genio",
+        });
       }
     },
   },
@@ -172,31 +158,15 @@ export default {
       }
     },
     handleEnd() {
-      const list = ["TW", "AU", "PH", "MY", "SG", "IN", "UK", "US", "CA-EN"]; // 要進入滿意度的國家
-      const country = this.countryId.toUpperCase();
-      if (list.includes(country)) {
-        //只有 list 先進入滿意度調查
-        window.dataLayer.push({
-          event: "data_layer_event",
-          chatbot_session_id: this.chatbot_session_id,
-          event_name_ga4: "click_survey_genio",
-          event_category_DL: "genio",
-          event_action_DL: "clicked",
-          event_label_DL: "click_survey/genio",
-        });
-        this.$router.push("/survey");
-      } else {
-        window.dataLayer.push({
-          event: "data_layer_event",
-          chatbot_session_id: this.chatbot_session_id,
-          event_name_ga4: "close_chat2_genio",
-          event_category_DL: "genio",
-          event_action_DL: "clicked",
-          event_label_DL: "close_chat2/genio",
-        });
-        this.$store.commit("gpt/reset");
-        this.$router.push("/end");
-      }
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "click_survey_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "click_survey/genio",
+      });
+      this.$router.push("/survey");
     },
     handleScroll(e) {
       const scrollTop = e.target.scrollTop;
