@@ -18,8 +18,8 @@
         </div>
       </div>
       <div class="score-text">
-        <span>{{ $t("GPT.SURVEY.SAT") }}</span>
         <span>{{ $t("GPT.SURVEY.DISSAT") }}</span>
+        <span>{{ $t("GPT.SURVEY.SAT") }}</span>
       </div>
 
       <el-input
