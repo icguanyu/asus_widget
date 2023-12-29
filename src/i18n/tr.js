@@ -217,16 +217,16 @@ const lan = {
     MESSAGE: {
       WAIT: "Sizin için bir çözüm arıyoruz, lütfen bekleyin.",
     },
-    END: "Sohbet sona erdi",
+    END: "Memnuniyet Anketi",
     END_MSG: "Size destek olabilmekten memnuniyet duyuyoruz. Sohbet sona erdi.",
     BACKHOME: "Anasayfaya dön",
     SURVEY: {
-      DESC: "請為本次ASUS虛擬助手服務評價分數",
-      SAT: "滿意",
-      DISSAT: "不滿意",
-      FEEDBACK: "留下您的反饋",
-      SEND: "送出",
-      BACK: "返回",
+      DESC: "Lütfen ASUS sanal asistan deneyiminizi değerlendirin",
+      SAT: "Memnun Kaldım",
+      DISSAT: "Memnun Kalmadım",
+      FEEDBACK: "Lütfen yorumlarınızı paylaşın.",
+      SEND: "Gönder",
+      BACK: "İptal et",
     },
   },
 };

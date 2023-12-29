@@ -216,16 +216,16 @@ const lan = {
     MESSAGE: {
       WAIT: "Por favor, espere mientras buscamos una solución para usted.",
     },
-    END: "Conversación finalizada",
+    END: "Encuesta de Satisfacción",
     END_MSG: "Ha sido un placer atenderle. La conversación ha terminado.",
     BACKHOME: "Volver a la página principal",
     SURVEY: {
-      DESC: "請為本次ASUS虛擬助手服務評價分數",
-      SAT: "滿意",
-      DISSAT: "不滿意",
-      FEEDBACK: "留下您的反饋",
-      SEND: "送出",
-      BACK: "返回",
+      DESC: "Por favor, valore su experiencia con el asistente virtual de ASUS.",
+      SAT: "Satisfecho",
+      DISSAT: "Insatisfecho",
+      FEEDBACK: "Por favor, rellene sus comentarios.",
+      SEND: "Enviar",
+      BACK: "Cancelar",
     },
   },
 };

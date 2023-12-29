@@ -189,7 +189,7 @@ const lan = {
     },
     END: {
       H1: "Video Call has ended",
-      P1: "Thank you, this video chat is over, you can close this window.",
+      P1: "Thank you, this video chat is finished, you can close this window.",
     },
   },
   GPT: {
@@ -215,16 +215,16 @@ const lan = {
     MESSAGE: {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
-    END: "Conversation ended",
-    END_MSG: "We're happy to serve you. The conversation is over.",
+    END: "Satisfaction Survey",
+    END_MSG: "We are please to provide our service to you. Please reach out for future support.",
     BACKHOME: "Return to homepage",
     SURVEY: {
-      DESC: "請為本次ASUS虛擬助手服務評價分數",
-      SAT: "滿意",
-      DISSAT: "不滿意",
-      FEEDBACK: "留下您的反饋",
-      SEND: "送出",
-      BACK: "返回",
+      DESC: "Please rate your experience with ASUS virtual assistant.",
+      SAT: "Satisfied",
+      DISSAT: "Unsatisfied",
+      FEEDBACK: "Please fill in your feedback.",
+      SEND: "Send",
+      BACK: "Cancel",
     },
   },
 };

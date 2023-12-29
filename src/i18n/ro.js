@@ -85,7 +85,7 @@ const lan = {
     EMAIL: "Email",
     DEVICEINFO: "Informații despre produsul dvs",
     DEVICENAME: "Numele produsului",
-    LABEL_DEVICESN: "Serial Number",
+    LABEL_DEVICESN: "Numărul de serie",
     DEVICESN: "Numărul de serie al produsului",
     PREPARE: "Crearea camerei de chat, pregătirea pentru chat",
     START: "Porniți chatul",
@@ -229,16 +229,16 @@ const lan = {
     MESSAGE: {
       WAIT: "Vă rugăm să așteptați, căutăm o soluție pentru dvs.",
     },
-    END: "Conversația s-a încheiat",
+    END: "Sondaj de satisfacție",
     END_MSG: "Suntem bucuroși să vă servim. Conversația s-a încheiat.",
     BACKHOME: "Reveniți la pagina principală",
     SURVEY: {
-      DESC: "請為本次ASUS虛擬助手服務評價分數",
-      SAT: "滿意",
-      DISSAT: "不滿意",
-      FEEDBACK: "留下您的反饋",
-      SEND: "送出",
-      BACK: "返回",
+      DESC: "Vă rugăm să evaluați experiența dvs. cu asistentul virtual ASUS.",
+      SAT: "Mulțumit",
+      DISSAT: "Nemulțumit",
+      FEEDBACK: "Vă rugăm să completați opinia dvs.",
+      SEND: "Trimite",
+      BACK: "Anulează",
     },},
 };
 export default lan;

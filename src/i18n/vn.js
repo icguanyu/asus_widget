@@ -219,16 +219,16 @@ const lan = {
     MESSAGE: {
       WAIT: "Vui lòng đợi, chúng tôi đang tìm giải pháp cho bạn.",
     },
-    END: "Hội thoại kết thúc",
+    END: "Satisfaction Survey",
     END_MSG: "Chúng tôi rất vui được phục vụ bạn. Cuộc trò chuyện đã kết thúc.",
     BACKHOME: "Quay lại trang chủ",
     SURVEY: {
-      DESC: "請為本次ASUS虛擬助手服務評價分數",
-      SAT: "滿意",
-      DISSAT: "不滿意",
-      FEEDBACK: "留下您的反饋",
-      SEND: "送出",
-      BACK: "返回",
+      DESC: "Please rate your experience with ASUS virtual assistant.",
+      SAT: "Satisfied",
+      DISSAT: "Unsatisfied",
+      FEEDBACK: "Please fill in your feedback.",
+      SEND: "Send",
+      BACK: "Cancel",
     },
   },
 };

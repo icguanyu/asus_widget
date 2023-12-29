@@ -215,16 +215,16 @@ const lan = {
     MESSAGE: {
       WAIT: "กรุณารอสักครู่ เรากำลังตรวจสอบวิธีแก้ปัญหาให้กับคุณ",
     },
-    END: "สิ้นสุดการสนทนา",
+    END: "Satisfaction Survey",
     END_MSG: "ASUS ยินดีให้บริการ การสนทนาได้สิ้นสุดลงแล้ว",
     BACKHOME: "กลับสู่หน้าหลัก",
     SURVEY: {
-      DESC: "請為本次ASUS虛擬助手服務評價分數",
-      SAT: "滿意",
-      DISSAT: "不滿意",
-      FEEDBACK: "留下您的反饋",
-      SEND: "送出",
-      BACK: "返回",
+      DESC: "Please rate your experience with ASUS virtual assistant.",
+      SAT: "Satisfied",
+      DISSAT: "Unsatisfied",
+      FEEDBACK: "Please fill in your feedback.",
+      SEND: "Send",
+      BACK: "Cancel",
     },
   },
 };
