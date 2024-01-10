@@ -219,6 +219,8 @@ const lan = {
     },
     END: "Memnuniyet Anketi",
     END_MSG: "Size destek olabilmekten memnuniyet duyuyoruz. Sohbet sona erdi.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Anasayfaya dön",
     SURVEY: {
       DESC: "Lütfen ASUS sanal asistan deneyiminizi değerlendirin",

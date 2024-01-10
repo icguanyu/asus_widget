@@ -219,6 +219,8 @@ const lan = {
     },
     END: "Elégedettségi felmérés",
     END_MSG: "Örömmel állunk rendelkezésére. A beszélgetés véget ért.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Visszalépés a kezdőlapra",
     SURVEY: {
       DESC: "Kérjük, értékelje az ASUS virtuális asszisztenssel kapcsolatos tapasztalatait.",

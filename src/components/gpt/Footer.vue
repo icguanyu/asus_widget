@@ -27,7 +27,7 @@
 
     <div class="end" v-show="isFinished">
       <el-button type="primary" @click="handleEnd">
-        {{ $t("GPT.END") }}
+        {{ isSurvey ? $t("GPT.END_SURVEY") : $t("GPT.END") }}
       </el-button>
     </div>
   </div>
@@ -158,15 +158,20 @@ export default {
       }
     },
     handleEnd() {
-      window.dataLayer.push({
-        event: "data_layer_event",
-        chatbot_session_id: this.chatbot_session_id,
-        event_name_ga4: "click_survey_genio",
-        event_category_DL: "genio",
-        event_action_DL: "clicked",
-        event_label_DL: "click_survey/genio",
-      });
-      this.$router.push("/survey");
+      if (this.isSurvey) {
+        window.dataLayer.push({
+          event: "data_layer_event",
+          chatbot_session_id: this.chatbot_session_id,
+          event_name_ga4: "click_survey_genio",
+          event_category_DL: "genio",
+          event_action_DL: "clicked",
+          event_label_DL: "click_survey/genio",
+        });
+        this.$router.push("/survey");
+      } else {
+        // 不進入滿意度調查
+        this.$router.push("/end");
+      }
     },
     handleScroll(e) {
       const scrollTop = e.target.scrollTop;
@@ -194,6 +199,11 @@ export default {
     },
     chatbot_session_id() {
       return this.$store.getters["gpt/chatbot_session_id"];
+    },
+    isSurvey() {
+      return this.$store.state.gpt.setting?.ChatGPT_IsShow_Survey === "1"
+        ? true
+        : false;
     },
   },
 };

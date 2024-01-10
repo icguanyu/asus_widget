@@ -216,6 +216,8 @@ const lan = {
     },
     END: "アンケート調査",
     END_MSG: "喜んでご対応させていただきます。 会話が終了しました。",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "ホームページに戻る",
     SURVEY: {
       DESC: "ASUS バーチャル アシスタントを評価してください.",

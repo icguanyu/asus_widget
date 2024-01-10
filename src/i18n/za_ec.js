@@ -216,7 +216,10 @@ const lan = {
       WAIT: "Please wait, we are looking for a solution for you.",
     },
     END: "Satisfaction Survey",
-    END_MSG: "We are please to provide our service to you. Please reach out for future support.",
+    END_MSG:
+      "We are please to provide our service to you. Please reach out for future support.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Return to homepage",
     SURVEY: {
       DESC: "Please rate your experience with ASUS virtual assistant.",

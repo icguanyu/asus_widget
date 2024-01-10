@@ -221,6 +221,8 @@ const lan = {
     },
     END: "Satisfaction Survey",
     END_MSG: "Chúng tôi rất vui được phục vụ bạn. Cuộc trò chuyện đã kết thúc.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Quay lại trang chủ",
     SURVEY: {
       DESC: "Please rate your experience with ASUS virtual assistant.",

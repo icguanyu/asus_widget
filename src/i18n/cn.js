@@ -212,6 +212,8 @@ const lan = {
     },
     END: "满意度问卷",
     END_MSG: "服务已结束，如有需要，欢迎随时联系我们。",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "重新开始服务",
     SURVEY: {
       DESC: "请为本次ASUS虚拟助手服务评价分数",

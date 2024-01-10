@@ -2,7 +2,7 @@
   <div class="gpt-end">
     <div class="wrap">
       <img src="@/assets/images/chat_end.png" alt="" />
-      <p>{{ $t("GPT.END_MSG") }}</p>
+      <p>{{ $t("GPT.END_SURVET_MSG") }}</p>
     </div>
 
     <el-button type="primary" @click="back">{{ $t("GPT.BACKHOME") }}</el-button>
@@ -10,31 +10,31 @@
 </template>
 
 <script>
-// 沒有進入滿意度調查的結束畫面
+// 滿意度調查後的結束畫面
 export default {
-  name: "gpt-end",
+  name: "gpt-survey-end",
   data() {
     return {};
   },
   async mounted() {},
   methods: {
     back() {
-      // window.dataLayer.push({
-      //   event: "data_layer_event",
-      //   chatbot_session_id: this.chatbot_session_id,
-      //   event_name_ga4: "new_chat2_genio",
-      //   event_category_DL: "genio",
-      //   event_action_DL: "clicked",
-      //   event_label_DL: "new_chat2/genio",
-      // });
+      window.dataLayer.push({
+        event: "data_layer_event",
+        chatbot_session_id: this.chatbot_session_id,
+        event_name_ga4: "new_chat2_genio",
+        event_category_DL: "genio",
+        event_action_DL: "clicked",
+        event_label_DL: "new_chat2/genio",
+      });
       const config = this.$store.state.global.config;
       this.$router.push(`/?country=${config.countryId}`);
     },
   },
   computed: {
-    // chatbot_session_id() {
-    //   return this.$store.getters["gpt/chatbot_session_id"];
-    // },
+    chatbot_session_id() {
+      return this.$store.getters["gpt/chatbot_session_id"];
+    },
   },
 };
 </script>

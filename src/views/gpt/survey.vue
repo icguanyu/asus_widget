@@ -93,11 +93,11 @@ export default {
           event_label_DL: `${this.form.surveyScore}/submit_survey/genio`,
         });
         this.$store.commit("gpt/reset");
-        this.$router.push("/end");
+        this.$router.push("/survey_end");
       } catch (error) {
         // console.log("catch", error.data);
         if (error.data === "Survey is existed") {
-          this.$router.push("/end");
+          this.$router.push("/survey_end");
         }
       }
       this.loading = false;

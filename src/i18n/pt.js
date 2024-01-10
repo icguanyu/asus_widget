@@ -219,6 +219,8 @@ const lan = {
     },
     END: "Satisfaction Survey",
     END_MSG: "Temos todo o gosto em servi-lo. A conversa terminou.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Regressar à página inicial",
     SURVEY: {
       DESC: "Avalie a sua experiência com o assistente virtual da ASUS.",

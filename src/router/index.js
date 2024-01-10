@@ -35,6 +35,11 @@ const routes = [
         component: () => import("../views/gpt/end.vue"),
       },
       {
+        path: "/survey_end",
+        name: "gpt-survey-end",
+        component: () => import("../views/gpt/survey_end.vue"),
+      },
+      {
         path: "/:id",
         name: "gpt-room",
         component: () => import("../views/gpt/_id.vue"),

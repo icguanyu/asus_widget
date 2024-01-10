@@ -218,6 +218,8 @@ const lan = {
     },
     END: "Průzkum spokojenosti",
     END_MSG: "Jsme rádi, že Vám můžeme pomoci. Konverzace je skončena.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Zpět na domovskou stránku",
     SURVEY: {
       DESC: "Ohodnoťte své zkušenosti s virtuálním asistentem ASUS.",

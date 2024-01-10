@@ -220,6 +220,8 @@ const lan = {
     },
     END: "Kundenfeedback",
     END_MSG: "Wir sind gerne für Sie da. Das Gespräch ist beendet.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Zurück zur Homepage",
     SURVEY: {
       DESC: "Berichten Sie uns, wie Sie die Nutzung unserer virtuellen Assistenten empfunden haben.",

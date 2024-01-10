@@ -51,8 +51,7 @@ const lan = {
     SAT_SURVEY: "Acord de service",
     CONFIRM_COUNTRY: {
       H1: "Dragă client ASUS,",
-      P1:
-        "Acum vizitați ASUS Online Customer Service pentru Australia, care este diferit de regiunea dvs. actuală. Conform Termenilor de garanție ASUS, nu orice produs ASUS este aplicabil pentru serviciul ASUS International Warranty and Support. Dacă site-ul regional de mai sus pe care îl vizitați nu este regiunea de unde ați cumpărat produsul ASUS sau este diferit de regiunea dvs. actuală, vă poate afecta drepturile. Puteți continua să utilizați ASUS Online Customer Service pentru Australia sau puteți schimba ASUS Online Customer Service în regiunea dvs.",
+      P1: "Acum vizitați ASUS Online Customer Service pentru Australia, care este diferit de regiunea dvs. actuală. Conform Termenilor de garanție ASUS, nu orice produs ASUS este aplicabil pentru serviciul ASUS International Warranty and Support. Dacă site-ul regional de mai sus pe care îl vizitați nu este regiunea de unde ați cumpărat produsul ASUS sau este diferit de regiunea dvs. actuală, vă poate afecta drepturile. Puteți continua să utilizați ASUS Online Customer Service pentru Australia sau puteți schimba ASUS Online Customer Service în regiunea dvs.",
       P2: "",
       P3: "",
       B1: "Schimbați pe ASUS",
@@ -94,8 +93,7 @@ const lan = {
       "Nu îndepliniți cerințele de vârstă pentru a utiliza ASUS Chat",
     REPEAT_ENTRY: {
       H1: "Camera de chat existentă a fost detectată",
-      P1:
-        "Sigur vrei să începi o nouă conversație? Când se deschide o nouă conversație, vechea conversație se va încheia.",
+      P1: "Sigur vrei să începi o nouă conversație? Când se deschide o nouă conversație, vechea conversație se va încheia.",
       B0: "Confirm",
       B1: "Anulare",
     },
@@ -137,16 +135,14 @@ const lan = {
       DISSAT: "Nemulţumit",
       SAT_CHOOSE: "Ce tip de Servicii? (selecție multiplă)",
       HEAD: "Ați fost mulțumit de chat?",
-      DESC:
-        "Ascultarea feedback-ului dumneavoastră este necesară pentru îmbunătățirea noastră continuă. Vă rugăm să ne informați dacă aveți sugestii pentru service sau asistență ASUS.",
+      DESC: "Ascultarea feedback-ului dumneavoastră este necesară pentru îmbunătățirea noastră continuă. Vă rugăm să ne informați dacă aveți sugestii pentru service sau asistență ASUS.",
       OTHER_OPTION: "Altul",
       OTHER_REASON: "Vă rugăm să completați Alt motiv",
       SEND: "Trimite",
     },
     CLOSE: {
       TITLE: "Sigur vrei să termini chatul?",
-      P1:
-        "Faceți clic pe „Terminare” pentru a închide fereastra. Dacă trebuie să utilizați din nou chatul, faceți clic pe „Începeți un nou chat”.",
+      P1: "Faceți clic pe „Terminare” pentru a închide fereastra. Dacă trebuie să utilizați din nou chatul, faceți clic pe „Începeți un nou chat”.",
       B0: "Terminare",
       B1: "Anulare",
     },
@@ -160,34 +156,27 @@ const lan = {
     CLOSE: "Închide fereastra",
   },
   CHAT_CLOSE: {
-    H1:
-      "Rețeaua dvs. a fost oprită de mai mult de 300 de secunde, așa că am încheiat această conversație.",
-    DESC:
-      "Dacă utilizați o rețea fără fir sau mobilă, vă rugăm să vă mutați într-o locație cu un semnal mai puternic; sau comutați la o conexiune de rețea prin cablu. Ne pare rău pentru orice inconvenient",
+    H1: "Rețeaua dvs. a fost oprită de mai mult de 300 de secunde, așa că am încheiat această conversație.",
+    DESC: "Dacă utilizați o rețea fără fir sau mobilă, vă rugăm să vă mutați într-o locație cu un semnal mai puternic; sau comutați la o conexiune de rețea prin cablu. Ne pare rău pentru orice inconvenient",
     CLOSE: "Închide fereastra",
   },
   SURVEY_DONE: {
     H1: "Mulțumesc. Ați completat Sondajul de satisfacție a serviciilor",
-    P1:
-      "Feedback-ul dumneavoastră este necesar pentru îmbunătățirea noastră continuă. Vă mulțumim pentru timpul acordat pentru a completa Sondajul de satisfacție a serviciilor. Dacă aveți nevoie de service sau asistență suplimentară, faceți clic pe „Începeți un nou chat”. Vă rugăm să faceți clic pe „Închide fereastra” pentru a finaliza chatul dacă ți-am rezolvat întrebarea",
+    P1: "Feedback-ul dumneavoastră este necesar pentru îmbunătățirea noastră continuă. Vă mulțumim pentru timpul acordat pentru a completa Sondajul de satisfacție a serviciilor. Dacă aveți nevoie de service sau asistență suplimentară, faceți clic pe „Începeți un nou chat”. Vă rugăm să faceți clic pe „Închide fereastra” pentru a finaliza chatul dacă ți-am rezolvat întrebarea",
     AGAIN: "Începeți un nou chat",
     CLOSE: "Închide fereastra",
   },
   AGENT_OFFLINE: {
-    H1:
-      "Conexiunea la internet a agentului nu răspunde; Chatul dvs. este întrerupt în prezent",
+    H1: "Conexiunea la internet a agentului nu răspunde; Chatul dvs. este întrerupt în prezent",
     H2: "Vă rugăm să nu închideți fereastra; încercăm reluarea chatul",
-    DESC:
-      "De asemenea, puteți alege să încheiați chatul și să începeți sondajul sau să faceți clic pe „Începeți un nou chat”, iar noi vom aloca imediat un nou agent pentru a vă continua chatul. Ne cerem scuze pentru orice inconvenient cauzat",
+    DESC: "De asemenea, puteți alege să încheiați chatul și să începeți sondajul sau să faceți clic pe „Începeți un nou chat”, iar noi vom aloca imediat un nou agent pentru a vă continua chatul. Ne cerem scuze pentru orice inconvenient cauzat",
     AGAIN: "Începeți un nou chat",
   },
   VIDEOCALL: {
     MEDIA_NOTALLOW: "Unable to use camera and microphone",
     H1: "Ready to join?",
-    P1:
-      "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
-    P2:
-      "After accessing, you can still freely set the lens switch and microphone mute.",
+    P1: "In order for ASUS customer service staff to help you solve the problem more efficiently, you must allow the device to access your camera and microphone to join the video chat room, and please ensure that your mobile network connection is stable and functioning normally",
+    P2: "After accessing, you can still freely set the lens switch and microphone mute.",
     VIDEO_STATE: "Video status",
     VIDEO_ON: "On",
     VIDEO_OFF: "Off",
@@ -215,7 +204,8 @@ const lan = {
       WAIT: "Vă rugăm așteptați",
       INPUT: "Introduceți textul",
       TRANSFER_TOAGENT: "Transfer la agent.",
-      READMORE: "De asemenea, puteți consulta următoarele întrebări frecvente aferente, vă mulțumesc.",
+      READMORE:
+        "De asemenea, puteți consulta următoarele întrebări frecvente aferente, vă mulțumesc.",
       COLLAPSE: "Ascunde",
     },
     HEAD: {
@@ -231,6 +221,8 @@ const lan = {
     },
     END: "Sondaj de satisfacție",
     END_MSG: "Suntem bucuroși să vă servim. Conversația s-a încheiat.",
+    END_SURVEY: "滿意度調查",
+    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "Reveniți la pagina principală",
     SURVEY: {
       DESC: "Vă rugăm să evaluați experiența dvs. cu asistentul virtual ASUS.",
@@ -239,6 +231,7 @@ const lan = {
       FEEDBACK: "Vă rugăm să completați opinia dvs.",
       SEND: "Trimite",
       BACK: "Anulează",
-    },},
+    },
+  },
 };
 export default lan;
