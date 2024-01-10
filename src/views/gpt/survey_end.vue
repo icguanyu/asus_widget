@@ -2,7 +2,7 @@
   <div class="gpt-end">
     <div class="wrap">
       <img src="@/assets/images/chat_end.png" alt="" />
-      <p>{{ $t("GPT.END_SURVET_MSG") }}</p>
+      <p>{{ $t("GPT.END_SURVEY_MSG") }}</p>
     </div>
 
     <el-button type="primary" @click="back">{{ $t("GPT.BACKHOME") }}</el-button>

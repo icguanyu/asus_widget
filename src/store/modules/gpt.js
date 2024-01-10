@@ -47,6 +47,7 @@ const actions = {
       device: checkDevice(),
       locationCountry: "", // AP-2339 移除IP偵測
     };
+    commit("reset"); // AP-2819 清除上一個 room 的相關資訊
     commit("toggleLoading", true);
     try {
       const res = await ChatBotRoom.Create(params);
@@ -87,7 +88,6 @@ const actions = {
     // 關閉當前 room
     const { chatBotRoomId, sessionId } = state.botRoom;
     await ChatBotRoom.Leave({ chatBotRoomId, sessionId });
-    commit("reset");
     // 建立新 room
     dispatch("createRoom");
   },

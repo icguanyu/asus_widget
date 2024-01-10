@@ -148,7 +148,9 @@ export default {
         this.$store.commit("gpt/setBotRoom", res.data);
         this.$store.dispatch("gpt/initSettingMetas", countryId);
       } catch (error) {
-        console.log("initBotRoom error", error);
+        console.log(error);
+        const config = this.$store.state.global.config;
+        this.$router.push(`/?country=${config.countryId}`);
       }
     },
     checkIsHidden(m) {
