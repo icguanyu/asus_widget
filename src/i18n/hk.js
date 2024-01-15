@@ -210,8 +210,8 @@ const lan = {
     MESSAGE: {
       WAIT: "請稍候，正在幫您尋找解決辦法中。",
     },
-    END: "滿意度調查",
-    END_MSG: "很開心為您服務，對話已結束。",
+    END: "結束對話",
+    END_MSG: "感謝您的使用，祝您一切順利。",
     END_SURVEY: "滿意度調查",
     END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
     BACKHOME: "重新開始服務",

@@ -216,10 +216,10 @@ const lan = {
     MESSAGE: {
       WAIT: "Gelieve wachten, we zijn op zoek naar een oplossing.",
     },
-    END: "Klant tevredenheids onderzoek",
+    END: "Conversation Ended",
     END_MSG: "We zijn blij u te hebben geholpen. Het gesprek is beeindigd.",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "Klant tevredenheids onderzoek",
+    END_SURVEY_MSG: "We zijn blij u te hebben geholpen. Het gesprek is beeindigd.",
     BACKHOME: "Terug naar homepagina",
     SURVEY: {
       DESC: "Gelieve uw feedback geven n.a.v. uw contact met onze ASUS virtuele assistent.",

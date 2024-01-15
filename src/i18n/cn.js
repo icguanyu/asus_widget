@@ -74,11 +74,11 @@ const lan = {
     NAME: "姓名",
     TEL: "电话",
     BIRTHDAY: "生日",
-    LABEL_EMAIL: "Email",
+    LABEL_EMAIL: "请输入您的邮箱",
     EMAIL: "邮箱",
     DEVICEINFO: "您的产品信息",
     DEVICENAME: "产品名称",
-    LABEL_DEVICESN: "Serial Number",
+    LABEL_DEVICESN: "产品序列号",
     DEVICESN: "产品序列号",
     PREPARE: "正在建立聊天室",
     START: "开始聊天",
@@ -189,7 +189,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
-      WELCOME: "Welcome",
+      WELCOME: "欢迎",
       AGREE: "同意",
       START: "开始",
       CANCEL: "取消",
@@ -210,7 +210,7 @@ const lan = {
     MESSAGE: {
       WAIT: "请稍等，我们正在为您寻找解决方案。",
     },
-    END: "满意度问卷",
+    END: "服务已完成",
     END_MSG: "服务已结束，如有需要，欢迎随时联系我们。",
     END_SURVEY: "滿意度調查",
     END_SURVEY_MSG: "謝謝您的評分，對話已結束。",

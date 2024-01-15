@@ -217,10 +217,10 @@ const lan = {
     MESSAGE: {
       WAIT: "Kérem várjon, keressük a megoldást az Ön számára.",
     },
-    END: "Elégedettségi felmérés",
+    END: "Conversation Ended",
     END_MSG: "Örömmel állunk rendelkezésére. A beszélgetés véget ért.",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "Elégedettségi felmérés",
+    END_SURVEY_MSG: "Örömmel állunk rendelkezésére. A beszélgetés véget ért.",
     BACKHOME: "Visszalépés a kezdőlapra",
     SURVEY: {
       DESC: "Kérjük, értékelje az ASUS virtuális asszisztenssel kapcsolatos tapasztalatait.",

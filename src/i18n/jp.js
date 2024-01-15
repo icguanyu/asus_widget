@@ -214,10 +214,10 @@ const lan = {
     MESSAGE: {
       WAIT: "お待ちください。解決策を探しています。",
     },
-    END: "アンケート調査",
+    END: "Conversation Ended",
     END_MSG: "喜んでご対応させていただきます。 会話が終了しました。",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "アンケート調査",
+    END_SURVEY_MSG: "喜んでご対応させていただきます。 会話が終了しました。",
     BACKHOME: "ホームページに戻る",
     SURVEY: {
       DESC: "ASUS バーチャル アシスタントを評価してください.",

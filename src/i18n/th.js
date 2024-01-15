@@ -193,7 +193,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
-      WELCOME: "ยินดีกัน",
+      WELCOME: "ยินดีต้อนรับ",
       AGREE: "ยอมรับ",
       START: "เริ่มต้น",
       CANCEL: "ยกเลิก",
@@ -215,18 +215,18 @@ const lan = {
     MESSAGE: {
       WAIT: "กรุณารอสักครู่ เรากำลังตรวจสอบวิธีแก้ปัญหาให้กับคุณ",
     },
-    END: "Satisfaction Survey",
+    END: "สิ้นสุดการสนทนา",
     END_MSG: "ASUS ยินดีให้บริการ การสนทนาได้สิ้นสุดลงแล้ว",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "แบบสำรวจความพึงพอใจ",
+    END_SURVEY_MSG: "ASUS ยินดีให้บริการ การสนทนาได้สิ้นสุดลงแล้ว",
     BACKHOME: "กลับสู่หน้าหลัก",
     SURVEY: {
-      DESC: "Please rate your experience with ASUS virtual assistant.",
-      SAT: "Satisfied",
-      DISSAT: "Unsatisfied",
-      FEEDBACK: "Please fill in your feedback.",
-      SEND: "Send",
-      BACK: "Cancel",
+      DESC: "กรุณาให้คะแนนความพึงพอใจต่อผู้ช่วยเสมือนจริงของ ASUS",
+      SAT: "พึงพอใจ",
+      DISSAT: "ไม่พึงพอใจ",
+      FEEDBACK: "กรุณากรอกความคิดเห็นของคุณ",
+      SEND: "ส่ง",
+      BACK: "ยกเลิก",
     },
   },
 };

@@ -215,10 +215,10 @@ const lan = {
     MESSAGE: {
       WAIT: "Proszę czekać, szukam dla ciebie rozwiązania.",
     },
-    END: "Ankieta satysfakcji",
+    END: "Conversation Ended",
     END_MSG: "Rozmowa dobiegła końca. Cieszymy się, że mogliśmy pomóc.",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "Ankieta satysfakcji",
+    END_SURVEY_MSG: "Rozmowa dobiegła końca. Cieszymy się, że mogliśmy pomóc.",
     BACKHOME: "Powrót do strony głównej",
     SURVEY: {
       DESC: "Prosimy ocenić swoje doświadczenie z wirtualnym asystentem ASUS.",

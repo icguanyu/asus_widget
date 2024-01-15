@@ -220,11 +220,11 @@ const lan = {
     MESSAGE: {
       WAIT: "Veuillez patienter, nous recherchons une solution pour vous.",
     },
-    END: "Satisfaction Survey",
+    END: "Conversation Ended",
     END_MSG:
       "Nous sommes heureux de fournir notre service. N'hésitez pas à nous contacter pour obtenir de l'aide future.",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "Satisfaction Survey",
+    END_SURVEY_MSG: "Nous sommes heureux de fournir notre service. N'hésitez pas à nous contacter pour obtenir de l'aide future.",
     BACKHOME: "Redémarrer la conversation",
     SURVEY: {
       DESC: "Please rate your experience with ASUS virtual assistant.",

@@ -217,10 +217,10 @@ const lan = {
     MESSAGE: {
       WAIT: "Sizin için bir çözüm arıyoruz, lütfen bekleyin.",
     },
-    END: "Memnuniyet Anketi",
+    END: "Conversation Ended",
     END_MSG: "Size destek olabilmekten memnuniyet duyuyoruz. Sohbet sona erdi.",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "Memnuniyet Anketi",
+    END_SURVEY_MSG: "Size destek olabilmekten memnuniyet duyuyoruz. Sohbet sona erdi.",
     BACKHOME: "Anasayfaya dön",
     SURVEY: {
       DESC: "Lütfen ASUS sanal asistan deneyiminizi değerlendirin",

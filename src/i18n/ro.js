@@ -197,7 +197,7 @@ const lan = {
   },
   GPT: {
     LAYOUT: {
-      WELCOME: "Welcome",
+      WELCOME: "Bine ați venit",
       AGREE: "De acord",
       START: "Start",
       CANCEL: "Anulare",
@@ -219,10 +219,10 @@ const lan = {
     MESSAGE: {
       WAIT: "Vă rugăm să așteptați, căutăm o soluție pentru dvs.",
     },
-    END: "Sondaj de satisfacție",
+    END: "Conversation Ended",
     END_MSG: "Suntem bucuroși să vă servim. Conversația s-a încheiat.",
-    END_SURVEY: "滿意度調查",
-    END_SURVEY_MSG: "謝謝您的評分，對話已結束。",
+    END_SURVEY: "Sondaj de satisfacție",
+    END_SURVEY_MSG: "Suntem bucuroși să vă servim. Conversația s-a încheiat.",
     BACKHOME: "Reveniți la pagina principală",
     SURVEY: {
       DESC: "Vă rugăm să evaluați experiența dvs. cu asistentul virtual ASUS.",
