@@ -191,7 +191,7 @@ p {
   top: 0;
   pointer-events: none;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   //border: 2px solid red;
   // padding: 15px;
   .container {
