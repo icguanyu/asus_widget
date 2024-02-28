@@ -1,0 +1,81 @@
+.rtl {
+  .el-checkbox {
+    .el-checkbox__label {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+  .head {
+    .tools {
+      .dropdown {
+        margin-right: 0;
+        margin-left: 12px;
+      }
+    }
+  }
+  .bot-room {
+    .rows {
+      .row {
+        .content {
+          .avatar {
+            margin-right: 0;
+            margin-left: 8px;
+          }
+        }
+        .client {
+          .content {
+            border-radius: 2px 8px 8px 8px;
+          }
+        }
+      }
+    }
+    .text {
+      .time {
+        margin-left: 0;
+        margin-right: 4px;
+      }
+    }
+    .text.client {
+      .time {
+        margin-left: 4px;
+        margin-right: 0px;
+      }
+    }
+    .option {
+      .time {
+        margin-left: 0;
+        margin-right: 4px;
+      }
+    }
+    .optionSelected {
+      .time {
+        margin-left: 0;
+        margin-right: 4px;
+      }
+    }
+    .optionSelected.client {
+      .time {
+        margin-left: 4px;
+        margin-right: 0;
+      }
+    }
+    .bot {
+      .time {
+        margin-left: 0;
+        margin-right: 4px;
+      }
+    }
+  }
+  .footer {
+    .contenteditable {
+      .content-box {
+        margin-right: 0 !important;
+        margin-left: 12px;
+      }
+    }
+    .backTop {
+      right: auto !important;
+      left: 20px;
+    }
+  }
+}

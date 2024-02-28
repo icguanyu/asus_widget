@@ -16,6 +16,7 @@ const getCookie = (cname) => {
 
 const state = {
   display: false,
+  dir: "ltr",
   config: {
     ASUSTicket: getCookie("aticket"),
     countryId: "TW",
@@ -40,6 +41,9 @@ const mutations = {
   },
   cleanRoomId(state) {
     state.config.roomId = "";
+  },
+  setDir(state, payload) {
+    state.dir = payload;
   },
 };
 const getters = {};

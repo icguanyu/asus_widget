@@ -23,7 +23,7 @@
                 alt=""
               />
             </span>
-            <el-dropdown-menu slot="dropdown">
+            <el-dropdown-menu :append-to-body="false" slot="dropdown">
               <el-dropdown-item command="leave" :disabled="isFinished">
                 <!-- <i class="bx bx-log-out-circle"></i> -->
                 {{ $t("GPT.HEAD.LEAVE") }}
@@ -64,6 +64,11 @@ export default {
       hideNav: false,
       agree: false,
     };
+  },
+  mounted() {
+    const { countryId } = this.$store.state.global.config;
+
+    this.checkLTR(countryId.toUpperCase());
   },
   methods: {
     checkVisiable(whiteList) {
@@ -118,6 +123,22 @@ export default {
         event_label_DL: "minimize/genio",
       });
     },
+    checkLTR(country) {
+      const rtlCountries = ["IL", "ME-AR", "SA-AR"];
+      const dir = rtlCountries.includes(country) ? "rtl" : "ltr";
+      const dom = document.querySelector(".gpt");
+      if (rtlCountries.includes(country)) {
+        dom.classList.remove("ltr");
+        dom.classList.add("rtl");
+      } else {
+        dom.classList.remove("rtl");
+        dom.classList.add("ltr");
+      }
+
+      dom.setAttribute("dir", dir);
+      dom.style.setProperty("--direction", dir);
+      this.$store.commit("global/setDir", dir);
+    },
   },
   computed: {
     routeName() {
@@ -128,6 +149,9 @@ export default {
     },
     chatbot_session_id() {
       return this.$store.getters["gpt/chatbot_session_id"];
+    },
+    dir() {
+      return this.$store.state.global.dir;
     },
   },
 };
