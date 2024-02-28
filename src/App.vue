@@ -11,6 +11,7 @@
       class="container"
       :class="{
         'element-hide': !display,
+        rtl: dir === 'rtl',
       }"
     >
       <!-- <Header :name="name" :country="country" @toggle="show = !show" /> -->
@@ -80,7 +81,7 @@ export default {
       this.onMessage();
     } else {
       console.log("dev mode.");
-      this.devTest();
+      // this.devTest();
     }
     this.route = this.$route;
   },
@@ -104,6 +105,8 @@ export default {
         window.bot_parentUrl = origin;
 
         const countryId = event.data.countryId.toUpperCase(); //強制大寫
+        vm.checkLTR(countryId);
+
         vm.$store.commit("global/setConfig", event.data);
         vm.$store.dispatch("gpt/initSettingMetas", countryId);
 
@@ -136,6 +139,7 @@ export default {
       };
 
       const countryId = event.data.countryId.toUpperCase(); //強制大寫
+      this.checkLTR(countryId);
       this.$store.commit("global/setConfig", event.data);
       this.$store.dispatch("gpt/initSettingMetas", countryId);
 
@@ -153,6 +157,15 @@ export default {
         event_action_DL: "clicked",
         event_label_DL: "icon_click/genio",
       });
+    },
+    checkLTR(country) {
+      const rtlCountries = ["IL", "ME-AR", "SA-AR"];
+      const dir = rtlCountries.includes(country.toUpperCase()) ? "rtl" : "ltr";
+      const dom = document.querySelector(".app .container");
+
+      dom.setAttribute("dir", dir);
+      dom.style.setProperty("--direction", dir);
+      this.$store.commit("global/setDir", dir);
     },
   },
   computed: {
@@ -175,6 +188,9 @@ export default {
     },
     chatbot_session_id() {
       return this.$store.getters["gpt/chatbot_session_id"];
+    },
+    dir() {
+      return this.$store.state.global.dir;
     },
   },
 };
